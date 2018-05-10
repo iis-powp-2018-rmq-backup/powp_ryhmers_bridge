@@ -10,6 +10,14 @@ public class DefaultCountingOutRhymer {
 
     private int totalIfEmpty = VALUE_IF_EMPTY;
 
+    public int getTotalIfEmpty() {
+        return totalIfEmpty;
+    }
+
+    public void setTotalIfEmpty(int totalIfEmpty) {
+        this.totalIfEmpty = totalIfEmpty;
+    }
+
     protected void countIn(int in) {
         if (!isFull()) {
             NUMBERS[++totalIfEmpty] = in;
