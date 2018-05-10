@@ -1,16 +1,16 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.DefaultCountingOutRyhmer;
-import edu.kis.vh.nursery.HanoiRyhmer;
-import edu.kis.vh.nursery.factory.DefaultRyhmersFactory;
-import edu.kis.vh.nursery.factory.RyhmersFactory;
+import edu.kis.vh.nursery.DefaultCountingOutRhymer;
+import edu.kis.vh.nursery.HanoiRhymer;
+import edu.kis.vh.nursery.factory.DefaultRhymersFactory;
+import edu.kis.vh.nursery.factory.RhymersFactory;
 
 class RyhmersDemo {
 
 	public static void main(String[] args) {
-		RyhmersFactory factory = new DefaultRyhmersFactory();
+		RhymersFactory factory = new DefaultRhymersFactory();
 		
-		DefaultCountingOutRyhmer[] ryhmers = { factory.GetStandardRyhmer(), factory.GetFalseRyhmer(),
+		DefaultCountingOutRhymer[] ryhmers = { factory.GetStandardRyhmer(), factory.GetFalseRyhmer(),
 				factory.GetFIFORyhmer(), factory.GetHanoiRyhmer()};
 		
 		for (int i = 1; i < 15; i++)
@@ -28,7 +28,7 @@ class RyhmersDemo {
 		}
 		
 		System.out.println("total rejected is "
-				+ ((HanoiRyhmer) ryhmers[3]).reportRejected());
+				+ ((HanoiRhymer) ryhmers[3]).reportRejected());
 		
 	}
 	
