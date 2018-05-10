@@ -3,7 +3,7 @@ package edu.kis.vh.nursery;
 public class DefaultCountingOutRyhmer {
 
     private static final int CAPACITY = 12;
-    public static final int IS_EMPTY = -1;
+    private static final int IS_EMPTY = -1;
     private int[] NUMBERS = new int[CAPACITY];
 
     private int total = IS_EMPTY;
