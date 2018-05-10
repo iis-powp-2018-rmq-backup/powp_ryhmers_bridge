@@ -33,3 +33,5 @@ public class defaultCountingOutRyhmer {
     }
 
 }
+
+//Alt + left/right arrow switches between opened files
