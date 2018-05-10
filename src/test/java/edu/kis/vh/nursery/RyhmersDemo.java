@@ -1,7 +1,5 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.defaultCountingOutRyhmer;
-import edu.kis.vh.nursery.HanoiRyhmer;
 import edu.kis.vh.nursery.factory.DefaultRyhmersFactory;
 import edu.kis.vh.nursery.factory.Ryhmersfactory;
 
@@ -10,8 +8,8 @@ class RyhmersDemo {
 	public static void main(String[] args) {
 		Ryhmersfactory factory = new DefaultRyhmersFactory();
 		
-		defaultCountingOutRyhmer[] ryhmers = { factory.GetStandardRyhmer(), factory.GetFalseRyhmer(),
-				factory.GetFIFORyhmer(), factory.GetHanoiRyhmer()};
+		DefaultCountingOutRyhmer[] ryhmers = { factory.getStandardRyhmer(), factory.getFalseRyhmer(),
+				factory.getFIFORyhmer(), factory.getHanoiRyhmer()};
 		
 		for (int i = 1; i < 15; i++)
 			for (int j = 0; j < 3; j++)
