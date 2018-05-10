@@ -4,7 +4,8 @@ public class DefaultCountingOutRyhmer {
 
     private static final int emptyStack = -1;
     private static final int sizeOfStack = 11;
-    private int[] NUMBERS = new int[12];
+    private static final int stackCapacity = 12;
+    private int[] NUMBERS = new int[stackCapacity];
 
     private int total = -1;
 
