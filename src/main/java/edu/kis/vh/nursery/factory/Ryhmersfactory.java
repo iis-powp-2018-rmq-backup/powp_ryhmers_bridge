@@ -1,16 +1,16 @@
 package edu.kis.vh.nursery.factory;
 
-import edu.kis.vh.nursery.defaultCountingOutRyhmer;
+import edu.kis.vh.nursery.DefaultCountingOutRyhmer;
 
 public interface Ryhmersfactory {
 
-	public defaultCountingOutRyhmer GetStandardRyhmer();
+	public DefaultCountingOutRyhmer getStandardRyhmer();
 
-	public defaultCountingOutRyhmer GetFalseRyhmer();
+	public DefaultCountingOutRyhmer getFalseRyhmer();
 
-	public defaultCountingOutRyhmer GetFIFORyhmer();
+	public DefaultCountingOutRyhmer getFIFORyhmer();
 
-	public defaultCountingOutRyhmer GetHanoiRyhmer();
+	public DefaultCountingOutRyhmer getHanoiRyhmer();
 
 //Kombinacje klawiszy alt + ← oraz alt + →, pozwalają przechodzic pomiedzy ostatnio modyfikowanymi klasami
 }
