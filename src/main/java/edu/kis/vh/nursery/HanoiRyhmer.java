@@ -15,4 +15,7 @@ public class HanoiRyhmer extends defaultCountingOutRyhmer {
 			super.countIn(in);
 		}
 	}
+	/*
+	*Kombinacja klawiszy "alt + ->" lub "alt + <-" umożliwia nam powrócenie
+	 * do poprzedniego położenia kursora */
 }
