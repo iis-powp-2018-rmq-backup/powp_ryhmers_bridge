@@ -6,35 +6,50 @@ public class DefaultCountingOutRhymer {
     private static final int CAPACITY = 11;
     private int[] NUMBERS = new int[12];
 
+    public static int getIS_EMPTY_TOTAl() {
+        return IS_EMPTY_TOTAl;
+    }
+
+    public static int getCAPACITY() {
+        return CAPACITY;
+    }
+
     public int getTotal() {
         return total;
     }
 
-    private int total = IS_EMPTY_TOTAl;
+    private int total = getIS_EMPTY_TOTAl();
 
     public void countIn(int in) {
         if (!isFull())
-            NUMBERS[++total] = in;
+            getNUMBERS()[++total] = in;
     }
 
     public boolean callCheck() {
-        return total == IS_EMPTY_TOTAl;
+        return total == getIS_EMPTY_TOTAl();
     }
 
     public boolean isFull() {
-        return total == CAPACITY;
+        return total == getCAPACITY();
     }
 
     protected int peekaboo() {
         if (callCheck())
-            return IS_EMPTY_TOTAl;
-        return NUMBERS[total];
+            return getIS_EMPTY_TOTAl();
+        return getNUMBERS()[total];
     }
 
     public int countOut() {
         if (callCheck())
-            return IS_EMPTY_TOTAl;
-        return NUMBERS[total--];
+            return getIS_EMPTY_TOTAl();
+        return getNUMBERS()[total--];
     }
 
+    public int[] getNUMBERS() {
+        return NUMBERS;
+    }
+
+    public void setNUMBERS(int[] NUMBERS) {
+        this.NUMBERS = NUMBERS;
+    }
 }
