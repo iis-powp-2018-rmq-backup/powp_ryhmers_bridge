@@ -16,3 +16,4 @@ public class HanoiRyhmer extends defaultCountingOutRyhmer {
 		}
 	}
 }
+//Kombinacja klawiszy alt+<- lub alt+-> : zmienia położenie kursora na jego poprzednie położenie
