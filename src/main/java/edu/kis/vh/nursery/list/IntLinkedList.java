@@ -9,9 +9,9 @@ public class IntLinkedList {
         if (last == null) {
             last = new Node(i);
         } else {
-            last.next = new Node(i);
-            last.next.prev = last;
-            last = last.next;
+            last.setNext(new Node(i));
+            last.getNext().setPrev(last);
+            last = last.getNext();
         }
     }
 
@@ -27,15 +27,15 @@ public class IntLinkedList {
         if (isEmpty()) {
             return VALUE_IF_EMPTY;
         }
-        return last.value;
+        return last.getValue();
     }
 
     protected int pop() {
         if (isEmpty()) {
             return VALUE_IF_EMPTY;
         }
-        int ret = last.value;
-        last = last.prev;
+        int ret = last.getValue();
+        last = last.getPrev();
         return ret;
     }
 
