@@ -12,4 +12,5 @@ public interface Ryhmersfactory {
 
 	public defaultCountingOutRyhmer GetHanoiRyhmer();
 
+//Kombinacje klawiszy alt + ← oraz alt + →, pozwalają przechodzic pomiedzy ostatnio modyfikowanymi klasami
 }
