@@ -16,3 +16,5 @@ public class HanoiRyhmer extends defaultCountingOutRyhmer {
 		}
 	}
 }
+
+// Kombinacja Alt + Strzałka lewo / prawo ustawia kursor edycji tekstu w poprzednie / następne położenie zgodnie z historią jego położeń.
