@@ -8,18 +8,23 @@ public class DefaultCountingOutRyhmer {
 
 	private int[] numbers = new int[NUMBERS_CAPACITY];
 
-	public int total = LOWEST;
+	private int total = LOWEST;
 
-	public void countIn(int in) {
+	
+	public int getTotal() {
+		return total;
+	}
+
+	protected void countIn(int in) {
 		if (!isFull())
 			numbers[++total] = in;
 	}
 
-	public boolean callCheck() {
+	protected boolean callCheck() {
 		return total == LOWEST;
 	}
 
-	public boolean isFull() {
+	protected boolean isFull() {
 		return total == NUMBERS_CAPACITY - 1;
 	}
 
@@ -29,7 +34,7 @@ public class DefaultCountingOutRyhmer {
 		return numbers[total];
 	}
 
-	public int countOut() {
+	protected int countOut() {
 		if (callCheck())
 			return LOWEST;
 		return numbers[total--];
