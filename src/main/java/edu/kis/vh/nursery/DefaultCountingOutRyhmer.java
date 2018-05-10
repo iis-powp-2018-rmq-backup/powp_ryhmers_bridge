@@ -13,6 +13,10 @@ public class DefaultCountingOutRyhmer {
             NUMBERS[++total] = in;
     }
 
+    public int getTotal() {
+        return total;
+    }
+
     boolean callCheck() {
         return total == emptyStack;
     }
