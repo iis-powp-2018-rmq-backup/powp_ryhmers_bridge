@@ -1,11 +1,18 @@
 package edu.kis.vh.nursery.list;
 
+/**
+ * LinkedList to store ints.
+ */
 public class IntLinkedList {
 
     private static final int IS_EMPTY = -1;
 	private Node last;
 	private int i;
 
+	/**
+	 * Pushes value to the top of the list
+	 * @param i value to be added
+	 */
 	public void push(final int i) {
 		if (last == null)
 			last = new Node(i);
@@ -16,20 +23,28 @@ public class IntLinkedList {
 		}
 	}
 
+	/**
+	 * Checks if list is empty
+	 * @return true if empty, otherwise false
+	 */
 	public boolean isEmpty() {
 		return last == null;
 	}
 
-	public boolean isFull() {
-		return false;
-	}
-
+	/**
+	 * Returns value at the top
+	 * @return int value on the top
+	 */
 	public int top() {
 		if (isEmpty())
 			return IS_EMPTY;
 		return last.getValue();
 	}
 
+	/**
+	 * Pops value from the top
+	 * @return int value from the top
+	 */
 	public int pop() {
 		if (isEmpty())
 			return IS_EMPTY;
