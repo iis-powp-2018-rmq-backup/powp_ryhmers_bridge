@@ -14,4 +14,10 @@ public class HanoiRyhmer extends defaultCountingOutRyhmer {
         else
             super.countIn(in);
     }
+
+    /*W intelij:
+        alt + ctrl + strzałka, przenosi miedzy ostatnimi pozycjami kursorów
+        alt + shitf + backspace, przenosi w miejsce ostatniej edycji
+
+     */
 }
