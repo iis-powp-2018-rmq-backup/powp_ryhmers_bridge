@@ -5,7 +5,12 @@ public class DefaultCountingOutRyhmer {
 	public final static int NO_NUMBERS = -1;
 
 	private int[] numbers = new int[MAX_NUMBERS_COUNT];
+
 	private int total = NO_NUMBERS;
+
+	public int getTotal() {
+		return total;
+	}
 
 	public void countIn(int in) {
 		if (!isFull()) {
