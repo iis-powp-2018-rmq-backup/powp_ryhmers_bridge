@@ -8,7 +8,7 @@ public class DefaultCountingOutRyhmer {
 
     private int total = IS_EMPTY;
 
-    public void countIn(int in) {
+    public void countIn(final int in) {
         if (!isFull())
             NUMBERS[++total] = in;
     }

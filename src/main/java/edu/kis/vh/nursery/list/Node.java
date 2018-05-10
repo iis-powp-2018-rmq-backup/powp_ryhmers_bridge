@@ -7,7 +7,7 @@ public class Node {
     private Node next;
     //changes in IntLinkedList: getters and setters used instead
 
-    Node(int i) {
+    Node(final int i) {
         setValue(i);
     }
 
