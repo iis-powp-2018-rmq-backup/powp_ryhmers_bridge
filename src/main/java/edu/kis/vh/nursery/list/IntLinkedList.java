@@ -2,14 +2,15 @@ package edu.kis.vh.nursery.list;
 
 public class IntLinkedList {
 
+	private static final int LIST_EMPTY = -1;
 	Node last;
-	int i;
+	int value;
 
-	public void push(int i) {
+	public void push(int value) {
 		if (last == null)
-			last = new Node(i);
+			last = new Node(value);
 		else {
-			last.next = new Node(i);
+			last.next = new Node(value);
 			last.next.prev = last;
 			last = last.next;
 		}
@@ -25,16 +26,16 @@ public class IntLinkedList {
 
 	public int top() {
 		if (isEmpty())
-			return -1;
+			return LIST_EMPTY;
 		return last.value;
 	}
 
 	public int pop() {
 		if (isEmpty())
-			return -1;
-		int ret = last.value;
+			return LIST_EMPTY;
+		int returnedValue = last.value;
 		last = last.prev;
-		return ret;
+		return returnedValue;
 	}
 
 }
