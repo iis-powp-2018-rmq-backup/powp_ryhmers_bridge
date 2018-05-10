@@ -3,6 +3,7 @@ package edu.kis.vh.nursery;
 import edu.kis.vh.nursery.factory.DefaultRyhmersFactory;
 import edu.kis.vh.nursery.factory.RyhmersFactory;
 
+//TODO: think about mediator pattern
 class RyhmersDemo {
 
 	public static void main(String[] args) {

@@ -1,5 +1,8 @@
 package edu.kis.vh.nursery;
 
+//TODO: extract interface Ryhmer
+
+//TODO: think about template method or strategy
 public class DefaultCountingOutRyhmer {
 
     private static final int CAPACITY = 12;
