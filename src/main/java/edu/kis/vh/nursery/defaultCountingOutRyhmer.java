@@ -32,3 +32,7 @@ public class defaultCountingOutRyhmer {
 	}
 
 }
+
+// przeskakiwanie pomiedzy miejscami ktore ostatnio edytowalismy strzałka w lewo powoduje przejscie w przod histori a w prawo do tyłu
+
+
