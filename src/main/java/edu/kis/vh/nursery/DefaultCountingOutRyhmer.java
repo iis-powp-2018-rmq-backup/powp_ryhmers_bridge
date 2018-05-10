@@ -5,8 +5,7 @@ public class DefaultCountingOutRyhmer {
 	public final static int NO_NUMBERS = -1;
 
 	private int[] numbers = new int[MAX_NUMBERS_COUNT];
-
-	public int total = NO_NUMBERS;
+	private int total = NO_NUMBERS;
 
 	public void countIn(int in) {
 		if (!isFull()) {
@@ -35,5 +34,4 @@ public class DefaultCountingOutRyhmer {
 		}
 		return numbers[total--];
 	}
-
 }
