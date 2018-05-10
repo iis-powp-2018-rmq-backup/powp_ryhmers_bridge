@@ -15,3 +15,4 @@ public class HanoiRyhmer extends defaultCountingOutRyhmer {
             super.countIn(in);
     }
 }
+//Klawisze alt + strzałka zmieniają kartę o jedną w lewo lub w prawo
