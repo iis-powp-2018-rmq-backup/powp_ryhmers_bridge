@@ -2,9 +2,13 @@ package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
 
-    private int[] NUMBERS = new int[12];
+    private static final int VALUE_IF_EMPTY = -1;
 
-    public int totalIfEmpty = -1;
+    private static final int CAPACITY = 12;
+
+    private int[] NUMBERS = new int[CAPACITY];
+
+    public int totalIfEmpty = VALUE_IF_EMPTY;
 
     public void countIn(int in) {
         if (!isFull()) {
