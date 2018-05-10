@@ -15,3 +15,7 @@ public class HanoiRyhmer extends defaultCountingOutRyhmer {
             super.countIn(in);
     }
 }
+
+//alt + -> : przelacza sie na otworzony plik po prawej, jesli zadnego nie ma, wlacza ostatni zamkniety
+//alt + <- : przelacza sie na otworzony plik po lewej
+//oraz pare innych nieskoordynowanych rzeczy
