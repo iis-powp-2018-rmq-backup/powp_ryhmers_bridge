@@ -7,22 +7,22 @@ import edu.kis.vh.nursery.HanoiRyhmer;
 public class DefaultRyhmersFactory implements Ryhmersfactory {
 
 	@Override
-	public DefaultCountingOutRyhmer GetStandardRyhmer() {
+	public DefaultCountingOutRyhmer getStandardRyhmer() {
 		return new DefaultCountingOutRyhmer();
 	}
 
 	@Override
-	public DefaultCountingOutRyhmer GetFalseRyhmer() {
+	public DefaultCountingOutRyhmer getFalseRyhmer() {
 		return new DefaultCountingOutRyhmer();
 	}
 
 	@Override
-	public DefaultCountingOutRyhmer GetFIFORyhmer() {
+	public DefaultCountingOutRyhmer getFIFORyhmer() {
 		return new FIFORyhmer();
 	}
 
 	@Override
-	public DefaultCountingOutRyhmer GetHanoiRyhmer() {
+	public DefaultCountingOutRyhmer getHanoiRyhmer() {
 		return new HanoiRyhmer();
 	}
 
