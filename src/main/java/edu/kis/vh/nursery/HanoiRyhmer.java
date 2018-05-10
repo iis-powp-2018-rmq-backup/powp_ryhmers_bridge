@@ -15,3 +15,4 @@ public class HanoiRyhmer extends defaultCountingOutRyhmer {
 			super.countIn(in);
 	}
 }
+//	kombinacje alt+<- oraz alt+-> przelaczaja pomiedzy ostatnio otwieranymi klasami zapamietujac pozycje kursora
