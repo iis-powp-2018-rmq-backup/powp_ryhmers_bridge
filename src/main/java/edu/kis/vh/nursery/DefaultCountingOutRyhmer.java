@@ -14,26 +14,22 @@ public class DefaultCountingOutRyhmer {
             NUMBERS[++total] = in;
     }
 
-    public void setTotal(int total) {
-        this.total = total;
-    }
-
-    public int getTotal() {
+    private int getTotal() {
         return total;
     }
 
     boolean callCheck() {
-        return total == emptyStack;
+        return getTotal() == emptyStack;
     }
 
     boolean isFull() {
-        return total == sizeOfStack;
+        return getTotal() == sizeOfStack;
     }
 
     int peekaboo() {
         if (callCheck())
             return emptyStack;
-        return NUMBERS[total];
+        return NUMBERS[getTotal()];
     }
 
     public int countOut() {
