@@ -14,8 +14,8 @@ public class FIFORyhmer extends defaultCountingOutRyhmer {
 		
 		while (!temp.callCheck())
 			
-		countIn(temp.countOut());
-		
+			countIn(temp.countOut());
+
 		return ret;
 	}
 }
