@@ -8,19 +8,19 @@ public class DefaultCountingOutRhymer {
 
     private int[] NUMBERS = new int[CAPACITY];
 
-    public int totalIfEmpty = VALUE_IF_EMPTY;
+    private int totalIfEmpty = VALUE_IF_EMPTY;
 
-    public void countIn(int in) {
+    protected void countIn(int in) {
         if (!isFull()) {
             NUMBERS[++totalIfEmpty] = in;
         }
     }
 
-    public boolean callCheck() {
+    protected boolean callCheck() {
         return totalIfEmpty == -1;
     }
 
-    public boolean isFull() {
+    protected boolean isFull() {
         return totalIfEmpty == 11;
     }
 
@@ -31,7 +31,7 @@ public class DefaultCountingOutRhymer {
         return NUMBERS[totalIfEmpty];
     }
 
-    public int countOut() {
+    protected int countOut() {
         if (callCheck()) {
             return -1;
         }
