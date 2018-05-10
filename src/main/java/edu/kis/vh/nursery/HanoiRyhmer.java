@@ -15,3 +15,4 @@ public class HanoiRyhmer extends defaultCountingOutRyhmer {
             super.countIn(in);
     }
 }
+// Alt + --> lub Alt + <-- dziala w pozwala na pominiecie calego słowa
