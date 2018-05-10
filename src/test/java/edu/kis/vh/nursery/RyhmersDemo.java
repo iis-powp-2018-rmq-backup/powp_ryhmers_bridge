@@ -7,10 +7,9 @@ class RyhmersDemo {
 
 	public static void main(String[] args) {
 		RyhmersFactory factory = new DefaultRyhmersFactory();
-		
-		DefaultCountingOutRyhmer[] ryhmers = { factory.getStandardRyhmer(), factory.getFalseRyhmer(),
-				factory.getFIFORyhmer(), factory.getHanoiRyhmer()};
-		
+
+		DefaultCountingOutRyhmer[] ryhmers = testRhymers(factory);
+
 		for (int i = 1; i < 15; i++)
 			for (int j = 0; j < 3; j++)
 				ryhmers[j].countIn(i);
@@ -29,5 +28,10 @@ class RyhmersDemo {
 				+ ((HanoiRyhmer) ryhmers[3]).reportRejected());
 		
 	}
-	
+
+	private static DefaultCountingOutRyhmer[] testRhymers(RyhmersFactory factory) {
+		return new DefaultCountingOutRyhmer[]{ factory.getStandardRyhmer(), factory.getFalseRyhmer(),
+                    factory.getFIFORyhmer(), factory.getHanoiRyhmer()};
+	}
+
 }
