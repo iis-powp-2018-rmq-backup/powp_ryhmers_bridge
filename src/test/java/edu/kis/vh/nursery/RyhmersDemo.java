@@ -8,7 +8,7 @@ class RyhmersDemo {
 	public static void main(String[] args) {
 		Ryhmersfactory factory = new DefaultRhymersFactory();
 		
-		defaultCountingOutRhymer[] ryhmers = { factory.getStandardRhymer(), factory.getFalseRhymer(),
+		DefaultCountingOutRhymer[] ryhmers = { factory.getStandardRhymer(), factory.getFalseRhymer(),
 				factory.getFIFORhymer(), factory.getHanoiRhymer()};
 		
 		for (int i = 1; i < 15; i++)
