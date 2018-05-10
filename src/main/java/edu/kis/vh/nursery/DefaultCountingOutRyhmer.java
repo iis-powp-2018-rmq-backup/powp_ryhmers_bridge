@@ -4,11 +4,11 @@ public class DefaultCountingOutRyhmer {
 
 	private static final int NUMBERS_CAPACITY = 12;
 
-	private static final int LOWEST = -1;
+	private static final int EMPTY_STACK_VALUE = -1;
 
 	private int[] numbers = new int[NUMBERS_CAPACITY];
 
-	private int total = LOWEST;
+	private int total = EMPTY_STACK_VALUE;
 
 	
 	public int getTotal() {
@@ -21,7 +21,7 @@ public class DefaultCountingOutRyhmer {
 	}
 
 	protected boolean callCheck() {
-		return total == LOWEST;
+		return total == EMPTY_STACK_VALUE;
 	}
 
 	protected boolean isFull() {
@@ -30,13 +30,13 @@ public class DefaultCountingOutRyhmer {
 
 	protected int peekaboo() {
 		if (callCheck())
-			return LOWEST;
+			return EMPTY_STACK_VALUE;
 		return numbers[total];
 	}
 
 	protected int countOut() {
 		if (callCheck())
-			return LOWEST;
+			return EMPTY_STACK_VALUE;
 		return numbers[total--];
 	}
 
