@@ -18,4 +18,9 @@ public class FIFORyhmer extends defaultCountingOutRyhmer {
 
 		return ret;
 	}
+	/*
+
+	Alt + stralki służą do przeskakiwania pomiędzy otwartymi oknami
+
+	 */
 }
