@@ -2,9 +2,13 @@ package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
 
-	private int[] numbers = new int[12];
+	private static int NUMBERS_CAPACITY = 12;
 
-	public int total = -1;
+	private static int STARTING_CAPACITY = -1;
+
+	private int[] numbers = new int[NUMBERS_CAPACITY];
+
+	public int total = STARTING_CAPACITY;
 
 	public void countIn(int in) {
 		if (!isFull())
@@ -12,11 +16,11 @@ public class DefaultCountingOutRhymer {
 	}
 
 	public boolean callCheck() {
-		return total == -1;
+		return total == STARTING_CAPACITY;
 	}
 
 	public boolean isFull() {
-		return total == 11;
+		return total == NUMBERS_CAPACITY - 1;
 	}
 
 	protected int peekaboo() {
