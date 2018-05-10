@@ -11,7 +11,15 @@ public class DefaultCountingOutRyhmer {
 	private int[] NUMBERS = new int[_NUMBERS_SIZE];
 	private int total = _1;
 
-	 void countIn(int in) {
+	 public int getTotal() {
+		return total;
+	}
+
+	public void setTotal(int total) {
+		this.total = total;
+	}
+
+	void countIn(int in) {
 		if (!isFull())
 			NUMBERS[++total] = in;
 	}
