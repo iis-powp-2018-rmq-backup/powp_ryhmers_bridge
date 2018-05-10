@@ -8,5 +8,5 @@ public class Node {
 	public Node(int i) {
 		value = i;
 	}
-
+// alt + <- poprzednia klasa z paska alt + -> następna klasa
 }
