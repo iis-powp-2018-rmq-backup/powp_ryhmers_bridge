@@ -59,18 +59,4 @@ public class DefaultCountingOutRyhmer {
         return NUMBERS;
     }
 
-    /**
-     * @param NUMBERS the NUMBERS to set
-     */
-    public void setNUMBERS(int[] NUMBERS) {
-        this.NUMBERS = NUMBERS;
-    }
-
-    /**
-     * @param total the total to set
-     */
-    public void setTotal(int total) {
-        this.total = total;
-    }
-
 }
