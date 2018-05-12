@@ -8,12 +8,12 @@ public class DefaultCountingOutRyhmer {
 
     public void countIn(int in) {
         if (!isFull()) {
-            NUMBERS[++total] = in;
+            getNUMBERS()[++total] = in;
         }
     }
 
     public boolean callCheck() {
-        return total == EMPTY_STACK_VALUE;
+        return total == getEMPTY_STACK_VALUE();
     }
 
     public boolean isFull() {
@@ -22,16 +22,55 @@ public class DefaultCountingOutRyhmer {
 
     public int peekaboo() {
         if (callCheck()) {
-            return EMPTY_STACK_VALUE;
+            return getEMPTY_STACK_VALUE();
         }
-        return NUMBERS[total];
+        return getNUMBERS()[total];
     }
 
     public int countOut() {
         if (callCheck()) {
-            return EMPTY_STACK_VALUE;
+            return getEMPTY_STACK_VALUE();
         }
-        return NUMBERS[total--];
+        return getNUMBERS()[total--];
+    }
+
+    public int getTotal() {
+        return total;
+    }
+
+    /**
+     * @return the CAPACITY
+     */
+    public int getCAPACITY() {
+        return CAPACITY;
+    }
+
+    /**
+     * @return the EMPTY_STACK_VALUE
+     */
+    public int getEMPTY_STACK_VALUE() {
+        return EMPTY_STACK_VALUE;
+    }
+
+    /**
+     * @return the NUMBERS
+     */
+    public int[] getNUMBERS() {
+        return NUMBERS;
+    }
+
+    /**
+     * @param NUMBERS the NUMBERS to set
+     */
+    public void setNUMBERS(int[] NUMBERS) {
+        this.NUMBERS = NUMBERS;
+    }
+
+    /**
+     * @param total the total to set
+     */
+    public void setTotal(int total) {
+        this.total = total;
     }
 
 }
