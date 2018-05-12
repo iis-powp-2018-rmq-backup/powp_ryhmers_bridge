@@ -8,7 +8,7 @@ import edu.kis.vh.nursery.factory.Ryhmersfactory;
 class RyhmersDemo {
 
     public static void main(String[] args) {
-        Ryhmersfactory factory = new DefaultRyhmersFactory();
+        final Ryhmersfactory factory = new DefaultRyhmersFactory();
 
         DefaultCountingOutRyhmer[] ryhmers = {factory.GetStandardRyhmer(), factory.GetFalseRyhmer(),
             factory.GetFIFORyhmer(), factory.GetHanoiRyhmer()};
