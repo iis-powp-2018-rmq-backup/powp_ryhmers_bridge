@@ -30,5 +30,9 @@ public class defaultCountingOutRyhmer {
 			return -1;
 		return NUMBERS[total--];
 	}
+/*
+ * alt + left arrow = move back to previously modified file 
+ * alt + right arrow = move forward to lately modified file
+ */
 
 }
