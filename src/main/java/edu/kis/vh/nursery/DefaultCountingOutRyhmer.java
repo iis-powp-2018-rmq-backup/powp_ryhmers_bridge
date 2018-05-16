@@ -35,6 +35,9 @@ public class DefaultCountingOutRyhmer {
         return numbers[total--];
     }
 
+    public int getTotal() {
+        return total;
+    }
 }
 
 //Alt + left/right arrow switches between opened files
