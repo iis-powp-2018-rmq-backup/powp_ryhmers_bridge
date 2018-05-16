@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>edu.kis.vh.nursery</OriginalElement>
+  <nodes>
+    <node x="138.5" y="0.0">edu.kis.vh.nursery.DefaultCountingOutRyhmer</node>
+    <node x="0.0" y="737.0">edu.kis.vh.nursery.RyhmersDemo</node>
+    <node x="0.0" y="463.0">edu.kis.vh.nursery.list.Node</node>
+    <node x="423.0" y="463.0">edu.kis.vh.nursery.RyhmersJUnitTest</node>
+    <node x="477.0" y="0.0">edu.kis.vh.nursery.factory.Ryhmersfactory</node>
+    <node x="262.0" y="322.0">edu.kis.vh.nursery.HanoiRyhmer</node>
+    <node x="215.0" y="463.0">edu.kis.vh.nursery.list.IntLinkedList</node>
+    <node x="0.0" y="333.0">edu.kis.vh.nursery.FIFORyhmer</node>
+    <node x="477.0" y="167.0">edu.kis.vh.nursery.factory.DefaultRyhmersFactory</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="edu.kis.vh.nursery.factory.DefaultRyhmersFactory" target="edu.kis.vh.nursery.factory.Ryhmersfactory">
+      <point x="0.0" y="-58.5" />
+      <point x="0.0" y="58.5" />
+    </edge>
+    <edge source="edu.kis.vh.nursery.HanoiRyhmer" target="edu.kis.vh.nursery.DefaultCountingOutRyhmer">
+      <point x="0.0" y="-48.0" />
+      <point x="347.0" y="297.0" />
+      <point x="281.75" y="297.0" />
+      <point x="47.75" y="136.0" />
+    </edge>
+    <edge source="edu.kis.vh.nursery.FIFORyhmer" target="edu.kis.vh.nursery.DefaultCountingOutRyhmer">
+      <point x="0.0" y="-37.0" />
+      <point x="121.0" y="297.0" />
+      <point x="186.25" y="297.0" />
+      <point x="-47.75" y="136.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="155.0" y="742.5" />
+  <SelectedNodes>
+    <node>edu.kis.vh.nursery.RyhmersJUnitTest</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+    <Category>Constructors</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
