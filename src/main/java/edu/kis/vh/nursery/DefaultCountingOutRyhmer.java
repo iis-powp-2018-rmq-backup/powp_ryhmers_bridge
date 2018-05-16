@@ -2,9 +2,11 @@ package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRyhmer {
 
-	private int[] numbers = new int[12]; //12 raczej nie nazywac SIZE !!!!
+	private static final int _12 = 12;
 
-	public int total = -1;
+	private int[] numbers = new int[_12]; //12 raczej nie nazywac SIZE !!! raczej capacity !!!
+
+	public int total = -1; //value if empty 
 
 	public int getTotal() {
 		return total;
