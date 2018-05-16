@@ -10,6 +10,14 @@ public class DefaultCountingOutRyhmer {
 
 	public int total = DEFAULT_ARRAY_EMPTY_VALUE;
 
+	public int getTotal() {
+		return total;
+	}
+
+	public void setTotal(int total) {
+		this.total = total;
+	}
+
 	public void countIn(int in) {
 		if (!isFull())
 			numbers[++total] = in;
