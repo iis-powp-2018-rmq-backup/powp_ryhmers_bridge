@@ -49,7 +49,4 @@ public class DefaultCountingOutRyhmer {
         return numbers;
     }
 
-    public void setNumbers(int[] numbers) {
-        this.numbers = numbers;
-    }
 }
