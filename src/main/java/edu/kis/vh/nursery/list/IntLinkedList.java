@@ -6,7 +6,7 @@ public class IntLinkedList {
     private Node last;
     private int i;
 
-    public static int getIsEmptyTop() {
+    private static int getIsEmptyTop() {
         return IS_EMPTY_TOP;
     }
 
@@ -42,11 +42,11 @@ public class IntLinkedList {
         return ret;
     }
 
-    public Node getLast() {
+    private Node getLast() {
         return last;
     }
 
-    public void setLast(Node last) {
+    private void setLast(Node last) {
         this.last = last;
     }
 
