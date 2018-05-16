@@ -2,20 +2,34 @@ package edu.kis.vh.nursery;
 
 public class FIFORhymer extends DefaultCountingOutRhymer {
 
-	public DefaultCountingOutRhymer defaultCountingOutRhymer = new DefaultCountingOutRhymer();
+	private DefaultCountingOutRhymer defaultCountingOutRhymer = new DefaultCountingOutRhymer();
 
 	@Override
 	public int countOut() {
 		while (!callCheck())
 
-			defaultCountingOutRhymer.countIn(super.countOut());
+			getDefaultCountingOutRhymer().countIn(super.countOut());
 
-		int returnedValue = defaultCountingOutRhymer.countOut();
+		int returnedValue = getDefaultCountingOutRhymer().countOut();
 
-		while (!defaultCountingOutRhymer.callCheck())
+		while (!getDefaultCountingOutRhymer().callCheck())
 
-			countIn(defaultCountingOutRhymer.countOut());
+			countIn(getDefaultCountingOutRhymer().countOut());
 
 		return returnedValue;
 	}
+
+	public DefaultCountingOutRhymer getDefaultCountingOutRhymer() {
+		return defaultCountingOutRhymer;
+	}
+
+	public void setDefaultCountingOutRhymer(DefaultCountingOutRhymer defaultCountingOutRhymer) {
+		this.defaultCountingOutRhymer = defaultCountingOutRhymer;
+	}
+
+	/*
+	dostęp do obiektu klasy DefaultCountingOutRhymer jest teraz możliwy wyłącznie poprzez gettery i settery
+	 */
+
+
 }

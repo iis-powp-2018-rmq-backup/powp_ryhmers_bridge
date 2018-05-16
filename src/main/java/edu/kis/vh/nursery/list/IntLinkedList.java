@@ -3,21 +3,21 @@ package edu.kis.vh.nursery.list;
 public class IntLinkedList {
 
 	private static final int LIST_EMPTY = -1;
-	Node last;
-	int value;
+	private Node last;
+	private int value;
 
 	public void push(int value) {
-		if (last == null)
-			last = new Node(value);
+		if (getLast() == null)
+			setLast(new Node(value));
 		else {
-			last.next = new Node(value);
-			last.next.prev = last;
-			last = last.next;
+			getLast().setNext(new Node(value));
+			getLast().getNext().setPrev(getLast());
+			setLast(getLast().getNext());
 		}
 	}
 
 	public boolean isEmpty() {
-		return last == null;
+		return getLast() == null;
 	}
 
 	public boolean isFull() {
@@ -27,15 +27,34 @@ public class IntLinkedList {
 	public int top() {
 		if (isEmpty())
 			return LIST_EMPTY;
-		return last.value;
+		return getLast().getValue();
 	}
 
 	public int pop() {
 		if (isEmpty())
 			return LIST_EMPTY;
-		int returnedValue = last.value;
-		last = last.prev;
+		int returnedValue = getLast().getValue();
+		setLast(getLast().getPrev());
 		return returnedValue;
 	}
 
+	public Node getLast() {
+		return last;
+	}
+
+	public void setLast(Node last) {
+		this.last = last;
+	}
+
+	public int getValue() {
+		return value;
+	}
+
+	public void setValue(int value) {
+		this.value = value;
+	}
+
+	/*
+	dostęp do obiektu Node oraz zmiennej last jest teraz możliwy wyłącznie poprzez gettery i settery
+	 */
 }
