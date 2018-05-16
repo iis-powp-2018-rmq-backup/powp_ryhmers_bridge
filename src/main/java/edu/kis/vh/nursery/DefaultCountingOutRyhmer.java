@@ -2,11 +2,11 @@ package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRyhmer {
 
-	public static final int NUMBERS_CAPACITY = 12;
-	public static final int NO_NUMBERS = -1;
+	private static final int NUMBERS_CAPACITY = 12;
+	private static final int NO_NUMBERS = -1;
 	private int[] numbers = new int[NUMBERS_CAPACITY];
 
-	public int total = NO_NUMBERS;
+	private int total = NO_NUMBERS;
 
 	public void countIn(int in) {
 		if (!isFull()) {
@@ -14,7 +14,7 @@ public class DefaultCountingOutRyhmer {
 		}
 	}
 
-	public boolean callCheck() {
+	protected boolean callCheck() {
 		return total == NO_NUMBERS;
 	}
 
