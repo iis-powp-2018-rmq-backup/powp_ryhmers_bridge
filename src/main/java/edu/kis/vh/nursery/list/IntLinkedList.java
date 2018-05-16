@@ -6,10 +6,18 @@ public class IntLinkedList {
     private Node last; // dostep do zmiennej odbywa sie poprzez funkcje get i set
     private int i; // dostep do zmiennej odbywa sie poprzez funkcje get i set
 
+    /**
+     * getter do zmiennej is_empty_indicator
+     * @return pusta lista
+     */
     public static int getIsEmptyIndicator() {
         return IS_EMPTY_INDICATOR;
     }
 
+    /**
+     * dodawanie wartosci do listy
+     * @param i wartosc dodawana na poczatek listy
+     */
     public void push(final int i) {
         if (getLast() == null)
             setLast(new Node(i));
@@ -20,20 +28,34 @@ public class IntLinkedList {
         }
     }
 
+    /**
+     * sprawdzenie czy lista jest pusta
+     * @return null
+     */
     private boolean isEmpty() {
         return getLast() == null;
     }
 
+    /**
+     * sprawdzenie czy lista jest pusta
+     * @return false
+     */
     public boolean isFull() {
         return false;
     }
 
+    /** zwraca ostatnia wartosc
+     * @return ostatnia wartosc
+     */
     public int top() {
         if (isEmpty())
             return getIsEmptyIndicator();
         return getLast().value;
     }
 
+    /** zwraca i usuwa ostatnia wartosc
+     * @return
+     */
     public int pop() {
         if (isEmpty())
             return getIsEmptyIndicator();
@@ -42,14 +64,26 @@ public class IntLinkedList {
         return ret;
     }
 
+    /**
+     * zwraca ostatnia wartosc
+     * @return ostatnia wartosc
+     */
     public Node getLast() {
         return last;
     }
 
+    /**
+     * ustwaia wartosc jako ostatnia
+     * @param last
+     */
     public void setLast(Node last) {
         this.last = last;
     }
 
+    /**
+     * zwraca liczbe
+     * @return i
+     */
     public int getI() {
         return i;
     }
