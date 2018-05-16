@@ -10,7 +10,7 @@ public class IntLinkedList {
         return IS_EMPTY_INDICATOR;
     }
 
-    public void push(int i) {
+    public void push(final int i) {
         if (getLast() == null)
             setLast(new Node(i));
         else {

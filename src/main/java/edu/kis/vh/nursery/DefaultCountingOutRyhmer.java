@@ -20,7 +20,7 @@ public class DefaultCountingOutRyhmer {
     
     private int total = getIsEmptyIndicator();
 
-    public void countIn(int in) {
+    public void countIn(final int in) {
         if (!isFull())
             getNumbers()[++total] = in;
     }

@@ -8,7 +8,7 @@ public class HanoiRyhmer extends DefaultCountingOutRyhmer {
         return getTotalRejected();
     }
 
-    public void countIn(int in) {
+    public void countIn(final int in) {
         if (!callCheck() && in > peekaboo())
             setTotalRejected(getTotalRejected() + 1);
         else
@@ -19,7 +19,7 @@ public class HanoiRyhmer extends DefaultCountingOutRyhmer {
         return totalRejected;
     }
 
-    public void setTotalRejected(int totalRejected) {
+    public void setTotalRejected(final int totalRejected) {
         this.totalRejected = totalRejected;
     }
 }
