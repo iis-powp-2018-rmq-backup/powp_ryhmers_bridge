@@ -1,17 +1,30 @@
 package edu.kis.vh.nursery;
 
-public class HanoiRyhmer extends defaultCountingOutRyhmer {
+/**
+ * Wyliczanka Hanoi
+ *
+ */
+public class HanoiRyhmer extends DefaultCountingOutRyhmer {
 
-int totalRejected = 0;
+	private int totalRejected = 0;
 
+	/**
+	 * Zwraca ilość nieprzyjętych liczb do wyliczanki
+	 * @return ilość nieprzyjętych liczb do wyliczanki
+	 */
 	public int reportRejected() {
 		return totalRejected;
 	}
 
-	public void countIn(int in) {
-	if (!callCheck() && in > peekaboo())
+	/**
+	 * Umieszcza podaną wartość w wyliczance(nie jest możliwe zgłoszenie liczby większej niż bieżaca)
+	 * @param wartość liczby do umieszczenia w wyliczance
+	 */
+	@Override
+	public void countIn(final int in) {
+		if (!callCheck() && in > peekaboo())
 			totalRejected++;
-			else
-				super.countIn(in);
+		else
+			super.countIn(in);
 	}
 }

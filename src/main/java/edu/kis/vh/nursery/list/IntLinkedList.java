@@ -2,16 +2,17 @@ package edu.kis.vh.nursery.list;
 
 public class IntLinkedList {
 
-	Node last;
-	int i;
+	private static final int IS_EMPTY_INDICATOR = -1;
+	private Node last;
+	private int i;
 
-	public void push(int i) {
+	public void push(final int i) {
 		if (last == null)
 			last = new Node(i);
 		else {
-			last.next = new Node(i);
-			last.next.prev = last;
-			last = last.next;
+			last.setNext(new Node(i));
+			last.getNext().setPrev(last);
+			last = last.getNext();
 		}
 	}
 
@@ -25,16 +26,49 @@ public class IntLinkedList {
 
 	public int top() {
 		if (isEmpty())
-			return -1;
-		return last.value;
+			return IS_EMPTY_INDICATOR;
+		return last.getValue();
 	}
 
 	public int pop() {
 		if (isEmpty())
-			return -1;
-		int ret = last.value;
-		last = last.prev;
+			return IS_EMPTY_INDICATOR;
+		final int ret = last.getValue();
+		last = last.getPrev();
 		return ret;
 	}
 
 }
+
+class Node {
+
+	private final int value;  //pozostałe klasy zamiast odwoływac się bezpośrednio do pola, korzystają z getterów i setteró
+	private Node prev;
+	private Node next;
+
+	public Node(final int i) {
+		value = i;
+	}
+
+	public int getValue() {
+		return value;
+	}
+
+	public Node getPrev() {
+		return prev;
+	}
+
+	public void setPrev(final Node prev) {
+		this.prev = prev;
+	}
+
+	public Node getNext() {
+		return next;
+	}
+
+	public void setNext(final Node next) {
+		this.next = next;
+	}
+	
+}
+
