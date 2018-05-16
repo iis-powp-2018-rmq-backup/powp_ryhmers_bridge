@@ -4,8 +4,8 @@ public class IntLinkedList {
 
 	private static final int DEFAULT_EMPTY_STACK_VALUE = -1;
 	
-	Node last;
-	int i;
+	private Node last;
+	private int i;
 
 	public void push(int i) {
 		if (last == null)
@@ -39,4 +39,11 @@ public class IntLinkedList {
 		return ret;
 	}
 
+	Node getLast() {
+		return last;
+	}
+
+	int getI() {
+		return i;
+	}
 }
