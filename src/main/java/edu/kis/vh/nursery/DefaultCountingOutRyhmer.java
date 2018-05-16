@@ -9,7 +9,7 @@ public class DefaultCountingOutRyhmer {
 
     private int total = DEFAULT_EMPTY_STACK_VALUE;
 
-    public void countIn(int in) {
+    public void countIn(final int in) {
         if (!isFull())
             numbers[++total] = in;
     }
