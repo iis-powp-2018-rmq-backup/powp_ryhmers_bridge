@@ -6,7 +6,7 @@ public class DefaultCountingOutRyhmer {
 
 	private static final int MAX_CAPACITy = 12;
 
-	private int[] numbers = new int[MAX_CAPACITy]; //12 raczej nie nazywac SIZE !!! raczej capacity !!!
+	private final int[] numbers = new int[MAX_CAPACITy]; //12 raczej nie nazywac SIZE !!! raczej capacity !!!
 
 	private int total = EMPTY_VALUE; //value if empty 
 
