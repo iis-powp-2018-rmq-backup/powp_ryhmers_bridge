@@ -1,40 +1,56 @@
 package edu.kis.vh.nursery.list;
 
-public class IntLinkedList {
+class IntLinkedList {
 
-	Node last;
-	int i;
+    private static final int IS_EMPTY_TOP = -1;
+    private Node last;
+    private int i;
 
-	public void push(int i) {
-		if (last == null)
-			last = new Node(i);
-		else {
-			last.next = new Node(i);
-			last.next.prev = last;
-			last = last.next;
-		}
-	}
+    private static int getIsEmptyTop() {
+        return IS_EMPTY_TOP;
+    }
 
-	public boolean isEmpty() {
-		return last == null;
-	}
+    private void push(int i) {
+        if (getLast() == null)
+            setLast(new Node(i));
+        else {
+            getLast().setNext(new Node(i));
+            getLast().getNext().setPrev(getLast());
+            setLast(getLast().getNext());
+        }
+    }
 
-	public boolean isFull() {
-		return false;
-	}
+    private boolean isEmpty() {
+        return getLast() == null;
+    }
 
-	public int top() {
-		if (isEmpty())
-			return -1;
-		return last.value;
-	}
+    private boolean isFull() {
+        return false;
+    }
 
-	public int pop() {
-		if (isEmpty())
-			return -1;
-		int ret = last.value;
-		last = last.prev;
-		return ret;
-	}
+    private int top() {
+        if (isEmpty())
+            return getIsEmptyTop();
+        return getLast().getValue();
+    }
 
+    private int pop() {
+        if (isEmpty())
+            return getIsEmptyTop();
+        int ret = getLast().getValue();
+        setLast(getLast().getPrev());
+        return ret;
+    }
+
+    private Node getLast() {
+        return last;
+    }
+
+    private void setLast(Node last) {
+        this.last = last;
+    }
+
+    public int getI() {
+        return i;
+    }
 }
