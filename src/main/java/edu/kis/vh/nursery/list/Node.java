@@ -10,15 +10,11 @@ public class Node {
 	//zamienione z bezpośrednich na gettery i settery.
 
 	public Node(int i) {
-		setValue(i);
+		this.value = i;
 	}
 
 	public int getValue() {
 		return value;
-	}
-
-	public void setValue(int value) {
-		this.value = value;
 	}
 
 	public Node getPrev() {
