@@ -1,17 +1,24 @@
 package edu.kis.vh.nursery;
 
-public class HanoiRyhmer extends defaultCountingOutRyhmer {
+/**
+ * alt + strzałka lewo/prawo ustawia kursor na podstawie jego historii położenia.
+ */
 
-int totalRejected = 0;
+
+public class HanoiRyhmer extends DefaultCountingOutRyhmer {
+
+	private int totalRejected = 0;
 
 	public int reportRejected() {
 		return totalRejected;
 	}
 
+	@Override
 	public void countIn(int in) {
-	if (!callCheck() && in > peekaboo())
+		if (!callCheck() && in > peekaboo()) {
 			totalRejected++;
-			else
-				super.countIn(in);
+		} else {
+			super.countIn(in);
+		}
 	}
 }
