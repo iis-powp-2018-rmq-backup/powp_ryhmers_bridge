@@ -4,37 +4,52 @@ public class DefaultCountingOutRyhmer {
 
     private static final int CAPACITY = 12;
     private static final int IS_EMPTY_INDICATOR = -1;
-    private int[] numbers = new int[CAPACITY];
+    private int[] numbers = new int[getCAPACITY()]; // dostep do zmiennej odbywa sie poprzez funkcje get i set
+
+    public static int getCAPACITY() {
+        return CAPACITY;
+    }
+
+    public static int getIsEmptyIndicator() {
+        return IS_EMPTY_INDICATOR;
+    }
 
     public int getTotal() {
         return total;
     }
     
-    private int total = IS_EMPTY_INDICATOR;
+    private int total = getIsEmptyIndicator();
 
     public void countIn(int in) {
         if (!isFull())
-            numbers[++total] = in;
+            getNumbers()[++total] = in;
     }
 
     boolean callCheck() {
-        return total == IS_EMPTY_INDICATOR;
+        return total == getIsEmptyIndicator();
     }
 
     boolean isFull() {
-        return total == CAPACITY-1;
+        return total == getCAPACITY() -1;
     }
 
     int peekaboo() {
         if (callCheck())
-            return IS_EMPTY_INDICATOR;
-        return numbers[total];
+            return getIsEmptyIndicator();
+        return getNumbers()[total];
     }
 
     public int countOut() {
         if (callCheck())
-            return IS_EMPTY_INDICATOR;
-        return numbers[total--];
+            return getIsEmptyIndicator();
+        return getNumbers()[total--];
     }
 
+    public int[] getNumbers() {
+        return numbers;
+    }
+
+    public void setNumbers(int[] numbers) {
+        this.numbers = numbers;
+    }
 }

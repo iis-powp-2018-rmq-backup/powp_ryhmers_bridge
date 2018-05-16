@@ -2,22 +2,26 @@ package edu.kis.vh.nursery.list;
 
 public class IntLinkedList {
 
-    private static final int EMPTY = -1;
-    private Node last;
-    int i;
+    private static final int IS_EMPTY_INDICATOR = -1;
+    private Node last; // dostep do zmiennej odbywa sie poprzez funkcje get i set
+    private int i; // dostep do zmiennej odbywa sie poprzez funkcje get i set
+
+    public static int getIsEmptyIndicator() {
+        return IS_EMPTY_INDICATOR;
+    }
 
     public void push(int i) {
-        if (last == null)
-            last = new Node(i);
+        if (getLast() == null)
+            setLast(new Node(i));
         else {
-            last.next = new Node(i);
-            last.next.prev = last;
-            last = last.next;
+            getLast().next = new Node(i);
+            getLast().next.prev = getLast();
+            setLast(getLast().next);
         }
     }
 
     private boolean isEmpty() {
-        return last == null;
+        return getLast() == null;
     }
 
     public boolean isFull() {
@@ -26,16 +30,31 @@ public class IntLinkedList {
 
     public int top() {
         if (isEmpty())
-            return EMPTY;
-        return last.value;
+            return getIsEmptyIndicator();
+        return getLast().value;
     }
 
     public int pop() {
         if (isEmpty())
-            return EMPTY;
-        int ret = last.value;
-        last = last.prev;
+            return getIsEmptyIndicator();
+        int ret = getLast().value;
+        setLast(getLast().prev);
         return ret;
     }
 
+    public Node getLast() {
+        return last;
+    }
+
+    public void setLast(Node last) {
+        this.last = last;
+    }
+
+    public int getI() {
+        return i;
+    }
+
+    public void setI(int i) {
+        this.i = i;
+    }
 }
