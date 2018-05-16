@@ -46,4 +46,43 @@ public class IntLinkedList {
 	int getI() {
 		return i;
 	}
+	
+	private class Node {
+
+		// metody top i pop klasy IntLinkedList używają settera i gettera zamiast bezpośredniego dostępu do pola
+		private int value;
+		// metody push i pop klasy IntLinkedList używają settera i gettera zamiast bezpośredniego dostępu do pola
+		private Node prev;
+		// metoda push klasy IntLinkedList używa settera i gettera zamiast bezpośredniego dostępu do pola
+		private Node next;
+
+		private Node(int i) {
+			value = i;
+		}
+		// alt + <- poprzednio edytowana klasa  alt + -> następna klasa
+
+		private int getValue() {
+			return value;
+		}
+
+		private void setValue(int value) {
+			this.value = value;
+		}
+
+		private Node getPrev() {
+			return prev;
+		}
+
+		private void setPrev(Node prev) {
+			this.prev = prev;
+		}
+
+		private Node getNext() {
+			return next;
+		}
+
+		private void setNext(Node next) {
+			this.next = next;
+		}
+	}
 }
