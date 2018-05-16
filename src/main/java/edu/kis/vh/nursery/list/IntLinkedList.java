@@ -3,8 +3,8 @@ package edu.kis.vh.nursery.list;
 public class IntLinkedList {
 
 	private static final int IS_EMPTY_INDICATOR = -1;
-	Node last;
-	int i;
+	private Node last;
+	private int i;
 
 	public void push(int i) {
 		if (last == null)
