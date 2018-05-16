@@ -4,7 +4,7 @@ public class DefaultCountingOutRhymer {
 
     private static final int IS_EMPTY_TOTAl = -1;
     private static final int CAPACITY = 11;
-    private int[] NUMBERS = new int[12];
+    private final int[] NUMBERS = new int[12];
 
     private static int getIS_EMPTY_TOTAl() {
         return IS_EMPTY_TOTAl;
