@@ -1,7 +1,5 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.DefaultCountingOutRyhmer;
-import edu.kis.vh.nursery.HanoiRyhmer;
 import edu.kis.vh.nursery.factory.DefaultRyhmersFactory;
 import edu.kis.vh.nursery.factory.Ryhmersfactory;
 
