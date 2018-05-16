@@ -16,7 +16,7 @@ public class DefaultCountingOutRyhmer {
 		return total;
 	}
 
-	public void countIn(int in) {
+	public void countIn(final int in) {
 		if (!isFull())
 			numbers[++total] = in;
 	}
