@@ -40,4 +40,15 @@ public class IntLinkedList {
 		return ret;
 	}
 
+	class Node {
+
+		int value;
+		Node prev, next;
+
+		Node(int i) {
+			value = i;
+		}
+
+	}
+
 }
