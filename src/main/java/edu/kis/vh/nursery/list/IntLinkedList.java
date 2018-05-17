@@ -4,7 +4,7 @@ public class IntLinkedList {
 
 	private static final int IS_EMPTY_INDICATOR = -1;
 	private Node last;
-	private int i;
+	private int total = IS_EMPTY_INDICATOR;
 
 	public void push(final int i) {
 		if (last == null)
@@ -14,6 +14,7 @@ public class IntLinkedList {
 			last.getNext().setPrev(last);
 			last = last.getNext();
 		}
+		++total;
 	}
 
 	public boolean isEmpty() {
@@ -35,8 +36,17 @@ public class IntLinkedList {
 			return IS_EMPTY_INDICATOR;
 		final int ret = last.getValue();
 		last = last.getPrev();
+		--total;
 		return ret;
 	}
+
+	public int getTotal() {
+		return total;
+	}
+
+
+	
+	
 
 }
 
