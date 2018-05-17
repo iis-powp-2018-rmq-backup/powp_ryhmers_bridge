@@ -13,3 +13,7 @@ public interface Rhymersfactory {
 	public defaultCountingOutRhymer GetHanoiRhymer();
 
 }
+
+/*
+ * Kombinacja klawiszy alt+-> alt+<- pozwala na przełączanie się między plikami
+ */
