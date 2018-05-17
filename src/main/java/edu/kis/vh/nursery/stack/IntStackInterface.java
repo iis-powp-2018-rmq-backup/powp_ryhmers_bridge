@@ -17,3 +17,6 @@ public interface IntStackInterface {
 }
 
 //Tak, pomogła realizacja zadania 10, nie trzeba było tego zmieniać w dwóch klasach
+
+//IntelIJ: Navigate->Open declaration (ctrl+b) works same as ctrl+mouse click
+//Navigate->Type Hierarchy shows hierarchy of classes using this interface
