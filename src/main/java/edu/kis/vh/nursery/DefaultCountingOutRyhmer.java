@@ -5,10 +5,15 @@ import edu.kis.vh.nursery.stack.IntArrayStack;
 public class DefaultCountingOutRyhmer {
 	
 	IntArrayStack arrayStack;
-   //konstruktor zwykly 
+   //konstruktor zwykly wygenerowany z Source->Generate Constructor
 	public DefaultCountingOutRyhmer(IntArrayStack arrayStack) {
 		super();
 		this.arrayStack = arrayStack;
+	}
+	
+	//konstruktor domyslny 
+	public DefaultCountingOutRyhmer() {
+		this.arrayStack = new IntArrayStack();
 	}
 	
 
