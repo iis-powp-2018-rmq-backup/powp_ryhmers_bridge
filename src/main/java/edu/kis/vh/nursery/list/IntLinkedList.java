@@ -1,7 +1,7 @@
 package edu.kis.vh.nursery.list;
 
 
-public class IntLinkedList implements StackImplementation {
+public class IntLinkedList implements Stack {
 
 	private static final int IS_EMPTY_INDICATOR = -1;
 	private Node last;

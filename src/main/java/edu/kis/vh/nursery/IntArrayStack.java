@@ -1,8 +1,8 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.list.StackImplementation;
+import edu.kis.vh.nursery.list.Stack;
 
-public class IntArrayStack implements StackImplementation{
+public class IntArrayStack implements Stack{
 	private static final int IS_EMPTY_INDICATOR = -1;
 
 	private static final int CAPACITY = 12;

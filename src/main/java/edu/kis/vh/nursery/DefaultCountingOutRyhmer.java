@@ -3,13 +3,13 @@ package edu.kis.vh.nursery;
 import edu.kis.vh.nursery.list.*;
 
 public class DefaultCountingOutRyhmer {
-	private StackImplementation list;
+	private Stack list; //wylicznka teraz przyjmuje wspólny interfejs dlatego tez może korzystać z implementacji stosu lub listy
 	
 	public DefaultCountingOutRyhmer() {
 		list = new IntLinkedList();
 	}
 
-	public DefaultCountingOutRyhmer(StackImplementation stack) {
+	public DefaultCountingOutRyhmer(Stack stack) {
 		super();
 		this.list = stack;
 	}

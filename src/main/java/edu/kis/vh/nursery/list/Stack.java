@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery.list;
 
-public interface StackImplementation {
+public interface Stack {
 
 	void push(int i);
 
