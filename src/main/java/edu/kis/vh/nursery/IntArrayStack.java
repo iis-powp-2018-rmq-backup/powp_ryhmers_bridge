@@ -1,0 +1,45 @@
+package edu.kis.vh.nursery;
+
+public class IntArrayStack {
+
+    private static final int IS_EMPTY_INDICATOR = -1;
+
+    private static final int CAPACITY = 12;
+
+    private int[] numbers = new int[CAPACITY];
+
+    public int getTotal() {
+        return total;
+    }
+
+    private int total = IS_EMPTY_INDICATOR;
+
+    public void countIn(final int in) {
+        if (!isFull()) {
+            numbers[++total] = in;
+        }
+    }
+
+    public boolean callCheck() {
+        return total == IS_EMPTY_INDICATOR;
+    }
+
+    public boolean isFull() {
+        return total == CAPACITY - 1;
+    }
+
+    public int peekaboo() {
+        if (callCheck()) {
+            return IS_EMPTY_INDICATOR;
+        }
+        return numbers[total];
+    }
+
+    public int countOut() {
+        if (callCheck()) {
+            return IS_EMPTY_INDICATOR;
+        }
+        return numbers[total--];
+    }
+
+}
