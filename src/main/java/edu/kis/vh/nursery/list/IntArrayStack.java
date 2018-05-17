@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery.stack;
+package edu.kis.vh.nursery.list;
 
 public class IntArrayStack {
 	private static final int EMPTY_VALUE = -1;
