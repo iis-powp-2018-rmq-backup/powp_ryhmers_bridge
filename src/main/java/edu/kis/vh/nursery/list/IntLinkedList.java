@@ -3,7 +3,7 @@ package edu.kis.vh.nursery.list;
 /**
  * LinkedList to store ints.
  */
-public class IntLinkedList {
+public class IntLinkedList implements IntStackInterface {
 
     private static final int IS_EMPTY = -1;
 	private Node last;
