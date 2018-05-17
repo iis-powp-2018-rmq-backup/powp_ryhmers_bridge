@@ -3,9 +3,9 @@ package edu.kis.vh.nursery.list;
 public class IntLinkedList {
 
     private Node last;
-    private final int EMPTY = -1;
+    private final int EMPTY_STACK_VALUE = -1;
     
-    public void push(final int value) {
+    public void countIn(final int value) {
         if (last == null) {
             last = new Node(value);
         } else {
@@ -15,7 +15,7 @@ public class IntLinkedList {
         }
     }
 
-    public boolean isEmpty() {
+    public boolean callCheck() {
         return last == null;
     }
 
@@ -23,16 +23,16 @@ public class IntLinkedList {
         return false;
     }
 
-    public int top() {
-        if (isEmpty()) {
-            return EMPTY;
+    public int peekaboo() {
+        if (callCheck()) {
+            return EMPTY_STACK_VALUE;
         }
         return last.getValue();
     }
 
-    public int pop() {
-        if (isEmpty()) {
-            return EMPTY;
+    public int countOut() {
+        if (callCheck()) {
+            return EMPTY_STACK_VALUE;
         }
         final int lastValue = last.getValue();
         last = last.prev;
