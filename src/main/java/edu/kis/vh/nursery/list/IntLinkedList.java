@@ -16,18 +16,25 @@ public class IntLinkedList {
 	 * Last element of list
 	 */
 	private Node last;
+	/**
+	 * Amount of elements in list
+	 */
+	private int size=0;
 
 	/**
 	 * Method adds value to the list
 	 * @param i value which be added to list
 	 */
 	public void push(final int i) {
-		if (last == null)
+		if (last == null) {
 			last = new Node(i);
+			size++;
+		}
 		else {
 			last.setNext(new Node(i));
 			last.getNext().setPrev(last);
 			last = last.getNext();
+			size++;
 		}
 	}
 
@@ -66,7 +73,12 @@ public class IntLinkedList {
 			return DEFAULT_EMPTY_STACK_VALUE;
 		final int ret = last.getValue();
 		last = last.getPrev();
+		size--;
 		return ret;
+	}
+	
+	public int getSize() {
+		return size;
 	}
 
 	/**
