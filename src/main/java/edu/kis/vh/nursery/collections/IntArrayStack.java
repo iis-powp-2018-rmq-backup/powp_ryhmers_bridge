@@ -1,7 +1,6 @@
-package edu.kis.vh.nursery;
+package edu.kis.vh.nursery.collections;
 
-public class IntArrayStack implements Container{
-    private static final int DEFAULT_START_VALUE = -1;
+public class IntArrayStack implements Container {
     private static final int NUMBERS_CAPACITY = 12;
 
     private int[] numbers = new int[NUMBERS_CAPACITY];

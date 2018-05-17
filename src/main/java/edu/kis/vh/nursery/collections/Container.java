@@ -1,6 +1,8 @@
-package edu.kis.vh.nursery;
+package edu.kis.vh.nursery.collections;
 
 public interface Container {
+
+    int DEFAULT_START_VALUE = -1;
 
     boolean isEmpty();
 
