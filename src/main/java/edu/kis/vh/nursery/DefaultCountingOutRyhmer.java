@@ -15,6 +15,14 @@ public class DefaultCountingOutRyhmer {
 	public DefaultCountingOutRyhmer() {
 		this.arrayStack = new IntArrayStack();
 	}
+    //wygenerowane delegeted methods 
+	public int getTotal() {
+		return arrayStack.getTotal();
+	}
+
+	public void countIn(int in) {
+		arrayStack.countIn(in);
+	}
 	
 
 	
