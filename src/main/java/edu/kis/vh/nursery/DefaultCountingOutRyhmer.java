@@ -6,11 +6,11 @@ public class DefaultCountingOutRyhmer {
     private static final int IS_EMPTY_INDICATOR = -1;
     private int[] numbers = new int[getCAPACITY()]; // dostep do zmiennej odbywa sie poprzez funkcje get i set
 
-    public static int getCAPACITY() {
+    private static int getCAPACITY() {
         return CAPACITY;
     }
 
-    public static int getIsEmptyIndicator() {
+    private static int getIsEmptyIndicator() {
         return IS_EMPTY_INDICATOR;
     }
 
@@ -45,7 +45,7 @@ public class DefaultCountingOutRyhmer {
         return getNumbers()[total--];
     }
 
-    public int[] getNumbers() {
+    private int[] getNumbers() {
         return numbers;
     }
 
