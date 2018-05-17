@@ -6,15 +6,11 @@ public class DefaultCountingOutRhymer {
 	static final int NUMBER_CAPACITY = 12;
 	static final int FULL = 11;
 
-	private int[] NUMBERS = new int[NUMBER_CAPACITY];
+	private final int[] NUMBERS = new int[NUMBER_CAPACITY];
 	private int total = EMPTY;
 
 	public int getTotal() {
 		return total;
-	}
-
-	public void setTotal(int total) {
-		this.total = total;
 	}
 
 	public void countIn(int in) {

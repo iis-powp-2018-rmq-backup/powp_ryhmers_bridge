@@ -5,7 +5,6 @@ public class IntLinkedList {
 	static final int EMPTY = -1;
 	
 	private Node last;
-	private int index;
 
 	public void push(int index) {
 		if (getLast() == null)
@@ -46,9 +45,4 @@ public class IntLinkedList {
 	void setLast(Node last) {
 		this.last = last;
 	}
-
-	int getIndex() {
-		return index;
-	}
-
 }
