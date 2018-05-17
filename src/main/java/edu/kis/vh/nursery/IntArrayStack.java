@@ -27,7 +27,7 @@ public class IntArrayStack {
 		return total == NUMBERS_CAPACITY + DEFAULT_ARRAY_EMPTY_VALUE;
 	}
 
-	protected int peekaboo() {
+	public int peekaboo() {
 		if (callCheck())
 			return DEFAULT_ARRAY_EMPTY_VALUE;
 		return numbers[total];
