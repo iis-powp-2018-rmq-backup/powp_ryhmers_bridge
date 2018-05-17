@@ -11,7 +11,6 @@ public class IntLinkedList {
 	public static final int LIST_EMPTY = -1;
 
 	private Node last;
-	private int i;
 
 	/**
 	 * Add integer to end of list.
