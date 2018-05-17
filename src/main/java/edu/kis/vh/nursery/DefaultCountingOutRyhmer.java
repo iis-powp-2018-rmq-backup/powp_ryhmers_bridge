@@ -11,40 +11,35 @@ public class DefaultCountingOutRyhmer {
     private int total = DEFAULT_EMPTY_STACK_VALUE;
 
     public DefaultCountingOutRyhmer() {
+        intArrayStack = new IntArrayStack();
     }
 
     public DefaultCountingOutRyhmer(IntArrayStack intArrayStack) {
         this.intArrayStack = intArrayStack;
     }
 
-    public void countIn(final int in) {
-        if (!isFull())
-            numbers[++total] = in;
+    public void countIn(int in) {
+        intArrayStack.countIn(in);
     }
 
-    boolean callCheck() {
-        return total == DEFAULT_EMPTY_STACK_VALUE;
+    public boolean callCheck() {
+        return intArrayStack.callCheck();
     }
 
-    boolean isFull() {
-        return total == DEFAULT_FULL_STACK_VALUE;
+    public boolean isFull() {
+        return intArrayStack.isFull();
     }
 
-    int peekaboo() {
-        if (callCheck())
-            return DEFAULT_EMPTY_STACK_VALUE;
-        return numbers[total];
+    public int peekaboo() {
+        return intArrayStack.peekaboo();
     }
 
     public int countOut() {
-
-        if (callCheck())
-            return DEFAULT_EMPTY_STACK_VALUE;
-        return numbers[total--];
+        return intArrayStack.countOut();
     }
 
     public int getTotal() {
-        return total;
+        return intArrayStack.getTotal();
     }
 }
 
