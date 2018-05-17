@@ -1,8 +1,17 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.stack.IntStackInterface;
+
 public class HanoiRyhmer extends DefaultCountingOutRyhmer {
 
     private int totalRejected = 0;
+
+    public HanoiRyhmer(IntStackInterface list) {
+        super(list);
+    }
+
+    public HanoiRyhmer() {
+    }
 
     public int reportRejected() {
         return totalRejected;
