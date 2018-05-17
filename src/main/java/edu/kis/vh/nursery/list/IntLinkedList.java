@@ -1,6 +1,8 @@
 package edu.kis.vh.nursery.list;
 
-public class IntLinkedList {
+import edu.kis.vh.nursery.Stack;
+
+public class IntLinkedList implements Stack {
 
 
 	public static final int EMPTY_LIST = -1;
