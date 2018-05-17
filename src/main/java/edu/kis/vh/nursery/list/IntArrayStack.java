@@ -21,7 +21,7 @@ public class IntArrayStack {
         return total == CAPACITY - 1;
     }
 
-    protected int peekaboo() {
+    public int peekaboo() {
         if (callCheck())
             return IS_EMPTY;
         return numbers[total];
