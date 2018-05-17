@@ -10,7 +10,7 @@ public class IntArrayStack implements IntStackInterface {
     @Override
     public void push(final int in) {
         if (!isFull())
-            numbers[++size] = in;
+            numbers[size++] = in;
     }
 
     @Override
@@ -20,7 +20,7 @@ public class IntArrayStack implements IntStackInterface {
 
     @Override
     public boolean isFull() {
-        return size == CAPACITY - 1;
+        return size == CAPACITY;
     }
 
     @Override
@@ -34,7 +34,7 @@ public class IntArrayStack implements IntStackInterface {
     public int pop() {
         if (isEmpty())
             return IS_EMPTY;
-        return numbers[size--];
+        return numbers[--size];
     }
 
     @Override
