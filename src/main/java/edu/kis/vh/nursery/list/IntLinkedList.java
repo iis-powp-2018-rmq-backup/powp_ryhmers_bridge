@@ -15,6 +15,7 @@ public class IntLinkedList {
 	 * Ostatni element listy
 	 */
 	private Node last;
+	private int size = 0;
 
 	/**
 	 * Metoda dodaje nowy element do listy
@@ -28,6 +29,7 @@ public class IntLinkedList {
 			last.next.prev = last;
 			last = last.next;
 		}
+		size++;
 	}
 
 	/**
@@ -65,11 +67,16 @@ public class IntLinkedList {
 			return DEFAULT_EMPTY_LIST_VALUE;
 		final int ret = last.value;
 		last = last.prev;
+		size--;
 		return ret;
 	}
 
 	Node getLast() {
 		return last;
+	}
+	
+	public int getSize() {
+		return size;
 	}
 	
 	/**
@@ -98,5 +105,5 @@ public class IntLinkedList {
 			value = i;
 		}
 		// alt + <- poprzednio edytowana klasa  alt + -> następna klasa
-	}
+	}	
 }

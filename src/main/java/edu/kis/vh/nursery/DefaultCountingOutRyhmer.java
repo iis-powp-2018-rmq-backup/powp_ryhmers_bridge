@@ -1,41 +1,45 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.list.IntLinkedList;
+
 public class DefaultCountingOutRyhmer {
 	
-	private IntArrayStack intArray;
+	private IntLinkedList intLinkedList;
 	
-	public DefaultCountingOutRyhmer() {
-		intArray = new IntArrayStack();
-	}
-	
-	public DefaultCountingOutRyhmer(IntArrayStack intArray) {
+	public DefaultCountingOutRyhmer(IntLinkedList intLinkedList) {
 		super();
-		this.intArray = intArray;
-	}
-	
-	//Navigate -> Open Declaration (F3) otwiera deklaracje metod w klasie IntArrayStack
-	
-	public int getTotal() {
-		return intArray.getTotal();
-	}
+		this.intLinkedList = intLinkedList;}
 
-	public void countIn(int in) {
-		intArray.countIn(in);
-	}
 
-	public boolean callCheck() {
-		return intArray.callCheck();
-	}
-
-	public boolean isFull() {
-		return intArray.isFull();
-	}
-
-	public int countOut() {
-		return intArray.countOut();
-	}
-
-	public int peekaboo() {
-		return intArray.peekaboo();
+	public DefaultCountingOutRyhmer() {
+		intLinkedList = new IntLinkedList();
 	}	
+
+    public int peekaboo() {
+        return intLinkedList.top();
+    }
+
+    public void countIn(int in) {
+        intLinkedList.push(in);
+    }
+
+    public boolean callCheck() {
+        return intLinkedList.isEmpty();
+    }
+
+    public boolean isFull() {
+        return intLinkedList.isFull();
+    }
+
+    public int countOut() {
+        return intLinkedList.pop();
+    }
+
+    public int getTotal() {
+        return intLinkedList.getSize();
+    }
 }
+	
+	
+	
+	//Navigate -> Open Declaration (F3) otwiera deklaracje metod w klasie IntArrayStac}	
