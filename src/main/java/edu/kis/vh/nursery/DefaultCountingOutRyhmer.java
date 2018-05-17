@@ -6,8 +6,16 @@ public class DefaultCountingOutRyhmer {
     private static final int DEFAULT_EMPTY_STACK_VALUE = -1;
     private static final int DEFAULT_FULL_STACK_VALUE = 11;
     private int[] numbers = new int[NUMBERS_CAPACITY];
+    private IntArrayStack intArrayStack;
 
     private int total = DEFAULT_EMPTY_STACK_VALUE;
+
+    public DefaultCountingOutRyhmer() {
+    }
+
+    public DefaultCountingOutRyhmer(IntArrayStack intArrayStack) {
+        this.intArrayStack = intArrayStack;
+    }
 
     public void countIn(final int in) {
         if (!isFull())
