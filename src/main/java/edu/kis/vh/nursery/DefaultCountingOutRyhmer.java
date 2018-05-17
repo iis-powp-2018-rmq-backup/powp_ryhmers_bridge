@@ -8,6 +8,7 @@ public class DefaultCountingOutRyhmer {
 
     public DefaultCountingOutRyhmer(){
         super();
+        this.intArrayStack = new IntArrayStack();
     }
 
     public void countIn(int in) {

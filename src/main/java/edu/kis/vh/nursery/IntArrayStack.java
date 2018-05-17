@@ -1,6 +1,7 @@
 package edu.kis.vh.nursery;
 
 public class IntArrayStack {
+
     private static final int emptyStack = -1;
     private static final int sizeOfStack = 11;
     private static final int stackCapacity = 12;
