@@ -3,7 +3,6 @@ package edu.kis.vh.nursery.stackandlist;
 public class IntLinkedList implements IntDataStructure {
 
     private Node last;
-    private final int EMPTY_STACK_VALUE = -1;
     
     @Override
     public void countIn(final int value) {

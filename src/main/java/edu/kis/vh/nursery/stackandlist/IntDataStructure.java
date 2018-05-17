@@ -11,6 +11,8 @@ package edu.kis.vh.nursery.stackandlist;
  */
 public interface IntDataStructure {
 
+    final int EMPTY_STACK_VALUE = 0;
+    
     boolean callCheck();
 
     void countIn(final int value);
