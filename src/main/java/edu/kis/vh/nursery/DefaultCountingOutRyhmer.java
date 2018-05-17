@@ -31,7 +31,7 @@ public class DefaultCountingOutRyhmer {
 		return intArray.isFull();
 	}
 
-	public int peekaboo() {
+	protected int peekaboo() {
 		return intArray.top();
 	}
 
