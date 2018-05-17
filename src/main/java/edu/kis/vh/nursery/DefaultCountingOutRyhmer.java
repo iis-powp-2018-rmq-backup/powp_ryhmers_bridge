@@ -41,3 +41,5 @@ public class DefaultCountingOutRyhmer {
 
 //Dzięki tej zmianie dynamicznie możemy decydować o wykorzystaniu
 //IntLinkedList bądź IntArrayStack
+
+//Wszystkie klasy Rhymerów łamią te zasadę, należałoby wyciągnąć wspólny interfejs
