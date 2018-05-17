@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.stackandlist;
 
 /**
  *

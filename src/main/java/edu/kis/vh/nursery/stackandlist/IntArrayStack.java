@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.stackandlist;
 
 public class IntArrayStack implements IntDataStructure {
     private final int CAPACITY = 12;
