@@ -4,9 +4,10 @@ import edu.kis.vh.nursery.list.IntArrayStack;
 import edu.kis.vh.nursery.list.IntLinkedList;
 
 public class DefaultCountingOutRyhmer {
+
     private IntLinkedList intLinkedList;
     private IntArrayStack intArrayStack;
-    
+
     public DefaultCountingOutRyhmer(IntArrayStack intArrayStack) {
         this.intLinkedList = intLinkedList;
     }
@@ -50,6 +51,7 @@ public class DefaultCountingOutRyhmer {
     public int[] getNUMBERS() {
         return intArrayStack.getNUMBERS();
     }
-    
-    
+
 }
+
+//Now we can dynamically switch between both implementations.
