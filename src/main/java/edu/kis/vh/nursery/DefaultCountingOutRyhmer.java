@@ -1,62 +1,53 @@
 package edu.kis.vh.nursery;
 
-public class DefaultCountingOutRyhmer {
-    private final int CAPACITY = 12;
-    private final int EMPTY_STACK_VALUE = -1;    
-    private int[] NUMBERS = new int[CAPACITY];    
-    private int total = EMPTY_STACK_VALUE;
+import edu.kis.vh.nursery.list.IntArrayStack;
 
-    public void countIn(final int in) {
-        if (!isFull()) {
-            getNUMBERS()[++total] = in;
-        }
+public class DefaultCountingOutRyhmer {
+    private IntArrayStack intArrayStack;
+
+    public DefaultCountingOutRyhmer(IntArrayStack intArrayStack) {
+        this.intArrayStack = intArrayStack;
+    }
+
+    public DefaultCountingOutRyhmer() {
+        intArrayStack = new IntArrayStack();
+    }
+
+    public void countIn(int in) {
+        intArrayStack.countIn(in);
     }
 
     public boolean callCheck() {
-        return total == getEMPTY_STACK_VALUE();
+        return intArrayStack.callCheck();
     }
 
     public boolean isFull() {
-        return total == 11;
+        return intArrayStack.isFull();
     }
 
     public int peekaboo() {
-        if (callCheck()) {
-            return getEMPTY_STACK_VALUE();
-        }
-        return getNUMBERS()[total];
+        return intArrayStack.peekaboo();
     }
 
     public int countOut() {
-        if (callCheck()) {
-            return getEMPTY_STACK_VALUE();
-        }
-        return getNUMBERS()[total--];
+        return intArrayStack.countOut();
     }
 
     public int getTotal() {
-        return total;
+        return intArrayStack.getTotal();
     }
 
-    /**
-     * @return the CAPACITY
-     */
     public int getCAPACITY() {
-        return CAPACITY;
+        return intArrayStack.getCAPACITY();
     }
 
-    /**
-     * @return the EMPTY_STACK_VALUE
-     */
     public int getEMPTY_STACK_VALUE() {
-        return EMPTY_STACK_VALUE;
+        return intArrayStack.getEMPTY_STACK_VALUE();
     }
 
-    /**
-     * @return the NUMBERS
-     */
     public int[] getNUMBERS() {
-        return NUMBERS;
+        return intArrayStack.getNUMBERS();
     }
-
+    
+    
 }
