@@ -42,16 +42,6 @@ public class DefaultCountingOutRyhmerTest {
 	}
 
 	@Test
-	public void testIsFullReturnsTrueIfFull() {
-		final int STACK_CAPACITY = 12;
-		for (int i = 0; i < STACK_CAPACITY; i++) {
-			ryhmer.countIn(888);
-		}
-		boolean result = ryhmer.isFull();
-		Assert.assertEquals(true, result);
-	}
-
-	@Test
 	public void testPeekabooReturnsMinus1WhenEmpty() {
 		int result = ryhmer.peekaboo();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);

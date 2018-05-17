@@ -6,34 +6,34 @@ public class IntArrayStack {
     private static final int IS_EMPTY = -1;
     private final int[] numbers = new int[CAPACITY];
 
-    private int total = IS_EMPTY;
+    private int size = IS_EMPTY;
 
-    public void countIn(final int in) {
+    public void push(final int in) {
         if (!isFull())
-            numbers[++total] = in;
+            numbers[++size] = in;
     }
 
-    public boolean callCheck() {
-        return total == IS_EMPTY;
+    public boolean isEmpty() {
+        return size == IS_EMPTY;
     }
 
     public boolean isFull() {
-        return total == CAPACITY - 1;
+        return size == CAPACITY - 1;
     }
 
-    public int peekaboo() {
-        if (callCheck())
+    public int top() {
+        if (isEmpty())
             return IS_EMPTY;
-        return numbers[total];
+        return numbers[size];
     }
 
-    public int countOut() {
-        if (callCheck())
+    public int pop() {
+        if (isEmpty())
             return IS_EMPTY;
-        return numbers[total--];
+        return numbers[size--];
     }
 
-    public int getTotal() {
-        return total;
+    public int getSize() {
+        return size;
     }
 }

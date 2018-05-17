@@ -7,7 +7,12 @@ public class IntLinkedList {
 
     private static final int IS_EMPTY = -1;
 	private Node last;
-	private int i;
+
+	public int getSize() {
+		return size;
+	}
+
+	private int size;
 
 	/**
 	 * Pushes value to the top of the list
@@ -21,6 +26,7 @@ public class IntLinkedList {
 			last.getNext().setPrev(last);
 			last = last.getNext();
 		}
+		size++;
 	}
 
 	/**
@@ -58,6 +64,7 @@ public class IntLinkedList {
 			return IS_EMPTY;
 		int ret = last.getValue();
 		last = last.getPrev();
+		size--;
 		return ret;
 	}
 
