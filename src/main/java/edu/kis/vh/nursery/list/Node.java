@@ -5,8 +5,8 @@ public class Node {
 	private int value;
 	private Node prev;
 	private Node next;
-//Enkapsulacja tworzy w tym wypadku get/set oraz ustawia pola na private, dzięki getterom i setterom które automatycznie są zastepywane
-//przez getNext etc. zmienne nie muszą być public
+	//Enkapsulacja tworzy w tym wypadku get/set oraz ustawia pola na private, dzięki getterom i setterom które automatycznie są zastepywane
+	//przez getNext etc. zmienne nie muszą być public
 	public Node(int i) {
 		value = i;
 	}
