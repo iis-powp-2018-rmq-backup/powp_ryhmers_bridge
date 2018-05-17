@@ -24,14 +24,14 @@ public class DefaultCountingOutRyhmer {
 
     int peekaboo() {
         if (callCheck())
-            return -1;
+            return DEFAULT_EMPTY_STACK_VALUE;
         return numbers[total];
     }
 
     public int countOut() {
 
         if (callCheck())
-            return -1;
+            return DEFAULT_EMPTY_STACK_VALUE;
         return numbers[total--];
     }
 

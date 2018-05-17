@@ -13,7 +13,6 @@ public class IntLinkedList {
 	 * Last element of the list
 	 */
 	private Node last;
-	private int i;
 
 	/**
 	 * Pushes value as a last element of the list
@@ -70,7 +69,7 @@ public class IntLinkedList {
 	/**
 	 * Class being container of value and references to neighboring nodes. Single element of the list.
 	 */
-	public class Node {
+	 class Node {
 
 		/**
 		 * Value of node
