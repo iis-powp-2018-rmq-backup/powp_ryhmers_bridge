@@ -1,11 +1,21 @@
 package edu.kis.vh.nursery.list;
 
+/**
+ * Basic implementation of linked list that contains integers.
+ */
 public class IntLinkedList {
+	/**
+	 * Value returned by empty list.
+	 */
 	public static final int LIST_EMPTY = -1;
 
 	private Node last;
 	private int i;
 
+	/**
+	 * Add integer to end of list.
+	 * @param i - integer to add
+	 */
 	public void push(int i) {
 		if (last == null) {
 			last = new Node(i);
@@ -16,14 +26,26 @@ public class IntLinkedList {
 		}
 	}
 
+	/**
+	 * Check if list is empty.
+	 * @return true if list is empty, false otherwise
+	 */
 	public boolean isEmpty() {
 		return last == null;
 	}
 
+	/**
+	 * Check if list is full.
+	 * @return should always return false
+	 */
 	public boolean isFull() {
 		return false;
 	}
 
+	/**
+	 * Get value on top of list.
+	 * @return integer that is currently on top of the list
+	 */
 	public int top() {
 		if (isEmpty()) {
 			return LIST_EMPTY;
@@ -31,6 +53,10 @@ public class IntLinkedList {
 		return last.getValue();
 	}
 
+	/**
+	 * Pop out value from top of the list.
+	 * @return popped out value
+	 */
 	public int pop() {
 		if (isEmpty()) {
 			return LIST_EMPTY;
