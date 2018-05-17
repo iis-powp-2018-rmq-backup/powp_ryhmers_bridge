@@ -4,12 +4,15 @@ import edu.kis.vh.nursery.stack.IntArrayStack;
 
 public class DefaultCountingOutRyhmer {
 	
-	IntArrayStack arrayStack=new IntArrayStack();
-
+	IntArrayStack arrayStack;
+   //konstruktor zwykly 
 	public DefaultCountingOutRyhmer(IntArrayStack arrayStack) {
 		super();
 		this.arrayStack = arrayStack;
 	}
+	
+
+	
 	
 	//stara implementacja 
    /*
