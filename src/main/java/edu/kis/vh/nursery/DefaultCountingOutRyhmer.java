@@ -3,13 +3,13 @@ package edu.kis.vh.nursery;
 import edu.kis.vh.nursery.list.*;
 
 public class DefaultCountingOutRyhmer {
-	private IntLinkedList list;
+	private StackImplementation list;
 	
 	public DefaultCountingOutRyhmer() {
 		list = new IntLinkedList();
 	}
 
-	public DefaultCountingOutRyhmer(IntLinkedList stack) {
+	public DefaultCountingOutRyhmer(StackImplementation stack) {
 		super();
 		this.list = stack;
 	}

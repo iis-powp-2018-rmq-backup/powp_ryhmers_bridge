@@ -1,11 +1,13 @@
 package edu.kis.vh.nursery.list;
 
-public class IntLinkedList {
+
+public class IntLinkedList implements StackImplementation {
 
 	private static final int IS_EMPTY_INDICATOR = -1;
 	private Node last;
 	private int total = IS_EMPTY_INDICATOR;
 
+	@Override
 	public void push(final int i) {
 		if (last == null)
 			last = new Node(i);
@@ -17,20 +19,24 @@ public class IntLinkedList {
 		++total;
 	}
 
+	@Override
 	public boolean isEmpty() {
 		return last == null;
 	}
 
+	@Override
 	public boolean isFull() {
 		return false;
 	}
 
+	@Override
 	public int top() {
 		if (isEmpty())
 			return IS_EMPTY_INDICATOR;
 		return last.getValue();
 	}
 
+	@Override
 	public int pop() {
 		if (isEmpty())
 			return IS_EMPTY_INDICATOR;
@@ -40,6 +46,7 @@ public class IntLinkedList {
 		return ret;
 	}
 
+	@Override
 	public int getTotal() {
 		return total;
 	}
