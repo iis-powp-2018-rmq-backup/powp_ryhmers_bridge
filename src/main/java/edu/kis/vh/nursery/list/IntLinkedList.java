@@ -1,10 +1,11 @@
 package edu.kis.vh.nursery.list;
 
-public class IntLinkedList {
+public class IntLinkedList implements IntDataStructure {
 
     private Node last;
     private final int EMPTY_STACK_VALUE = -1;
     
+    @Override
     public void countIn(final int value) {
         if (last == null) {
             last = new Node(value);
@@ -15,14 +16,17 @@ public class IntLinkedList {
         }
     }
 
+    @Override
     public boolean callCheck() {
         return last == null;
     }
 
+    @Override
     public boolean isFull() {
         return false;
     }
 
+    @Override
     public int peekaboo() {
         if (callCheck()) {
             return EMPTY_STACK_VALUE;
@@ -30,6 +34,7 @@ public class IntLinkedList {
         return last.getValue();
     }
 
+    @Override
     public int countOut() {
         if (callCheck()) {
             return EMPTY_STACK_VALUE;
