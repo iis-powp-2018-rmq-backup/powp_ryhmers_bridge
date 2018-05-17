@@ -1,5 +1,8 @@
 package edu.kis.vh.nursery;
 
+/*
+ * Wyliczanki zostaly zachowane, aby mozna bylo korzystac z konkretnych implementacji wyliczanek
+ */
 public class DefaultCountingOutRhymer {
 
 	static final int EMPTY = -1;

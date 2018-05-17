@@ -5,6 +5,10 @@ import edu.kis.vh.nursery.FIFORhymer;
 import edu.kis.vh.nursery.HanoiRhymer;
 import edu.kis.vh.nursery.factory.RhymersFactory;
 
+
+/*
+ * Klasy factory zostaly publiczne aby mozna bylo uzywac fabryk do pobierania implementacji wyliczanek
+ */
 public class DefaultRhymersFactory implements RhymersFactory {
 
 	@Override
