@@ -38,3 +38,6 @@ public class DefaultCountingOutRyhmer {
         return list.getSize();
     }
 }
+
+//Dzięki tej zmianie dynamicznie możemy decydować o wykorzystaniu
+//IntLinkedList bądź IntArrayStack
