@@ -14,4 +14,6 @@ public class HanoiRhymer extends defaultCountingOutRhymer {
 	else
 		super.countIn(in);
 	}
+// Alt + Right Arrow = przejscie do przodu po plikach, zgodnie z kolejnoscia edycji.
+// Alt + Left Arrow = przejscie wstecz po plikach zgodnie historia edycji.
 }
