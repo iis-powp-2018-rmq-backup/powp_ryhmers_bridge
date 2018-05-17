@@ -13,6 +13,8 @@ public class DefaultCountingOutRyhmer {
 		this.intArray = intArray;
 	}
 	
+	//Navigate -> Open Declaration (F3) otwiera deklaracje metod w klasie IntArrayStack
+	
 	public int getTotal() {
 		return intArray.getTotal();
 	}

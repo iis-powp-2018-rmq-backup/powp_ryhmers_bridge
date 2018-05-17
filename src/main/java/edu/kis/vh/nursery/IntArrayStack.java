@@ -17,7 +17,7 @@ public class IntArrayStack {
 		if (!isFull())
 			numbers[++total] = in;
 	}
-
+	
 	public boolean callCheck() {
 		return total == DEFAULT_ARRAY_EMPTY_VALUE;
 	}
