@@ -35,7 +35,7 @@ public class IntLinkedList {
 		if (isEmpty()) {
 			return LIST_EMPTY;
 		}
-		int ret = last.getValue();
+		final int ret = last.getValue();
 		last = last.getPrev();
 		return ret;
 	}
