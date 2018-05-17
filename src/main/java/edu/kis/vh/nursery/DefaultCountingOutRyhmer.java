@@ -1,44 +1,45 @@
 package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRyhmer {
-
-	private static final int IS_EMPTY_INDICATOR = -1;
-
-	private static final int CAPACITY = 12;
-
-	private final int[] numbers = new int[CAPACITY];
-
-	private int total = IS_EMPTY_INDICATOR;
-
-	public int getTotal() {
-		return total;
+	private IntArrayStack stack;
+	
+	public DefaultCountingOutRyhmer() {
+		stack = new IntArrayStack();
 	}
 
-	public void countIn(final int in) {
-		if (!isFull())
-			numbers[++total] = in;
+	public DefaultCountingOutRyhmer(IntArrayStack stack) {
+		super();
+		this.stack = stack;
+	}
+
+	public int getTotal() {
+		return stack.getTotal();
+	}
+
+	public void countIn(int in) {
+		stack.countIn(in);
 	}
 
 	public boolean callCheck() {
-		return total == IS_EMPTY_INDICATOR;
+		return stack.callCheck();
 	}
 
 	public boolean isFull() {
-		return total == CAPACITY-1;
-	}
-
-	protected int peekaboo() {
-		if (callCheck())
-			return IS_EMPTY_INDICATOR;
-		return numbers[total];
+		return stack.isFull();
 	}
 
 	public int countOut() {
-		if (callCheck())
-			return IS_EMPTY_INDICATOR;
-		return numbers[total--];
+		return stack.countOut();
 	}
 
+	protected int peekaboo() {
+		return stack.peekaboo();
+	}
+	
+	
+	
+	
+	
 }
 
 // przeskakiwanie pomiedzy miejscami ktore ostatnio edytowalismy strzałka w lewo powoduje przejscie w przod histori a w prawo do tyłu
