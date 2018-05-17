@@ -20,7 +20,7 @@ public class DefaultCountingOutRyhmer {
 	public void countIn(int in) {
 		intArray.countIn(in);
 	}
-
+//	Open Declaration opens the implementation of the method, from which we delegate
 	public boolean callCheck() {
 		return intArray.callCheck();
 	}
