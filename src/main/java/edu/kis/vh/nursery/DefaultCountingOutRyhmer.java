@@ -1,7 +1,12 @@
 package edu.kis.vh.nursery;
 
-public class DefaultCountingOutRyhmer {
+import edu.kis.vh.nursery.stack.IntArrayStack;
 
+public class DefaultCountingOutRyhmer {
+	
+	IntArrayStack arrayStack=new IntArrayStack();
+	//stara implementacja 
+   /*
 	private static final int EMPTY_VALUE = -1;
 
 	private static final int MAX_CAPACITy = 12;
@@ -37,6 +42,6 @@ public class DefaultCountingOutRyhmer {
 		if (callCheck())
 			return EMPTY_VALUE;
 		return numbers[total--];
-	}
+	}*/
 
 }
