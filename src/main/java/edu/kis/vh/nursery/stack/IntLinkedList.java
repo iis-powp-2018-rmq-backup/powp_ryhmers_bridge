@@ -4,15 +4,17 @@ package edu.kis.vh.nursery.stack;
  * LinkedList to store ints.
  */
 public class IntLinkedList implements IntStackInterface {
-
-    private static final int IS_EMPTY = -1;
 	private Node last;
 
+	private int size;
+
+	/**
+	 * Gets size of list
+	 * @return size of list
+	 */
 	public int getSize() {
 		return size;
 	}
-
-	private int size;
 
 	/**
 	 * Pushes value to the top of the stack

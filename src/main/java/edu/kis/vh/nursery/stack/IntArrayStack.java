@@ -3,7 +3,6 @@ package edu.kis.vh.nursery.stack;
 public class IntArrayStack implements IntStackInterface {
 
     private static final int CAPACITY = 12;
-    private static final int IS_EMPTY = -1;
     private final int[] numbers = new int[CAPACITY];
 
     private int size = IS_EMPTY;
