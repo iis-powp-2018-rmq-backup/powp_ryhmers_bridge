@@ -9,7 +9,7 @@ public class FIFORyhmerTest {
 
 	@Test
 	public void testCountOutReturnsMinus1WhenRyhmersEmpty() {
-		int EMPTY_STACK_VALUE = -1;
+		int EMPTY_STACK_VALUE = 0;
 		int result = ryhmer.countOut();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
 	}

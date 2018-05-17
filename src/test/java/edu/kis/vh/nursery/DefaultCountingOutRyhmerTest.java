@@ -6,7 +6,7 @@ import org.junit.Test;
 public class DefaultCountingOutRyhmerTest {
 
 	private DefaultCountingOutRyhmer ryhmer = new DefaultCountingOutRyhmer();
-	private int EMPTY_STACK_VALUE = -1;
+	private int EMPTY_STACK_VALUE = 0;
 
 	@Test
 	public void testCountInAddsValueToListPeekabooReturnsIt() {
