@@ -9,6 +9,7 @@ public class DefaultCountingOutRyhmer {
     }
 
 
-
-
+    public DefaultCountingOutRyhmer() {
+        super();
+    }
 }
