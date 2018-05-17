@@ -4,7 +4,7 @@ package edu.kis.vh.nursery.list;
  * @author Kamil Błażejczuk
  * Klasa zapewnia strukturę LinkedList tylko dla elementów typu int
  */
-public class IntLinkedList {
+public class IntLinkedList implements IntStackInterface {
 
 	/**
 	 * Domyślna wartość zwracana, gdy lista jest pusta
