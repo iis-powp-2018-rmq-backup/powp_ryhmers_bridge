@@ -44,3 +44,4 @@ public class DefaultCountingOutRyhmer {
 }
 
 //Alt + left/right arrow switches between opened files
+//F3 (Or CTRL + B in IntelliJ) shows declaration of used method
