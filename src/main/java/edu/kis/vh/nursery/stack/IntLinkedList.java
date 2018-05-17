@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.stack;
 
 /**
  * LinkedList to store ints.
@@ -15,7 +15,7 @@ public class IntLinkedList implements IntStackInterface {
 	private int size;
 
 	/**
-	 * Pushes value to the top of the list
+	 * Pushes value to the top of the stack
 	 * @param i value to be added
 	 */
 	public void push(final int i) {
@@ -30,7 +30,7 @@ public class IntLinkedList implements IntStackInterface {
 	}
 
 	/**
-	 * Checks if list is empty
+	 * Checks if stack is empty
 	 * @return true if empty, otherwise false
 	 */
 	public boolean isEmpty() {
@@ -38,7 +38,7 @@ public class IntLinkedList implements IntStackInterface {
 	}
 
 	/**
-	 * Checks if list is full
+	 * Checks if stack is full
 	 * @return false
 	 */
 	public boolean isFull() {
