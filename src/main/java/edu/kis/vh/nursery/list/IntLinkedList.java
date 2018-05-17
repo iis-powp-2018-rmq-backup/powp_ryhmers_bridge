@@ -15,7 +15,6 @@ public class IntLinkedList {
 	 * Ostatni element listy
 	 */
 	private Node last;
-	private int i;
 
 	/**
 	 * Metoda dodaje nowy element do listy
@@ -25,9 +24,9 @@ public class IntLinkedList {
 		if (last == null)
 			last = new Node(i);
 		else {
-			last.setNext(new Node(i));
-			last.getNext().setPrev(last);
-			last = last.getNext();
+			last.next = new Node(i);
+			last.next.prev = last;
+			last = last.next;
 		}
 	}
 
@@ -54,7 +53,7 @@ public class IntLinkedList {
 	public int top() {
 		if (isEmpty())
 			return DEFAULT_EMPTY_LIST_VALUE;
-		return last.getValue();
+		return last.value;
 	}
 
 	/**
@@ -64,17 +63,13 @@ public class IntLinkedList {
 	public int pop() {
 		if (isEmpty())
 			return DEFAULT_EMPTY_LIST_VALUE;
-		final int ret = last.getValue();
-		last = last.getPrev();
+		final int ret = last.value;
+		last = last.prev;
 		return ret;
 	}
 
 	Node getLast() {
 		return last;
-	}
-
-	int getI() {
-		return i;
 	}
 	
 	/**
@@ -103,29 +98,5 @@ public class IntLinkedList {
 			value = i;
 		}
 		// alt + <- poprzednio edytowana klasa  alt + -> następna klasa
-
-		private int getValue() {
-			return value;
-		}
-
-		private void setValue(int value) {
-			this.value = value;
-		}
-
-		private Node getPrev() {
-			return prev;
-		}
-
-		private void setPrev(Node prev) {
-			this.prev = prev;
-		}
-
-		private Node getNext() {
-			return next;
-		}
-
-		private void setNext(Node next) {
-			this.next = next;
-		}
 	}
 }
