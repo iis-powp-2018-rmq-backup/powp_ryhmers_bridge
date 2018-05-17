@@ -20,3 +20,4 @@ public class HanoiRyhmer extends DefaultCountingOutRyhmer {
 //alt + -> : przelacza sie na otworzony plik po prawej, jesli zadnego nie ma, wlacza ostatni zamkniety
 //alt + <- : przelacza sie na otworzony plik po lewej
 //oraz pare innych nieskoordynowanych rzeczy
+//IDE: IntelIJ z customowymi ustawieniami skrótów klawiszowych m.in. podobnymi do zachowania Netbeansa

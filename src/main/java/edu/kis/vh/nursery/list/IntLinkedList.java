@@ -32,6 +32,14 @@ public class IntLinkedList {
 	}
 
 	/**
+	 * Checks if list is full
+	 * @return false
+	 */
+	public boolean isFull() {
+		return false;
+	}
+
+	/**
 	 * Returns value at the top
 	 * @return int value on the top
 	 */
