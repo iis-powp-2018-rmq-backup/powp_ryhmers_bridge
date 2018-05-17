@@ -7,7 +7,7 @@ public class RyhmersJUnitTest {
 //Testy dzialaja
 	@Test
 	public void testCountIn() {
-		DefaultCountingOutRyhmer ryhmer = new DefaultCountingOutRyhmer();
+		IntArrayStack ryhmer = new IntArrayStack();
 		int testValue = 4;
 		ryhmer.countIn(testValue);
 
@@ -17,7 +17,7 @@ public class RyhmersJUnitTest {
 
 	@Test
 	public void testCallCheck() {
-		DefaultCountingOutRyhmer ryhmer = new DefaultCountingOutRyhmer();
+		IntArrayStack ryhmer = new IntArrayStack();
 		boolean result = ryhmer.callCheck();
 		Assert.assertEquals(true, result);
 
@@ -29,7 +29,7 @@ public class RyhmersJUnitTest {
 
 	@Test
 	public void testIsFull() {
-		DefaultCountingOutRyhmer ryhmer = new DefaultCountingOutRyhmer();
+		IntArrayStack ryhmer = new IntArrayStack();
 		final int STACK_CAPACITY = 12;
 		for (int i = 0; i < STACK_CAPACITY; i++) {
 			boolean result = ryhmer.isFull();
@@ -43,7 +43,7 @@ public class RyhmersJUnitTest {
 
 	@Test
 	public void testPeekaboo() {
-		DefaultCountingOutRyhmer ryhmer = new DefaultCountingOutRyhmer();
+		IntArrayStack ryhmer = new IntArrayStack();
 		final int EMPTY_STACK_VALUE = -1;
 
 		int result = ryhmer.peekaboo();
@@ -60,7 +60,7 @@ public class RyhmersJUnitTest {
 
 	@Test
 	public void testCountOut() {
-		DefaultCountingOutRyhmer ryhmer = new DefaultCountingOutRyhmer();
+		IntArrayStack ryhmer = new IntArrayStack();
 		final int EMPTY_STACK_VALUE = -1;
 
 		int result = ryhmer.countOut();
