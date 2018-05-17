@@ -1,21 +1,29 @@
 package edu.kis.vh.nursery;
 
-public class FIFORyhmer extends defaultCountingOutRyhmer {
+/**
+ *
+ * @author 204641
+ */
+public class FIFORyhmer extends DefaultCountingOutRyhmer {
 
-	public defaultCountingOutRyhmer temp = new defaultCountingOutRyhmer();
-	
-	@Override
-	public int countOut() {
-		while (!callCheck())
-			
-		temp.countIn(super.countOut());
-		
-		int ret = temp.countOut();
-		
-		while (!temp.callCheck())
-			
-		countIn(temp.countOut());
-		
-		return ret;
-	}
+    private DefaultCountingOutRyhmer defaultCountingOutRyhmer = new DefaultCountingOutRyhmer();
+
+    /**
+     *
+     * @return stack count after taking out an element
+     */
+    @Override 
+    public int countOut() {
+        while (!callCheck()) {
+            defaultCountingOutRyhmer.countIn(super.countOut());
+        }
+
+        int totalAfterCountOut = defaultCountingOutRyhmer.countOut();
+
+        while (!defaultCountingOutRyhmer.callCheck()) {
+            countIn(defaultCountingOutRyhmer.countOut());
+        }
+
+        return totalAfterCountOut;
+    }
 }
