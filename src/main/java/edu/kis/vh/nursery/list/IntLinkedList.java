@@ -3,6 +3,7 @@ package edu.kis.vh.nursery.list;
 /**
  * Basic implementation of linked list that contains integers.
  */
+// TODO: Should implement Collection interface
 public class IntLinkedList {
 	/**
 	 * Value returned by empty list.
@@ -39,7 +40,7 @@ public class IntLinkedList {
 	 * @return should always return false
 	 */
 	public boolean isFull() {
-		return false;
+		return false; // TODO: Useless method in this case, should be removed
 	}
 
 	/**
@@ -48,7 +49,7 @@ public class IntLinkedList {
 	 */
 	public int top() {
 		if (isEmpty()) {
-			return LIST_EMPTY;
+			return LIST_EMPTY; // TODO: Should return Integer instead of int, and null value in this case. It would pass my tests then :)
 		}
 		return last.getValue();
 	}
