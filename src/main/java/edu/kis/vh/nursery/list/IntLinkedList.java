@@ -51,8 +51,4 @@ public class IntLinkedList {
 		return index;
 	}
 
-	void setIndex(int index) {
-		this.index = index;
-	}
-
 }
