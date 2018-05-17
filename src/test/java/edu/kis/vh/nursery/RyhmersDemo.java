@@ -1,17 +1,17 @@
 package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.factory.DefaultRyhmersFactory;
-import edu.kis.vh.nursery.factory.Ryhmersfactory;
+import edu.kis.vh.nursery.factory.RyhmersFactory;
 
 class RyhmersDemo {
 
 	public static void main(String[] args) {
-		Ryhmersfactory factory = new DefaultRyhmersFactory();
+		RyhmersFactory factory = new DefaultRyhmersFactory();
 		rhymersTest(factory);
 
 	}
 
-	private static void rhymersTest(Ryhmersfactory factory) {
+	private static void rhymersTest(RyhmersFactory factory) {
 		DefaultCountingOutRyhmer[] ryhmers = {factory.getStandardRyhmer(), factory.getFalseRyhmer(),
 				factory.getFIFORyhmer(), factory.getHanoiRyhmer()};
 

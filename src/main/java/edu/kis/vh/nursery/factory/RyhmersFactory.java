@@ -2,7 +2,7 @@ package edu.kis.vh.nursery.factory;
 
 import edu.kis.vh.nursery.DefaultCountingOutRyhmer;
 
-public interface Ryhmersfactory {
+public interface RyhmersFactory {
 
 	DefaultCountingOutRyhmer getStandardRyhmer();
 
