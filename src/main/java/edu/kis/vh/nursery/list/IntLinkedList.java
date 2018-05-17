@@ -16,10 +16,6 @@ public class IntLinkedList {
 	 * Last element of list
 	 */
 	private Node last;
-	/**
-	 * Value, which be added to node
-	 */
-	private int i;
 
 	/**
 	 * Method adds value to the list
@@ -87,22 +83,6 @@ public class IntLinkedList {
 	 */
 	public void setLast(Node last) {
 		this.last = last;
-	}
-
-	/**
-	 * Getter of integer i atribute
-	 * @return integer value
-	 */
-	public int getI() {
-		return i;
-	}
-
-	/**
-	 * Setter of integer i atribute
-	 * @param integer value
-	 */
-	public void setI(int i) {
-		this.i = i;
 	}
 
 }
