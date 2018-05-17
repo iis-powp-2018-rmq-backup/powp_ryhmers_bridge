@@ -30,7 +30,7 @@ public class IntArrayStack {
 		return total == 11;
 	}
 
-	protected int peekaboo() {
+	public int peekaboo() {
 		if (callCheck())
 			return EMPTY_ARRAY;
 		return numbers[total];
