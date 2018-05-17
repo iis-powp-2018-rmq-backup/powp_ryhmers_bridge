@@ -26,14 +26,16 @@ public class DefaultCountingOutRyhmer {
         return intArrayStack.countOut();
     }
 
-    IntArrayStack intArrayStack = new IntArrayStack();
+    IntArrayStack intArrayStack;
 
+    public DefaultCountingOutRyhmer() {
+        this.intArrayStack = new IntArrayStack();
+    }
     public DefaultCountingOutRyhmer(IntArrayStack intArrayStack) {
+        super();
         this.intArrayStack = intArrayStack;
     }
 
 
-    public DefaultCountingOutRyhmer() {
-        super();
-    }
+
 }
