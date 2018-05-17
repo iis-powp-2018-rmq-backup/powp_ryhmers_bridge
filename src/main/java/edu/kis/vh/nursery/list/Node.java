@@ -3,6 +3,7 @@ package edu.kis.vh.nursery.list;
 public class Node {
 
 	// W klasie IntLinkedList bezpośrednie referencje do pól zostały zamienione na gettery i settery.
+	// Zad. 9 - w całym projekcie nie ma nieużywanych setterów
 	private int value;
 	private Node prev;
 	private Node next;
