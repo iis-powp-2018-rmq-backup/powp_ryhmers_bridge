@@ -6,7 +6,7 @@ public class DefaultCountingOutRhymer {
 
 	private static final int CAPACITY = 12;
 
-	private int[] NUMBERS = new int[CAPACITY];
+	private final int[] NUMBERS = new int[CAPACITY];
 
 	private int totalIfEmpty = VALUE_IF_EMPTY;
 
@@ -14,7 +14,7 @@ public class DefaultCountingOutRhymer {
 		return totalIfEmpty;
 	}
 
-	protected void countIn(int in) {
+	protected void countIn(final int in) {
 		if (!isFull()) {
 			NUMBERS[++totalIfEmpty] = in;
 		}

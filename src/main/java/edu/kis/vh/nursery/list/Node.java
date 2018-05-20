@@ -2,7 +2,7 @@ package edu.kis.vh.nursery.list;
 
 public class Node {
 
-	private int value;
+	private final int value;
 	private Node prev;
 	private Node next;
 
@@ -12,7 +12,7 @@ public class Node {
 	 * Node(i)); last.next.prev = last; => last.getNext().setPrev(last); last =
 	 * last.next; => last = last.getNext();
 	 */
-	protected Node(int i) {
+	protected Node(final int i) {
 		value = i;
 	}
 
@@ -24,7 +24,7 @@ public class Node {
 		return next;
 	}
 
-	public void setNext(Node next) {
+	public void setNext(final Node next) {
 		this.next = next;
 	}
 
@@ -32,7 +32,7 @@ public class Node {
 		return prev;
 	}
 
-	public void setPrev(Node prev) {
+	public void setPrev(final Node prev) {
 		this.prev = prev;
 	}
 
