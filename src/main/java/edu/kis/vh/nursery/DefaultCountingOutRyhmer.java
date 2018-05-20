@@ -1,15 +1,11 @@
 package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.collection.IntArrayStack;
-import edu.kis.vh.nursery.collection.IntLinkedList;
 
 public class DefaultCountingOutRyhmer {
-	  
-	//proba implementacji zadania 4 
-	IntLinkedList list=new IntLinkedList();
-	//
 	
-	IntArrayStack arrayStack;
+	
+	private IntArrayStack arrayStack;
    //konstruktor zwykly wygenerowany z Source->Generate Constructor
 	public DefaultCountingOutRyhmer(IntArrayStack arrayStack) {
 		super();
@@ -28,6 +24,23 @@ public class DefaultCountingOutRyhmer {
 	public void countIn(int in) {
 		arrayStack.countIn(in);
 	}
+
+	public boolean callCheck() {
+		return arrayStack.callCheck();
+	}
+
+	public boolean isFull() {
+		return arrayStack.isFull();
+	}
+
+	public int peekaboo() {
+		return arrayStack.peekaboo();
+	}
+
+	public int countOut() {
+		return arrayStack.countOut();
+	}
+	
 	
 	//stara implementacja 
    /*

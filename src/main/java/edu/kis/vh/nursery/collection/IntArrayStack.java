@@ -18,21 +18,21 @@ public class IntArrayStack {
 			numbers[++total] = in;
 	}
 
-	protected boolean callCheck() {
+	public boolean callCheck() {
 		return total == EMPTY_VALUE;
 	}
 
-	protected boolean isFull() {
+	public boolean isFull() {
 		return total == 11;
 	}
 
-	protected int peekaboo() {
+	public int peekaboo() {
 		if (callCheck())
 			return EMPTY_VALUE;
 		return numbers[total];
 	}
 
-	protected int countOut() {
+	public int countOut() {
 		if (callCheck())
 			return EMPTY_VALUE;
 		return numbers[total--];
