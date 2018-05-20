@@ -1,10 +1,26 @@
 package edu.kis.vh.nursery.list;
 
+/**
+ * @author Monia 
+ * Class with linked list that contains only integers.
+ */
 public class IntLinkedList {
 
+	/**
+	 * Constant value to indicate when the list is empty.
+	 */
 	private static final int VALUE_IF_EMPTY = -1;
+	/**
+	 * Last element of the list.
+	 */
 	private Node last;
 
+	/**
+	 * This method pushes value to the top of the list.
+	 * 
+	 * @param i
+	 *            - value to be placed into the list.
+	 */
 	protected void push(final int i) {
 		if (last == null) {
 			last = new Node(i);
@@ -15,14 +31,30 @@ public class IntLinkedList {
 		}
 	}
 
+	/**
+	 * This method check if the list is empty.
+	 * 
+	 * @return returns true if empty, false if not.
+	 */
 	protected boolean isEmpty() {
 		return last == null;
 	}
 
+	/**
+	 * This method check if the list is full.
+	 * 
+	 * @return returns false if is full.
+	 */
 	protected boolean isFull() {
 		return false;
 	}
 
+	/**
+	 * This method returns last value from list.
+	 * 
+	 * @return returns last value from list if not empty and VALUE_IF_EMPTY when
+	 *         empty.
+	 */
 	protected int top() {
 		if (isEmpty()) {
 			return VALUE_IF_EMPTY;
@@ -30,6 +62,11 @@ public class IntLinkedList {
 		return last.getValue();
 	}
 
+	/**
+	 * This method removes last value from the list.
+	 * 
+	 * @return returns last value from the list.
+	 */
 	protected int pop() {
 		if (isEmpty()) {
 			return VALUE_IF_EMPTY;
@@ -39,6 +76,9 @@ public class IntLinkedList {
 		return ret;
 	}
 
+	/**
+	 * @author Monia Nested class which is used as single element on the list.
+	 */
 	private class Node {
 
 		private final int value;
