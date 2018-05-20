@@ -2,41 +2,38 @@ package edu.kis.vh.nursery.list;
 
 public class Node {
 
-    private int value;
-    private Node prev;
-    private Node next;
+	private int value;
+	private Node prev;
+	private Node next;
 
-    /*
-     * Powstały gettery i settery do wartości value, prev oraz next. W klasie IntLinkedList zmieniło się na: last.next
-     * =new Node(i); => last.setNext(new Node(i)); last.next.prev = last; => last.getNext().setPrev(last); last =
-     * last.next; => last = last.getNext();
-     */
-    protected Node(int i) {
-        value = i;
-    }
+	/*
+	 * Powstały gettery i settery do wartości value, prev oraz next. W klasie
+	 * IntLinkedList zmieniło się na: last.next =new Node(i); => last.setNext(new
+	 * Node(i)); last.next.prev = last; => last.getNext().setPrev(last); last =
+	 * last.next; => last = last.getNext();
+	 */
+	protected Node(int i) {
+		value = i;
+	}
 
-    public int getValue() {
-        return value;
-    }
+	public int getValue() {
+		return value;
+	}
 
-    public void setValue(int value) {
-        this.value = value;
-    }
+	public Node getNext() {
+		return next;
+	}
 
-    public Node getNext() {
-        return next;
-    }
+	public void setNext(Node next) {
+		this.next = next;
+	}
 
-    public void setNext(Node next) {
-        this.next = next;
-    }
+	public Node getPrev() {
+		return prev;
+	}
 
-    public Node getPrev() {
-        return prev;
-    }
-
-    public void setPrev(Node prev) {
-        this.prev = prev;
-    }
+	public void setPrev(Node prev) {
+		this.prev = prev;
+	}
 
 }
