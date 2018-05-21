@@ -9,7 +9,12 @@ class RyhmersDemo {
 
 	public static void main(String[] args) {
 		Ryhmersfactory factory = new DefaultRyhmersFactory();
+		ryhmersTest(factory);
 		
+		
+	}
+	
+	private static void ryhmersTest(Ryhmersfactory factory){
 		DefaultCountingOutRyhmer[] ryhmers = { factory.getStandardRyhmer(), factory.getFalseRyhmer(),
 				factory.getFIFORyhmer(), factory.getHanoiRyhmer()};
 		
