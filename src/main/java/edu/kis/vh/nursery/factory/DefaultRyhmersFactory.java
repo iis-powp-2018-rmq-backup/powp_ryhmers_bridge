@@ -3,9 +3,9 @@ package edu.kis.vh.nursery.factory;
 import edu.kis.vh.nursery.DefaultCountingOutRyhmer;
 import edu.kis.vh.nursery.FIFORyhmer;
 import edu.kis.vh.nursery.HanoiRyhmer;
-import edu.kis.vh.nursery.factory.Ryhmersfactory;
+import edu.kis.vh.nursery.factory.RyhmersFactory;
 
-public class DefaultRyhmersFactory implements Ryhmersfactory {
+public class DefaultRyhmersFactory implements RyhmersFactory {
 
 	@Override
 	public DefaultCountingOutRyhmer getStandardRyhmer() {
