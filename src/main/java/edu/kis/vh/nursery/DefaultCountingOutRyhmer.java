@@ -5,7 +5,11 @@ import edu.kis.vh.nursery.collection.IntContainer;
 
 public class DefaultCountingOutRyhmer {
 	
-	
+	/*
+	 * użycie interfejsu jako typu daje elastycznosc użycia dowolnej implementacji spelniającej ten interfejs.
+	 * Można przy użyciu customowego konstruktora wstrzyknąć odpowiednią implementacje i zwolnić klasę
+	 * DefaultCountingOutRyhmer z zarządzania zależnościami. Został również domyślny kontruktor zależy od IntArrayStack
+	 */
 	private IntContainer intcontainer;
    //konstruktor zwykly wygenerowany z Source->Generate Constructor
 	public DefaultCountingOutRyhmer(IntContainer arrayStack) {
