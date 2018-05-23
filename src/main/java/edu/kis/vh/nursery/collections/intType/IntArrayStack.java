@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery.collection;
+package edu.kis.vh.nursery.collections.intType;
 
 public class IntArrayStack implements IntContainer {
 	private static final int EMPTY_VALUE = -1;

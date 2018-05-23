@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery.collection;
+package edu.kis.vh.nursery.collections.intType;
 
 /**
  * @author ola List for handling int values

@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import edu.kis.vh.nursery.collection.IntLinkedList;
+import edu.kis.vh.nursery.collections.intType.IntLinkedList;
 import junit.framework.Assert;
 
 public class IntLinkedListTest {
