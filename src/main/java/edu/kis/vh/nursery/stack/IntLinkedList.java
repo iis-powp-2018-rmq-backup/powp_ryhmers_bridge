@@ -6,10 +6,6 @@ package edu.kis.vh.nursery.stack;
  */
 public class IntLinkedList implements Stack {
     /**
-     * Constant which indicates, if stack is empty
-     */
-    public static final int EMPTY_LIST = -1;
-    /**
      * Last element of the stack
      */
     private Node last;
@@ -60,7 +56,7 @@ public class IntLinkedList implements Stack {
     @Override
     public int top() {
         if (isEmpty()) {
-            return EMPTY_LIST;
+            return EMPTY_STACK;
         }
         return last.getValue();
     }
@@ -74,7 +70,7 @@ public class IntLinkedList implements Stack {
     @Override
     public int pop() {
         if (isEmpty()) {
-            return EMPTY_LIST;
+            return EMPTY_STACK;
         }
         int ret = last.getValue();
         last = last.getPrev();
