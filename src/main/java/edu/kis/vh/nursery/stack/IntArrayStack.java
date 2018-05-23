@@ -1,13 +1,11 @@
 package edu.kis.vh.nursery.stack;
 
 public class IntArrayStack implements Stack{
-	private static final int IS_EMPTY_INDICATOR = -1;
-
 	private static final int CAPACITY = 12;
 
 	private final int[] numbers = new int[CAPACITY];
 
-	private int total = IS_EMPTY_INDICATOR;
+	private int total = Stack.IS_EMPTY_INDICATOR;
 
 	public int getTotal() {
 		return total;
@@ -19,7 +17,7 @@ public class IntArrayStack implements Stack{
 	}
 
 	public boolean isEmpty() {
-		return total == IS_EMPTY_INDICATOR;
+		return total == Stack.IS_EMPTY_INDICATOR;
 	}
 
 	public boolean isFull() {
@@ -28,13 +26,13 @@ public class IntArrayStack implements Stack{
 
 	public int top() {
 		if (isEmpty())
-			return IS_EMPTY_INDICATOR;
+			return Stack.IS_EMPTY_INDICATOR;
 		return numbers[total];
 	}
 
 	public int pop() {
 		if (isEmpty())
-			return IS_EMPTY_INDICATOR;
+			return Stack.IS_EMPTY_INDICATOR;
 		return numbers[total--];
 	}
 
