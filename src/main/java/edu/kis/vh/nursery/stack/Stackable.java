@@ -2,7 +2,10 @@ package edu.kis.vh.nursery.stack;
 
 public interface Stackable {
 
-	int IS_EMPTY = -1;
+	int IS_EMPTY = 0;
+	/*Tak, realizacja zadania 10 sprawiła, że wystarczyło zmienić 
+	 * wartość jednej zmiennej.
+	 */
 
 	int getSize();
 
