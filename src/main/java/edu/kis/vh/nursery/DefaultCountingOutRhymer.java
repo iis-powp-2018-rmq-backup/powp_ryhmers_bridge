@@ -3,34 +3,35 @@ package edu.kis.vh.nursery;
 import edu.kis.vh.nursery.list.IntLinkedList;
 
 public class DefaultCountingOutRhymer {
-	protected IntLinkedList intLinkedList;
+	protected Stack list;
 
 	public DefaultCountingOutRhymer() {
-		this.intLinkedList = new IntLinkedList();
+		this.list = list;
 	}
 
-	public DefaultCountingOutRhymer(IntLinkedList intLinkedList) {
-		this.intLinkedList = intLinkedList;
+	public DefaultCountingOutRhymer(IntLinkedList list) {
+		this.list = list;
 	}
 
 	public void countIn(int in) {
-		intLinkedList.push(in);
+		list.push(in);
 	}
 
 	public boolean callCheck() {
-		return intLinkedList.isEmpty();
+		return list.isEmpty();
 	}
 
 	public boolean isFull() {
-		return intLinkedList.isFull();
+		return list.isFull();
 	}
 
 	public int peekaboo() {
-		return intLinkedList.top();
+		return list.top();
 	}
 
 	public int countOut() {
-		return intLinkedList.pop();
+		return list.pop();
 	}
 
 }
+// 3.1.7 Dzięki tej zmianie możemy decydować o wykorzystaniu IntLinkedList oraz IntArrayStack
