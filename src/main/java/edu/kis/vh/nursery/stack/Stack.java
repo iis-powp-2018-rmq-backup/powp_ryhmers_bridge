@@ -4,7 +4,7 @@ public interface Stack {
     /**
      * Constant which indicates, if stack is empty
      */
-    int EMPTY_STACK = -1;
+    int EMPTY_STACK = 0;
 
     void push(int i);
 
@@ -15,4 +15,7 @@ public interface Stack {
     int top();
 
     int pop();
+
+    /*Tak pomogła mi, ponieważ dzięki zastosowaniu wspólnego interfejsu
+        zmiana wartości nastąpiła tylko w jednym miejscu w kodzie */
 }
