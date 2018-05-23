@@ -6,7 +6,7 @@ public class DefaultCountingOutRhymer {
 	protected Stack list;
 
 	public DefaultCountingOutRhymer() {
-		this.list = list;
+		this.list = new IntLinkedList();
 	}
 
 	public DefaultCountingOutRhymer(IntLinkedList list) {
