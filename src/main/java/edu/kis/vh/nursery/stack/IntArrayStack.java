@@ -11,7 +11,7 @@ public class IntArrayStack implements IntStackInterface {
 	@Override
     public void push(final int in) {
         if (!isFull())
-            numbers[++total] = in;
+            numbers[total++] = in;
     }
 
     @Override
@@ -21,21 +21,21 @@ public class IntArrayStack implements IntStackInterface {
 
     @Override
     public boolean isFull() {
-        return total == NUMBERS_CAPACITY - 1;
+        return total == NUMBERS_CAPACITY;
     }
 
     @Override
     public int top() {
         if (isEmpty())
             return DEFAULT_EMPTY_STACK_VALUE;;
-        return numbers[total];
+        return numbers[total-1];
     }
 
     @Override
     public int pop() {
         if (isEmpty())
             return DEFAULT_EMPTY_STACK_VALUE;;
-        return numbers[total--];
+        return numbers[--total];
     }
 
     @Override
