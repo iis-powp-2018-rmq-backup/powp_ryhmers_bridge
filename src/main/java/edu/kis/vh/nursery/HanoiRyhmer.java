@@ -1,5 +1,7 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.stack.Stack;
+
 /**
  * Wyliczanka Hanoi
  *
@@ -7,6 +9,14 @@ package edu.kis.vh.nursery;
 public class HanoiRyhmer extends DefaultCountingOutRyhmer {
 
 	private int totalRejected = 0;
+	
+	public HanoiRyhmer() {
+		super();
+	}
+
+	public HanoiRyhmer(Stack stack) {
+		super(stack);
+	}
 
 	/**
 	 * Zwraca ilość nieprzyjętych liczb do wyliczanki
