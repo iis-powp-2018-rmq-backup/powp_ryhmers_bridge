@@ -13,3 +13,4 @@ public interface Rhymersfactory {
     DefaultCountingOutRhymer getHanoiRyhmer();
 
 }
+// 3.1.16 wzorzec - fabryka abstrakcyjna (abstract factory)
