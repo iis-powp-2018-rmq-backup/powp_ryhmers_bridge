@@ -4,7 +4,7 @@ package edu.kis.vh.nursery.list;
  * Class which is responsible for containing int values and provides
  * simple interface to handle it
  */
-public class IntLinkedList {
+public class IntLinkedList implements Stack {
     /**
      * Constant which indicates, if list is empty
      */
@@ -20,6 +20,7 @@ public class IntLinkedList {
      *
      * @param i specific element to put on the list
      */
+    @Override
     public void push(int i) {
         if (last == null) {
             last = new Node(i);
@@ -35,6 +36,7 @@ public class IntLinkedList {
      *
      * @return boolean indicates if list is empty or not
      */
+    @Override
     public boolean isEmpty() {
         return last == null;
     }
@@ -44,6 +46,7 @@ public class IntLinkedList {
      *
      * @return boolean indicates if list is full or not
      */
+    @Override
     public boolean isFull() {
         return false;
     }
@@ -54,6 +57,7 @@ public class IntLinkedList {
      * @return last added element on the list or EMPTY_LIST constant to indicate
      * if it is empty
      */
+    @Override
     public int top() {
         if (isEmpty()) {
             return EMPTY_LIST;
@@ -67,6 +71,7 @@ public class IntLinkedList {
      * @return last added element on the list or EMPTY_LIST constant to indicate
      * if it is empty
      */
+    @Override
     public int pop() {
         if (isEmpty()) {
             return EMPTY_LIST;
