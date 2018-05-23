@@ -1,20 +1,32 @@
 package edu.kis.vh.nursery;
 
-public class FIFORyhmer extends defaultCountingOutRyhmer {
+import edu.kis.vh.nursery.stack.IntArrayStack;
+import edu.kis.vh.nursery.stack.Stack;
 
-	public defaultCountingOutRyhmer temp = new defaultCountingOutRyhmer();
+public class FIFORyhmer extends DefaultCountingOutRyhmer {
+
+	private final IntArrayStack temp = new IntArrayStack(); //IntArrayStack bedzie lepszy bo bedzie zajmował mniej miejsca
+															//gdyż sklada sie tylko z tablicy , a IntLinkedList dla kazdego argumentu zawiera wartosc oraz wskaik na wczenisjeszy i kolejny elemnet
 	
+	public FIFORyhmer() {
+		super();
+	}
+
+	public FIFORyhmer(Stack stack) {
+		super(stack);
+	}
+
 	@Override
 	public int countOut() {
 		while (!callCheck())
 			
-		temp.countIn(super.countOut());
+			temp.push(super.countOut());
 		
-		int ret = temp.countOut();
+		final int ret = temp.pop();
 		
-		while (!temp.callCheck())
+		while (!temp.isEmpty())
 			
-		countIn(temp.countOut());
+			countIn(temp.pop());
 		
 		return ret;
 	}
