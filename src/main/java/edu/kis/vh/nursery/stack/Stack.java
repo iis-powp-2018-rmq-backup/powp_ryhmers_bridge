@@ -15,5 +15,7 @@ public interface Stack {
 	int pop();
 
 	int getTotal();
+	
+	//skrót F3 pokazuje definicje, skrót ctr-t pokazuje gdzie jest zaimplemntowana np dana metoda, zaś ctrl + myszka umozliwia wybranie sobie jednej z tych opcji
 
 }
