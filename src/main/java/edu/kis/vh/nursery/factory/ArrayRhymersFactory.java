@@ -25,3 +25,4 @@ public class ArrayRhymersFactory implements Rhymersfactory {
         return new DefaultCountingOutRhymer(new IntArrayStack());
     }
 }
+//Klasy *Rhymers* i *Rhymer łamią zasadę izolacji. Uważam , że powinniśmy utworzyć dla tych klas wspólny interfejs.
