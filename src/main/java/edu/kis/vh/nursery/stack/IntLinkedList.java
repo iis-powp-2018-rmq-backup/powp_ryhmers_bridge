@@ -5,16 +5,15 @@ package edu.kis.vh.nursery.stack;
  * Klasa zapewnia strukturę LinkedList tylko dla elementów typu int
  */
 public class IntLinkedList implements IntStackInterface {
-
-	/**
-	 * Domyślna wartość zwracana, gdy lista jest pusta
-	 */
-	private static final int DEFAULT_EMPTY_LIST_VALUE = -1;
 	
 	/**
 	 * Ostatni element listy
 	 */
 	private Node last;
+	
+	/**
+	 * Aktualny rozmiar listy
+	 */
 	private int size = 0;
 
 	/**
@@ -54,7 +53,7 @@ public class IntLinkedList implements IntStackInterface {
 	 */
 	public int top() {
 		if (isEmpty())
-			return DEFAULT_EMPTY_LIST_VALUE;
+			return DEFAULT_EMPTY_STACK_VALUE;
 		return last.value;
 	}
 
@@ -64,7 +63,7 @@ public class IntLinkedList implements IntStackInterface {
 	 */
 	public int pop() {
 		if (isEmpty())
-			return DEFAULT_EMPTY_LIST_VALUE;
+			return DEFAULT_EMPTY_STACK_VALUE;
 		final int ret = last.value;
 		last = last.prev;
 		size--;
