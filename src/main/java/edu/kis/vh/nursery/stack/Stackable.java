@@ -2,6 +2,8 @@ package edu.kis.vh.nursery.stack;
 
 public interface Stackable {
 
+	int IS_EMPTY = -1;
+
 	int getSize();
 
 	/**

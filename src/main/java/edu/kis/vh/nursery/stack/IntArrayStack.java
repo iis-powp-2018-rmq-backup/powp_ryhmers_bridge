@@ -2,13 +2,11 @@ package edu.kis.vh.nursery.stack;
 
 public class IntArrayStack implements Stackable {
 	
-	private static final int EMPTY_ARRAY = -1;
-
 	private static final int CAPACITY = 12;
 
 	private final int[] numbers = new int[CAPACITY];
 
-	private int size = EMPTY_ARRAY;
+	private int size = Stackable.IS_EMPTY;
 
 	@Override
 	public int getSize() {
@@ -26,7 +24,7 @@ public class IntArrayStack implements Stackable {
 
 	@Override
 	public boolean isEmpty() {
-		return size == EMPTY_ARRAY;
+		return size == Stackable.IS_EMPTY;
 	}
 
 	@Override
@@ -37,14 +35,14 @@ public class IntArrayStack implements Stackable {
 	@Override
 	public int top() {
 		if (isEmpty())
-			return EMPTY_ARRAY;
+			return Stackable.IS_EMPTY;
 		return numbers[size];
 	}
 
 	@Override
 	public int pop() {
 		if (isEmpty())
-			return EMPTY_ARRAY;
+			return Stackable.IS_EMPTY;
 		return numbers[size--];
 	}
 /*

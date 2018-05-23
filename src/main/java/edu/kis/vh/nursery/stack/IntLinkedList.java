@@ -2,7 +2,6 @@ package edu.kis.vh.nursery.stack;
 
 public class IntLinkedList implements Stackable{
 
-	private static final int VALUE_IS_EMPTY = -1;
 	private Node last;
 	private int size;
 
@@ -36,14 +35,14 @@ public class IntLinkedList implements Stackable{
 	@Override
 	public int top() {
 		if (isEmpty())
-			return VALUE_IS_EMPTY;
+			return IS_EMPTY;
 		return last.getValue();
 	}
 
 	@Override
 	public int pop() {
 		if (isEmpty())
-			return VALUE_IS_EMPTY;
+			return IS_EMPTY;
 		int ret = last.getValue();
 		last = last.getPrev();
 		size--;
