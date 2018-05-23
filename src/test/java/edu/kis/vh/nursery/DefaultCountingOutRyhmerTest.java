@@ -3,9 +3,11 @@ package edu.kis.vh.nursery;
 import org.junit.Assert;
 import org.junit.Test;
 
+import edu.kis.vh.nursery.stack.IntArrayStack;
+
 public class DefaultCountingOutRyhmerTest {
 	DefaultCountingOutRyhmer ryhmer = new DefaultCountingOutRyhmer();
-	final int EMPTY_STACK_VALUE = -1;
+	final int EMPTY_STACK_VALUE = 0;
 	
 
 	@Test
@@ -30,6 +32,7 @@ public class DefaultCountingOutRyhmerTest {
 
 	@Test
 	public void testIsFull() {
+		DefaultCountingOutRyhmer ryhmer = new DefaultCountingOutRyhmer(new IntArrayStack());
 		final int STACK_CAPACITY = 12;
 		for (int i = 0; i < STACK_CAPACITY; i++) {
 			boolean result = ryhmer.isFull();

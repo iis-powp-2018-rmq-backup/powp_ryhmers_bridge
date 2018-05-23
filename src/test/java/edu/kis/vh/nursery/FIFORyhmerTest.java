@@ -7,7 +7,7 @@ import org.junit.Test;
 
 public class FIFORyhmerTest {
 	FIFORyhmer ryhmer = new FIFORyhmer();
-	final int IS_EMPTY_INDICATOR = -1;
+	final int IS_EMPTY_INDICATOR = 0;
 
 	@Test
 	public void testCountOut() {

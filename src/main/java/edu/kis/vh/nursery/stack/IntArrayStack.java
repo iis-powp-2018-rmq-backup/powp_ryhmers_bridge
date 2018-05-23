@@ -13,7 +13,7 @@ public class IntArrayStack implements Stack{
 
 	public void push(final int in) {
 		if (!isFull())
-			numbers[++total] = in;
+			numbers[total++] = in;
 	}
 
 	public boolean isEmpty() {
@@ -21,7 +21,7 @@ public class IntArrayStack implements Stack{
 	}
 
 	public boolean isFull() {
-		return total == CAPACITY-1;
+		return total == CAPACITY;
 	}
 
 	public int top() {
@@ -33,7 +33,7 @@ public class IntArrayStack implements Stack{
 	public int pop() {
 		if (isEmpty())
 			return Stack.IS_EMPTY_INDICATOR;
-		return numbers[total--];
+		return numbers[--total];
 	}
 
 }
