@@ -8,38 +8,38 @@ public class IntArrayStack {
 
 	private final int[] numbers = new int[CAPACITY];
 
-	private int total = EMPTY_ARRAY;
+	private int size = EMPTY_ARRAY;
 
-	public int getTotal() {
-		return total;
+	public int getSize() {
+		return size;
 	}
 
 	/**
 	 * @param in any number
 	 */
-	public void countIn(int in) {
+	public void push(int in) {
 		if (!isFull())
-			numbers[++total] = in;
+			numbers[++size] = in;
 	}
 
-	public boolean callCheck() {
-		return total == EMPTY_ARRAY;
+	public boolean isEmpty() {
+		return size == EMPTY_ARRAY;
 	}
 
 	public boolean isFull() {
-		return total == 11;
+		return size == 11;
 	}
 
-	public int peekaboo() {
-		if (callCheck())
+	public int top() {
+		if (isEmpty())
 			return EMPTY_ARRAY;
-		return numbers[total];
+		return numbers[size];
 	}
 
-	public int countOut() {
-		if (callCheck())
+	public int pop() {
+		if (isEmpty())
 			return EMPTY_ARRAY;
-		return numbers[total--];
+		return numbers[size--];
 	}
 /*
  * alt + left arrow = move back to previously modified file 
