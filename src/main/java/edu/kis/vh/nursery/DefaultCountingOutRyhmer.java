@@ -1,12 +1,12 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.list.IntLinkedList;
-import edu.kis.vh.nursery.list.IntStackInterface;
+import edu.kis.vh.nursery.stack.IntLinkedList;
+import edu.kis.vh.nursery.stack.IntStackInterface;
 
 public class DefaultCountingOutRyhmer {
 	
 	private IntStackInterface intLinkedList;
-	//Zmiana ta umoliwia nam dznamicyne podjęcie deczyji czy wykorzystywać IntLinkedList czy IntArrayStack
+	//Zmiana ta umożliwia nam dynamiczne podjęcie deczyji, czy wykorzystywać IntLinkedList, czy IntArrayStack
 	
 	public DefaultCountingOutRyhmer(IntStackInterface intLinkedList) {
 		super();
