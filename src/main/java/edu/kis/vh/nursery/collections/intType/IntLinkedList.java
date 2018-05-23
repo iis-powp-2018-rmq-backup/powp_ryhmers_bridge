@@ -5,7 +5,6 @@ package edu.kis.vh.nursery.collections.intType;
  */
 public class IntLinkedList implements IntContainer {
 
-	private static final int EMPTY_VALUE = -1;
 	private Node last;
 	private int total = 0;
 
