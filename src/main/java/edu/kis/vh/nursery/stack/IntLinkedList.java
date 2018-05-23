@@ -5,7 +5,7 @@ import edu.kis.vh.nursery.Stack;
 public class IntLinkedList implements Stack {
 
 
-	public static final int EMPTY_LIST = -1;
+	//public static final int EMPTY_LIST = -1;
 	private Node last;
 	int i;
 
@@ -29,14 +29,14 @@ public class IntLinkedList implements Stack {
 
 	public int top() {
 		if (isEmpty()) {
-			return EMPTY_LIST;
+			return IS_EMPTY;
 		}
 		return last.getValue();
 	}
 
 	public int pop() {
 		if (isEmpty()) {
-			return EMPTY_LIST;
+			return IS_EMPTY;
 		}
 		int ret = last.getValue();
 		last = last.getPrev();
