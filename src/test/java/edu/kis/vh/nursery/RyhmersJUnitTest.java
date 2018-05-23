@@ -8,6 +8,7 @@ import edu.kis.vh.nursery.stack.IntArrayStack;
 public class RyhmersJUnitTest {
 	
 	private DefaultCountingOutRyhmer ryhmer = new DefaultCountingOutRyhmer();
+	final int EMPTY_STACK_VALUE = 0;
 	
 	@Test
 	public void testCountIn() {
@@ -44,8 +45,6 @@ public class RyhmersJUnitTest {
 
 	@Test
 	public void testPeekaboo() {
-		final int EMPTY_STACK_VALUE = -1;
-
 		int result = ryhmer.peekaboo();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
 
@@ -60,8 +59,6 @@ public class RyhmersJUnitTest {
 
 	@Test
 	public void testCountOut() {
-		final int EMPTY_STACK_VALUE = -1;
-
 		int result = ryhmer.countOut();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
 
