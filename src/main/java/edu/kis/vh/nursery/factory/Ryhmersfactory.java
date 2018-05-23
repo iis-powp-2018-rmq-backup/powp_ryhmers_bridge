@@ -13,3 +13,5 @@ public interface Ryhmersfactory {
 	public DefaultCountingOutRyhmer getHanoiRyhmer();
 	
 }
+
+//jest to wzorzec Abstarct Factory
