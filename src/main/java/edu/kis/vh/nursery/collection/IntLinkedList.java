@@ -3,10 +3,11 @@ package edu.kis.vh.nursery.collection;
 /**
  * @author ola List for handling int values
  */
-public class IntLinkedList {
+public class IntLinkedList implements IntContainer {
 
 	private static final int EMPTY_VALUE = -1;
 	private Node last;
+	private int total = 0;
 
 	/**
 	 * Insert value to the list
@@ -22,6 +23,7 @@ public class IntLinkedList {
 			last.getNext().setPrev(last);
 			last = last.getNext();
 		}
+		total++;
 	}
 
 	/**
@@ -64,6 +66,36 @@ public class IntLinkedList {
 		int ret = last.getValue();
 		last = last.getPrev();
 		return ret;
+	}
+
+	@Override
+	public int getTotal() {
+		return total;
+	}
+
+	@Override
+	public void countIn(int in) {
+		push(in);
+
+	}
+
+	@Override
+	public boolean callCheck() {
+		return total == EMPTY_VALUE;
+	}
+
+	@Override
+	public int peekaboo() {
+		if (callCheck())
+			return EMPTY_VALUE;
+		return top();
+	}
+
+	@Override
+	public int countOut() {
+		if (callCheck())
+			return EMPTY_VALUE;
+		return pop();
 	}
 
 }
