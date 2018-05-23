@@ -12,4 +12,5 @@ public interface RyhmersFactory {
 
 	public DefaultCountingOutRyhmer getHanoiRyhmer();
 
+	//abstract factory pattern
 }
