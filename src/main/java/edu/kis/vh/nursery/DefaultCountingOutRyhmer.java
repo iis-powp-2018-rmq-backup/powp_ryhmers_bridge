@@ -39,5 +39,10 @@ public class DefaultCountingOutRyhmer {
       co sprawia, że możemy dynamiczne używać kolekcji/napisanych przez nas klas, które by implementowały Interfejs Stack
     */
 
+    /*18.
+    Wszystkie klasy (DefaultCountingOutRhymer,FIFORyhmer,HanoiRyhmer) łamią tę zasadę, ponieważ
+    żadne z nich nie posiada wspólnej abstrakcji, a co za tym idzie używając każdej z nich musimy się odwoływać do konkretnej implementacji.
+    Można to naprawić poprzez wydzielenie wspólnego interfejsu dla tych klas.
+     */
 
 }
