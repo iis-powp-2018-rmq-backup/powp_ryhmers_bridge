@@ -35,5 +35,9 @@ public class DefaultCountingOutRyhmer {
         return stack.pop();
     }
 
+    /*Dzięki zastosowaniu interfejsu nie jesteśmy zależni od konkretnej implementacji IntLinkedList/IntArrayStack
+      co sprawia, że możemy dynamiczne używać kolekcji/napisanych przez nas klas, które by implementowały Interfejs Stack
+    */
+
 
 }
