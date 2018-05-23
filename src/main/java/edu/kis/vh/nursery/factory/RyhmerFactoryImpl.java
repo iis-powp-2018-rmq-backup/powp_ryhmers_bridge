@@ -1,8 +1,10 @@
-package edu.kis.vh.nursery;
+package edu.kis.vh.nursery.factory;
 
+import edu.kis.vh.nursery.DefaultCountingOutRyhmer;
+import edu.kis.vh.nursery.FIFORyhmer;
+import edu.kis.vh.nursery.HanoiRyhmer;
 import edu.kis.vh.nursery.collections.intType.IntArrayStack;
 import edu.kis.vh.nursery.collections.intType.IntLinkedList;
-import edu.kis.vh.nursery.factory.Ryhmersfactory;
 
 public class RyhmerFactoryImpl implements Ryhmersfactory {
 
