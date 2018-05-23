@@ -31,7 +31,7 @@ public class RhymersJUnitTest {
 	public void testIsFull() {
 		DefaultCountingOutRhymer ryhmer = new DefaultCountingOutRhymer();
 		final int STACK_CAPACITY = 12;
-		for (int i = 0; i < STACK_CAPACITY; i++) {
+		for (int i = 1; i < STACK_CAPACITY; i++) {
 			boolean result = ryhmer.isFull();
 			Assert.assertEquals(false, result);
 			ryhmer.countIn(888);
@@ -44,7 +44,7 @@ public class RhymersJUnitTest {
 	@Test
 	public void testPeekaboo() {
 		DefaultCountingOutRhymer ryhmer = new DefaultCountingOutRhymer();
-		final int EMPTY_STACK_VALUE = -1;
+		final int EMPTY_STACK_VALUE = 0;
 
 		int result = ryhmer.peekaboo();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
@@ -61,7 +61,7 @@ public class RhymersJUnitTest {
 	@Test
 	public void testCountOut() {
 		DefaultCountingOutRhymer ryhmer = new DefaultCountingOutRhymer();
-		final int EMPTY_STACK_VALUE = -1;
+		final int EMPTY_STACK_VALUE = 0;
 
 		int result = ryhmer.countOut();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
@@ -76,3 +76,5 @@ public class RhymersJUnitTest {
 	}
 
 }
+
+//Błędy powstały przez zmiane wartości stałej EMPTY_STACK_VALUE z -1 na 0
