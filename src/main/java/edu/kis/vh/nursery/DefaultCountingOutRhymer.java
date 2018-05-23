@@ -3,7 +3,6 @@ package edu.kis.vh.nursery;
 public class DefaultCountingOutRhymer {
 
 	private static final int NUMBERS_EMPTY = -1;
-	private static final int NUMBERS_CLOSE_TO_CAPACITY = 11;
 	private static final int NUMBERS_CAPACITY = 12;
 
 	private int[] numbers = new int[NUMBERS_CAPACITY];
@@ -20,7 +19,7 @@ public class DefaultCountingOutRhymer {
 	}
 	
 	protected boolean isFull() {
-		return total == NUMBERS_CLOSE_TO_CAPACITY;
+		return total == NUMBERS_CAPACITY - 1;
 	}
 
 	protected int peekaboo() {
