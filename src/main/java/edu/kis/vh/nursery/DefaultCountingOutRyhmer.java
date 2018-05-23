@@ -46,4 +46,4 @@ public class DefaultCountingOutRyhmer {
 
 // przeskakiwanie pomiedzy miejscami ktore ostatnio edytowalismy strzałka w lewo powoduje przejscie w przod histori a w prawo do tyłu
 
-
+//wszystkie 3 klasy łamia ta zasde gdyż nie maja wspólnego interfejsu, co sie wiąze z tym , że zawsze musimy sie odwoływac do konkretnej implementacji
