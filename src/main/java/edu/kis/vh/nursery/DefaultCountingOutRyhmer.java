@@ -9,6 +9,9 @@ public class DefaultCountingOutRyhmer {
 	/*
 	 * Umożliwia nam to wykorzystanie dowolnego typu implementującego interfejs Stackable.
 	 * W tym przypadku mamy możliwość wyboru między IntLinkedList a IntArrayStack
+	 * 
+	 * Wszystkie klasy tej hierarchii łamią zasadę izolacji. 
+	 * Aby to naprawić potrzebny jest wspólny interfejs. 
 	 */
 	
 	public DefaultCountingOutRyhmer() {
