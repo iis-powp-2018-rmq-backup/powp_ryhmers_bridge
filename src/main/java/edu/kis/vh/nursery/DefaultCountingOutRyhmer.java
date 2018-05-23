@@ -45,3 +45,4 @@ public class DefaultCountingOutRyhmer {
 	//Navigate -> Open Declaration (F3) otwiera deklaracje metod w klasie IntArrayStac	
 	//ctrl + lewy przycisk myszki pozwala otworzyć nie tylko deklarację ale też implementację
 	//ctrl + t pokazuje hierarchię klas
+	// wszystkie klasy z tej hierarchii łamią tę zasadę (powinny mieć wspólny interfejs)
