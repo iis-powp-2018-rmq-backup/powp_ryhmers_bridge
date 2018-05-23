@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.list.*;
+import edu.kis.vh.nursery.stack.*;
 
 public class DefaultCountingOutRyhmer {
 	private Stack list; //wylicznka teraz przyjmuje wspólny interfejs dlatego tez może korzystać z implementacji stosu lub listy

@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.stack;
 
 public class IntArrayStack implements Stack{
 	private static final int IS_EMPTY_INDICATOR = -1;
