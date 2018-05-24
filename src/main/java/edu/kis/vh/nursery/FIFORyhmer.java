@@ -1,10 +1,11 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.collection.IntArrayStack;
 import edu.kis.vh.nursery.collection.Stack;
 
 public class FIFORyhmer extends DefaultCountingOutRyhmer {
 
-    private DefaultCountingOutRyhmer temp = new DefaultCountingOutRyhmer();
+    private Stack temp = new IntArrayStack();
 
     public FIFORyhmer() {
     }
@@ -16,13 +17,15 @@ public class FIFORyhmer extends DefaultCountingOutRyhmer {
     @Override
     public int countOut() {
         while (!callCheck())
-            temp.countIn(super.countOut());
+            temp.push(super.countOut());
 
-        final int ret = temp.countOut();
+        final int ret = temp.pop();
 
-        while (!temp.callCheck())
-            countIn(temp.countOut());
+        while (!temp.isEmpty())
+            countIn(temp.pop());
 
         return ret;
     }
 }
+
+//IntArrayStack might be a better choice since we need top values only
