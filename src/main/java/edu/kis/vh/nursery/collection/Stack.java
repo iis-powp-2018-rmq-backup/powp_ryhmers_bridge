@@ -4,7 +4,8 @@ public interface Stack {
     /**
      * Default value returned by methods when the list is empty
      */
-    int DEFAULT_EMPTY_STACK_VALUE = -1;
+    //Thanks to moving this constant to interface we have possibility of changing its value only here and it will be reflected by all implementations
+    int DEFAULT_EMPTY_STACK_VALUE = 0;
 
     void push(int in);
 
