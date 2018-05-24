@@ -28,3 +28,6 @@ public class FIFORyhmer extends DefaultCountingOutRyhmer {
         return totalAfterCountOut;
     }
 }
+
+//it's better to keep it a a DefaultCountingOutRhymer and make the changes 
+//in that class. This saves a lot of time and effort.
