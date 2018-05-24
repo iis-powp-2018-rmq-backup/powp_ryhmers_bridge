@@ -1,7 +1,7 @@
 package edu.kis.vh.nursery.factory;
 
 import edu.kis.vh.nursery.DefaultCountingOutRyhmer;
-
+//Here is used abstract factory pattern
 public interface Ryhmersfactory {
 
 	public DefaultCountingOutRyhmer getStandardRyhmer();
