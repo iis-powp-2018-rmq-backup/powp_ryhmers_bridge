@@ -1,0 +1,7 @@
+/target/
+/uml/
+/bin/
+/uml/model.ucls
+.settings
+.classpath
+.project
