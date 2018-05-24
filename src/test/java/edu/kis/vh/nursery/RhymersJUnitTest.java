@@ -42,7 +42,7 @@ public class RhymersJUnitTest {
 	}
 
 	@Test
-	public void testPeekaboo() {
+	public void testprevValue() {
 		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
 		final int EMPTY_STACK_VALUE = -1;
 
