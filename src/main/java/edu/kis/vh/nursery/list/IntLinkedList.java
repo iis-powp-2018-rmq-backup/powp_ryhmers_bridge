@@ -2,8 +2,11 @@ package edu.kis.vh.nursery.list;
 
 public class IntLinkedList {
 
-	Node last;
-	int i;
+	private static final int initialtotal = -1;
+
+	private Node last;
+
+	private int i;
 
 	public void push(int i) {
 		if (last == null)
@@ -25,45 +28,56 @@ public class IntLinkedList {
 
 	public int top() {
 		if (isEmpty())
-			return -1;
+			return initialtotal;
 		return last.getValue();
 	}
 
 	public int pop() {
 		if (isEmpty())
-			return -1;
+			return initialtotal;
 		int ret = last.getValue();
 		last = last.getPrev();
 		return ret;
 	}
-	public class Node {
+
+	public Node getLast() {
+		return last;
+	}
+
+	public int getI() {
+		return i;
+	}
+
+	private class Node {
 
 		private int value;
 		private Node prev;
 		private Node next;
-		//Enkapsulacja tworzy w tym wypadku get/set oraz ustawia pola na private, dzięki getterom i setterom które automatycznie są zastepywane
-		//przez getNext etc. zmienne nie muszą być public
-		public Node(int i) {
+
+		// Enkapsulacja tworzy w tym wypadku get/set oraz ustawia pola na private,
+		// dzięki getterom i setterom które automatycznie są zastepywane
+		// przez getNext etc. zmienne nie muszą być public
+		private Node(int i) {
 			value = i;
 		}
 
-		public int getValue() {
+		private int getValue() {
 			return value;
 		}
 
-		public Node getPrev() {
+		private Node getPrev() {
 			return prev;
 		}
 
-		public void setPrev(Node prev) {
+		private void setPrev(Node prev) {
 			this.prev = prev;
 		}
 
-		public Node getNext() {
+		private Node getNext() {
 			return next;
 		}
 
-		public void setNext(Node next) {
+		private void setNext(Node next) {
 			this.next = next;
 		}
 
