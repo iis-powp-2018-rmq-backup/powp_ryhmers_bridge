@@ -45,3 +45,5 @@ public class DefaultCountingOutRyhmer {
 
 //Using Stack interface in constructor, instead of concrete classes lets utilize them interchangeably
 //without changing content of this class every time we want to use another implementation
+
+//All classes from this hierarchy break the isolation rule. Solution is to create common interface of these.
