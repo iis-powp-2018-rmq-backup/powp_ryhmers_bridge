@@ -13,3 +13,4 @@ public interface RhymersFactory {
     public DefaultCountingOutRhymer getHanoiRyhmer();
 
 }
+//abstract factory design pattern
