@@ -1,6 +1,16 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.stack.StackInterface;
+
 public class FIFORyhmer extends DefaultCountingOutRyhmer {
+
+	public FIFORyhmer() {
+		super();
+	}
+
+	public FIFORyhmer(StackInterface intArray) {
+		super(intArray);
+	}
 
 	private final DefaultCountingOutRyhmer temp = new DefaultCountingOutRyhmer();
 
