@@ -19,3 +19,5 @@ public interface Stack {
 
     int getTotal();
 }
+
+//Or CTRL + B in IntelliJ shows declaration of used method. Same goes to CTRL + LMB. Type hierarchy (CTRL + H) showed subclasses of this interface.
