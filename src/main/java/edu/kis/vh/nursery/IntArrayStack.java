@@ -1,6 +1,8 @@
 package edu.kis.vh.nursery;
 
-public class IntArrayStack {
+import edu.kis.vh.nursery.list.StackImplementation;
+
+public class IntArrayStack implements StackImplementation {
 
     private static final int IS_EMPTY_INDICATOR = -1;
 
@@ -8,35 +10,41 @@ public class IntArrayStack {
 
     private int[] numbers = new int[CAPACITY];
 
+    private int total = IS_EMPTY_INDICATOR;
+
+    @Override
     public int getTotal() {
         return total;
     }
 
-    private int total = IS_EMPTY_INDICATOR;
-
-    public void countIn(final int in) {
+    @Override
+    public void push(final int in) {
         if (!isFull()) {
             numbers[++total] = in;
         }
     }
 
-    public boolean callCheck() {
+    @Override
+    public boolean isEmpty() {
         return total == IS_EMPTY_INDICATOR;
     }
 
+    @Override
     public boolean isFull() {
         return total == CAPACITY - 1;
     }
 
-    public int peekaboo() {
-        if (callCheck()) {
+    @Override
+    public int top() {
+        if (isEmpty()) {
             return IS_EMPTY_INDICATOR;
         }
         return numbers[total];
     }
 
-    public int countOut() {
-        if (callCheck()) {
+    @Override
+    public int pop() {
+        if (isEmpty()) {
             return IS_EMPTY_INDICATOR;
         }
         return numbers[total--];
