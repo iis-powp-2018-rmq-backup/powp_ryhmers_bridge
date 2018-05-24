@@ -1,17 +1,31 @@
 package edu.kis.vh.nursery;
 
-public class HanoiRyhmer extends defaultCountingOutRyhmer {
+import edu.kis.vh.nursery.stack.Stack;
 
-int totalRejected = 0;
+public class HanoiRyhmer extends DefaultCountingOutRyhmer {
+
+	private int totalRejected = 0;
+
+	public HanoiRyhmer() {
+	}
+
+	public HanoiRyhmer(Stack stack) {
+		super(stack);
+	}
 
 	public int reportRejected() {
 		return totalRejected;
 	}
 
+	@Override
 	public void countIn(int in) {
-	if (!callCheck() && in > peekaboo())
+		if (!callCheck() && in > peekaboo()) {
 			totalRejected++;
-			else
-				super.countIn(in);
+		} else {
+			super.countIn(in);
+		}
 	}
+	/*
+	*Kombinacja klawiszy "alt + ->" lub "alt + <-" umożliwia nam powrócenie
+	 * do poprzedniego położenia kursora */
 }

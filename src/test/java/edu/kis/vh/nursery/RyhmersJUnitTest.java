@@ -1,5 +1,6 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.stack.IntArrayStack;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -7,7 +8,7 @@ public class RyhmersJUnitTest {
 
 	@Test
 	public void testCountIn() {
-		defaultCountingOutRyhmer ryhmer = new defaultCountingOutRyhmer();
+		DefaultCountingOutRyhmer ryhmer = new DefaultCountingOutRyhmer();
 		int testValue = 4;
 		ryhmer.countIn(testValue);
 
@@ -17,7 +18,7 @@ public class RyhmersJUnitTest {
 
 	@Test
 	public void testCallCheck() {
-		defaultCountingOutRyhmer ryhmer = new defaultCountingOutRyhmer();
+		DefaultCountingOutRyhmer ryhmer = new DefaultCountingOutRyhmer();
 		boolean result = ryhmer.callCheck();
 		Assert.assertEquals(true, result);
 
@@ -29,7 +30,7 @@ public class RyhmersJUnitTest {
 
 	@Test
 	public void testIsFull() {
-		defaultCountingOutRyhmer ryhmer = new defaultCountingOutRyhmer();
+		DefaultCountingOutRyhmer ryhmer = new DefaultCountingOutRyhmer(new IntArrayStack());
 		final int STACK_CAPACITY = 12;
 		for (int i = 0; i < STACK_CAPACITY; i++) {
 			boolean result = ryhmer.isFull();
@@ -40,11 +41,16 @@ public class RyhmersJUnitTest {
 		boolean result = ryhmer.isFull();
 		Assert.assertEquals(true, result);
 	}
+	/*Powstał podczas robienia punktu 4/5 *
+	Konstruktor domyślny DefaultCountingOutRyhmer() używa IntLinkedList, która w metodzie isFull zwraca false, poniewaz
+	lista nie ma zmiennej odpowiedzialnej za ilość liczb jaką przechowuje,zatem nigdy nie będzie pełna
+	zatem test nie przejdzie ze względu na linie 41/
+	 */
 
 	@Test
 	public void testPeekaboo() {
-		defaultCountingOutRyhmer ryhmer = new defaultCountingOutRyhmer();
-		final int EMPTY_STACK_VALUE = -1;
+		DefaultCountingOutRyhmer ryhmer = new DefaultCountingOutRyhmer();
+		final int EMPTY_STACK_VALUE = 0;
 
 		int result = ryhmer.peekaboo();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
@@ -57,11 +63,11 @@ public class RyhmersJUnitTest {
 		result = ryhmer.peekaboo();
 		Assert.assertEquals(testValue, result);
 	}
-
+	//Powstał podczas wykonywania punktu 11 -> niepoprawna wartość EMPTY_STACK_VALUE
 	@Test
 	public void testCountOut() {
-		defaultCountingOutRyhmer ryhmer = new defaultCountingOutRyhmer();
-		final int EMPTY_STACK_VALUE = -1;
+		DefaultCountingOutRyhmer ryhmer = new DefaultCountingOutRyhmer();
+		final int EMPTY_STACK_VALUE = 0;
 
 		int result = ryhmer.countOut();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
@@ -74,5 +80,5 @@ public class RyhmersJUnitTest {
 		result = ryhmer.countOut();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
 	}
-
+	//Błąd powstał podczas wykonywania punktu 11 -> niepoprawna wartość EMPTY_STACK_VALUE
 }
