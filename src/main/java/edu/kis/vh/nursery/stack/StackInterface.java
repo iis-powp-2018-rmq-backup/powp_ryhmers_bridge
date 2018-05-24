@@ -5,8 +5,8 @@ public interface StackInterface {
 	/**
 	 * Constant Value, which represents empty list
 	 */
-	int DEFAULT_EMPTY_STACK_VALUE = -1;
-
+	int DEFAULT_EMPTY_STACK_VALUE = 0;
+//	Change from 3.1.10, helps me, because i had to only change one line of code.
 	/**
 	 * Method adds value to the list
 	 * @param i value which be added to list
