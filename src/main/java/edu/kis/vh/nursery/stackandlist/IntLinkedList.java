@@ -3,7 +3,8 @@ package edu.kis.vh.nursery.stackandlist;
 public class IntLinkedList implements IntDataStructure {
 
     private Node last;
-    
+    private int size;
+
     @Override
     public void countIn(final int value) {
         if (last == null) {
@@ -13,6 +14,7 @@ public class IntLinkedList implements IntDataStructure {
             last.next.prev = last;
             last = last.next;
         }
+        size++;
     }
 
     @Override
@@ -40,7 +42,13 @@ public class IntLinkedList implements IntDataStructure {
         }
         final int lastValue = last.getValue();
         last = last.prev;
+        size--;
         return lastValue;
+    }
+
+    @Override
+    public int getSize() {
+        return size;
     }
 
 }

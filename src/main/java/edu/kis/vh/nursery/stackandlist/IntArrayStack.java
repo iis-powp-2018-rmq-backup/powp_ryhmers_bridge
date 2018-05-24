@@ -8,59 +8,39 @@ public class IntArrayStack implements IntDataStructure {
     @Override
     public void countIn(final int in) {
         if (!isFull()) {
-            getNUMBERS()[++total] = in;
+            NUMBERS[++total] = in;
         }
     }
     
     @Override
     public boolean callCheck() {
-        return total == getEMPTY_STACK_VALUE();
+        return total == EMPTY_STACK_VALUE;
     }
 
     @Override
     public boolean isFull() {
-        return total == 11;
+        return total == CAPACITY;
     }
 
     @Override
     public int peekaboo() {
         if (callCheck()) {
-            return getEMPTY_STACK_VALUE();
+            return EMPTY_STACK_VALUE;
         }
-        return getNUMBERS()[total];
+        return NUMBERS[total];
     }
 
     @Override
     public int countOut() {
         if (callCheck()) {
-            return getEMPTY_STACK_VALUE();
+            return EMPTY_STACK_VALUE;
         }
-        return getNUMBERS()[total--];
+        return NUMBERS[total--];
     }
-
-    public int getTotal() {
+    
+    @Override
+    public int getSize() {
         return total;
-    }
-
-    /**
-     * @return the CAPACITY
-     */
-    public int getCAPACITY() {
-        return CAPACITY;
-    }
-
-    /**
-     * @return the EMPTY_STACK_VALUE
-     */
-    public int getEMPTY_STACK_VALUE() {
-        return EMPTY_STACK_VALUE;
-    }
-
-    /**
-     * @return the NUMBERS
-     */
-    public int[] getNUMBERS() {
-        return NUMBERS;
     }
 
 }

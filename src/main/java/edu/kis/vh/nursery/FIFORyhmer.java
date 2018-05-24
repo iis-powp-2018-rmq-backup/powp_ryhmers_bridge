@@ -1,13 +1,13 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.stackandlist.IntArrayStack;
+import edu.kis.vh.nursery.stackandlist.IntDataStructure;
 
-public class FIFORyhmer extends DefaultCountingOutRyhmer {
+public class FIFORyhmer extends DefaultCountingOutRhymer {
 
-    private DefaultCountingOutRyhmer defaultCountingOutRyhmer = new DefaultCountingOutRyhmer();
+    private DefaultCountingOutRhymer defaultCountingOutRhymer = new DefaultCountingOutRhymer();
 
-    public FIFORyhmer(IntArrayStack intArrayStack) {
-        super(intArrayStack);
+    public FIFORyhmer(IntDataStructure intDataStructure) {
+        super(intDataStructure);
     }
 
     public FIFORyhmer() {
@@ -16,13 +16,13 @@ public class FIFORyhmer extends DefaultCountingOutRyhmer {
     @Override
     public int countOut() {
         while (!callCheck()) {
-            defaultCountingOutRyhmer.countIn(super.countOut());
+            defaultCountingOutRhymer.countIn(super.countOut());
         }
 
-        int totalAfterCountOut = defaultCountingOutRyhmer.countOut();
+        int totalAfterCountOut = defaultCountingOutRhymer.countOut();
 
-        while (!defaultCountingOutRyhmer.callCheck()) {
-            countIn(defaultCountingOutRyhmer.countOut());
+        while (!defaultCountingOutRhymer.callCheck()) {
+            countIn(defaultCountingOutRhymer.countOut());
         }
 
         return totalAfterCountOut;

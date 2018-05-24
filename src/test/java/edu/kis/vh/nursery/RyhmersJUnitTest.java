@@ -6,7 +6,7 @@ import org.junit.Test;
 public class RyhmersJUnitTest {
 
     private final int testValue = 4;
-    private final DefaultCountingOutRyhmer ryhmer = new DefaultCountingOutRyhmer();
+    private final DefaultCountingOutRhymer ryhmer = new DefaultCountingOutRhymer();
 
     @Test
     public void testCountIn() {

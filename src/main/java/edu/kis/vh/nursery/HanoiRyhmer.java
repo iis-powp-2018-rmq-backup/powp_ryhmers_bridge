@@ -1,13 +1,13 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.stackandlist.IntArrayStack;
+import edu.kis.vh.nursery.stackandlist.IntDataStructure;
 
-public class HanoiRyhmer extends DefaultCountingOutRyhmer {
+public class HanoiRyhmer extends DefaultCountingOutRhymer {
 
     private int totalRejected = 0;
 
-    public HanoiRyhmer(IntArrayStack intArrayStack) {
-        super(intArrayStack);
+    public HanoiRyhmer(IntDataStructure intDataStructure) {
+        super(intDataStructure);
     }
 
     public HanoiRyhmer() {
