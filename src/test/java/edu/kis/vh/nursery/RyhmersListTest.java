@@ -3,11 +3,12 @@ package edu.kis.vh.nursery;
 import org.junit.Assert;
 import org.junit.Test;
 
-import edu.kis.vh.nursery.stack.IntArrayStack;
+import edu.kis.vh.nursery.stack.IntLinkedList;
 
-public class RyhmersJUnitTest {
+public class RyhmersListTest {
 	
-	private DefaultCountingOutRyhmer ryhmer = new DefaultCountingOutRyhmer();
+	private DefaultCountingOutRyhmer ryhmer = 
+			new DefaultCountingOutRyhmer(new IntLinkedList());
 	final int EMPTY_STACK_VALUE = 0;
 	
 	@Test

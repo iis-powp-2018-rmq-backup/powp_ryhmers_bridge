@@ -19,7 +19,7 @@ public class IntArrayStack implements Stackable {
 	@Override
 	public void push(int in) {
 		if (!isFull())
-			numbers[++size] = in;
+			numbers[size++] = in;
 	}
 
 	@Override
@@ -29,21 +29,21 @@ public class IntArrayStack implements Stackable {
 
 	@Override
 	public boolean isFull() {
-		return size == 11;
+		return size == CAPACITY;
 	}
 
 	@Override
 	public int top() {
 		if (isEmpty())
 			return Stackable.IS_EMPTY;
-		return numbers[size];
+		return numbers[size-1];
 	}
 
 	@Override
 	public int pop() {
 		if (isEmpty())
 			return Stackable.IS_EMPTY;
-		return numbers[size--];
+		return numbers[--size];
 	}
 /*
  * alt + left arrow = move back to previously modified file 
