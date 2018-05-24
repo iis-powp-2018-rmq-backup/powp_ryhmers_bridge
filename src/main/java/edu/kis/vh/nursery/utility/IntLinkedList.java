@@ -10,17 +10,13 @@ package edu.kis.vh.nursery.utility;
 public class IntLinkedList implements StackImplementation {
 
     /**
-     * Constant Value, which represents empty list
-     */
-    private static final int DEFAULT_EMPTY_STACK_VALUE = -1;
-    /**
      * Last element of list
      */
     private Node last;
     /**
      * Total number of elements in the list
      */
-    private int total = DEFAULT_EMPTY_STACK_VALUE;
+    private int total = IS_EMPTY_INDICATOR;
 
     /**
      * Method that returns total number of elements in the list
@@ -78,7 +74,7 @@ public class IntLinkedList implements StackImplementation {
     @Override
     public int top() {
         if (isEmpty()) {
-            return DEFAULT_EMPTY_STACK_VALUE;
+            return IS_EMPTY_INDICATOR;
         }
         return last.getValue();
     }
@@ -91,7 +87,7 @@ public class IntLinkedList implements StackImplementation {
     @Override
     public int pop() {
         if (isEmpty()) {
-            return DEFAULT_EMPTY_STACK_VALUE;
+            return IS_EMPTY_INDICATOR;
         }
         final int ret = last.getValue();
         last = last.getPrev();

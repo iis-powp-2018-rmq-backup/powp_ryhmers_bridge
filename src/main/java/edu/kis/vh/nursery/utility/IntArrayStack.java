@@ -2,8 +2,6 @@ package edu.kis.vh.nursery.utility;
 
 public class IntArrayStack implements StackImplementation {
 
-    private static final int IS_EMPTY_INDICATOR = -1;
-
     private static final int CAPACITY = 12;
 
     private int[] numbers = new int[CAPACITY];
