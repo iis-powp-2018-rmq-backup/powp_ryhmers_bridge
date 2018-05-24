@@ -16,7 +16,7 @@ public class IntArrayStack implements StackInterface{
 	@Override
 	public void push(final int in) {
 		if (!isFull())
-			numbers[++total] = in;
+			numbers[total++] = in;
 	}
 
 	@Override
@@ -40,6 +40,6 @@ public class IntArrayStack implements StackInterface{
 	public int pop() {
 		if (isEmpty())
 			return StackInterface.DEFAULT_EMPTY_STACK_VALUE;
-		return numbers[total--];
+		return numbers[--total];
 	}
 }

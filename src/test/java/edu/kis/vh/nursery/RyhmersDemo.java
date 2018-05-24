@@ -1,16 +1,25 @@
 package edu.kis.vh.nursery;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import edu.kis.vh.nursery.DefaultCountingOutRyhmer;
 import edu.kis.vh.nursery.HanoiRyhmer;
+import edu.kis.vh.nursery.factory.ArrayRyhmersFactory;
 import edu.kis.vh.nursery.factory.DefaultRyhmersFactory;
+import edu.kis.vh.nursery.factory.ListRyhmersFactory;
 import edu.kis.vh.nursery.factory.Ryhmersfactory;
 
 class RyhmersDemo {
 
 	public static void main(String[] args) {
-		Ryhmersfactory factory = new DefaultRyhmersFactory();
-
-		testRhymers(factory);
+		List<Ryhmersfactory> rhymersfactories = new ArrayList<>();
+		rhymersfactories.add(new DefaultRyhmersFactory());
+		rhymersfactories.add(new ArrayRyhmersFactory());
+		rhymersfactories.add(new ListRyhmersFactory());
+		for(Ryhmersfactory rhymersfactory : rhymersfactories){
+			testRhymers(rhymersfactory);
+		}
 
 	}
 
