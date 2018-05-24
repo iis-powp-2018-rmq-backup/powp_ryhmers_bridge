@@ -15,6 +15,11 @@ public class IntLinkedList {
 	private Node last;
 
 	/**
+	 * Size of the list
+	 */
+	private int total = DEFAULT_EMPTY_LIST_VALUE;
+
+	/**
 	 * Pushes value as a last element of the list
 	 * @param i Value to push
 	 */
@@ -64,6 +69,10 @@ public class IntLinkedList {
 		final int ret = last.getValue();
 		last = last.getPrev();
 		return ret;
+	}
+
+	public int getTotal() {
+		return total;
 	}
 
 	/**
