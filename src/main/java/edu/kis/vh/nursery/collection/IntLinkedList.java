@@ -5,11 +5,7 @@ package edu.kis.vh.nursery.collection;
  */
 public class IntLinkedList implements Stack {
 
-	/**
-	 * Default value returned by methods when the list is empty
-	 */
-	private static final int DEFAULT_EMPTY_LIST_VALUE = -1;
-	/**
+    /**
 	 * Last element of the list
 	 */
 	private Node last;
@@ -17,7 +13,7 @@ public class IntLinkedList implements Stack {
 	/**
 	 * Size of the list
 	 */
-	private int total = DEFAULT_EMPTY_LIST_VALUE;
+	private int total = DEFAULT_EMPTY_STACK_VALUE;
 
 	/**
 	 * Pushes value as a last element of the list
@@ -54,23 +50,23 @@ public class IntLinkedList implements Stack {
 
 	/**
 	 * Returns last value of the list
-	 * @return Last value of the list if list is not empty. Otherwise, DEFAULT_EMPTY_LIST_VALUE is returned.
+	 * @return Last value of the list if list is not empty. Otherwise, DEFAULT_EMPTY_STACK_VALUE is returned.
 	 */
     @Override
 	public int top() {
 		if (isEmpty())
-			return DEFAULT_EMPTY_LIST_VALUE;
+			return DEFAULT_EMPTY_STACK_VALUE;
 		return last.getValue();
 	}
 
 	/**
 	 * Returns last value of the list and removes it
-	 * @return Last value of the list if list is not empty. Otherwise, DEFAULT_EMPTY_LIST_VALUE is returned.
+	 * @return Last value of the list if list is not empty. Otherwise, DEFAULT_EMPTY_STACK_VALUE is returned.
 	 */
     @Override
 	public int pop() {
 		if (isEmpty())
-			return DEFAULT_EMPTY_LIST_VALUE;
+			return DEFAULT_EMPTY_STACK_VALUE;
 		final int ret = last.getValue();
 		last = last.getPrev();
 		return ret;

@@ -2,8 +2,6 @@ package edu.kis.vh.nursery.collection;
 
 public class IntArrayStack implements Stack {
     private static final int NUMBERS_CAPACITY = 12;
-    private static final int DEFAULT_EMPTY_STACK_VALUE = -1;
-    private static final int DEFAULT_FULL_STACK_VALUE = 11;
     private int[] numbers = new int[NUMBERS_CAPACITY];
 
     private int total = DEFAULT_EMPTY_STACK_VALUE;
@@ -21,7 +19,7 @@ public class IntArrayStack implements Stack {
 
     @Override
     public boolean isFull() {
-        return total == DEFAULT_FULL_STACK_VALUE;
+        return total == NUMBERS_CAPACITY - 1;
     }
 
     @Override
