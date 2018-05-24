@@ -1,7 +1,7 @@
 package edu.kis.vh.nursery.stackandlist;
 
 public class IntArrayStack implements IntDataStructure {
-    private final int CAPACITY = 12;
+    private final int CAPACITY = 15;
     private int[] NUMBERS = new int[CAPACITY];    
     private int total = EMPTY_STACK_VALUE;
 
