@@ -46,7 +46,7 @@ public class RyhmersJUnitTest {
 	@Test
 	public void testPeekaboo() {
 		IntArrayStack ryhmer = new IntArrayStack();
-		final int EMPTY_STACK_VALUE = -1;
+		final int EMPTY_STACK_VALUE = 0;
 
 		int result = ryhmer.top();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
@@ -63,7 +63,7 @@ public class RyhmersJUnitTest {
 	@Test
 	public void testCountOut() {
 		IntArrayStack ryhmer = new IntArrayStack();
-		final int EMPTY_STACK_VALUE = -1;
+		final int EMPTY_STACK_VALUE = 0;
 
 		int result = ryhmer.pop();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);

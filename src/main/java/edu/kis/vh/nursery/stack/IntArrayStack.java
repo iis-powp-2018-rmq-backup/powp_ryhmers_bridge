@@ -33,7 +33,7 @@ public class IntArrayStack implements StackInterface{
 	public int top() {
 		if (isEmpty())
 			return StackInterface.DEFAULT_EMPTY_STACK_VALUE;
-		return numbers[total];
+		return numbers[total-1];
 	}
 
 	@Override
