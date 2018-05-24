@@ -3,6 +3,8 @@ package edu.kis.vh.nursery;
 import org.junit.Assert;
 import org.junit.Test;
 
+import edu.kis.vh.nursery.stack.IntArrayStack;
+
 public class RyhmersJUnitTest {
 
 	@Test

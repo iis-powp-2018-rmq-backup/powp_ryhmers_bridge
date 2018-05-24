@@ -1,10 +1,10 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.list.IntLinkedList;
-import edu.kis.vh.nursery.list.StackInterface;
+import edu.kis.vh.nursery.stack.IntLinkedList;
+import edu.kis.vh.nursery.stack.StackInterface;
 
 public class DefaultCountingOutRyhmer {
-
+//	This change, make for us to use more dynamically classes that implements StackInterface
 	private StackInterface intArray;
 
 	public DefaultCountingOutRyhmer(){
