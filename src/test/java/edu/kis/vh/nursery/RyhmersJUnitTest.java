@@ -1,6 +1,8 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.collection.IntArrayStack;
 import edu.kis.vh.nursery.collection.Stack;
+import edu.kis.vh.nursery.factory.ArrayRyhmersFactory;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -30,9 +32,13 @@ public class RyhmersJUnitTest {
 
 	@Test
 	public void testIsFull() {
-		DefaultCountingOutRyhmer ryhmer = new DefaultCountingOutRyhmer();
+		//Since the default collection in DefaultCountingOutRyhmer is IntLinkedList,
+		//which doesn't have any fixed capacity, we should test IntArrayStack instead.
+		DefaultCountingOutRyhmer ryhmer = new DefaultCountingOutRyhmer(new IntArrayStack());
 		final int STACK_CAPACITY = 12;
-		for (int i = 0; i < STACK_CAPACITY; i++) {
+		//We need to fix this loop condition because we don't want to fill the stack completely
+		//before asserting if it's empty.
+		for (int i = 0; i < STACK_CAPACITY - 1; i++) {
 			boolean result = ryhmer.isFull();
 			Assert.assertEquals(false, result);
 			ryhmer.countIn(888);
