@@ -1,13 +1,24 @@
 package edu.kis.vh.nursery.list;
 
+/**
+ * @author Dawid Sowala
+ *
+ */
 public class IntLinkedList {
 
 	private static final int initialtotal = -1;
 
+	/**
+	 * Ostatni element listy
+	 */
 	private Node last;
 
 	private int i;
 
+	/**
+	 * Dodanie elementu do listy
+	 * @param i wartość elementu
+	 */
 	public void push(int i) {
 		if (last == null)
 			last = new Node(i);
@@ -18,20 +29,34 @@ public class IntLinkedList {
 		}
 	}
 
+	/**
+	 * Sprawdzanie czy lista jest pusta
+	 * @return zwraca true dla pustej listy
+	 */
 	public boolean isEmpty() {
 		return last == null;
 	}
 
+	/**
+	 * Spradzenie czy lista jest pełna
+	 * @return zwraca zawsze false
+	 */
 	public boolean isFull() {
 		return false;
 	}
-
+	
+	/**
+	 * @return Zwraca ostatni element listy lub -1 gdy ta jest pusta
+	 */
 	public int top() {
 		if (isEmpty())
 			return initialtotal;
 		return last.getValue();
 	}
 
+	/**
+	 * @return Zwraca i usuwa ostatni element listy lub -1 gdy ta jest pusta
+	 */
 	public int pop() {
 		if (isEmpty())
 			return initialtotal;
@@ -48,6 +73,9 @@ public class IntLinkedList {
 		return i;
 	}
 
+	/**
+	 * Klasa struktury listy
+	 */
 	private class Node {
 
 		private int value;
