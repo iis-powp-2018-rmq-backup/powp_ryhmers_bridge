@@ -6,7 +6,7 @@ package edu.kis.vh.nursery.list;
  * @author Piotr
  *
  */
-public class IntLinkedList {
+public class IntLinkedList implements StackInterface {
 
 	/**
 	 * Constant Value, which represents empty list
@@ -25,6 +25,7 @@ public class IntLinkedList {
 	 * Method adds value to the list
 	 * @param i value which be added to list
 	 */
+	@Override
 	public void push(final int i) {
 		if (last == null) {
 			last = new Node(i);
@@ -42,6 +43,7 @@ public class IntLinkedList {
 	 * Method checks, if the list is empty
 	 * @return boolean value whether list is empty or not
 	 */
+	@Override
 	public boolean isEmpty() {
 		return last == null;
 	}
@@ -50,6 +52,7 @@ public class IntLinkedList {
 	 * Method checks, if the list is full
 	 * @return boolean value whether list is full or not
 	 */
+	@Override
 	public boolean isFull() {
 		return false;
 	}
@@ -58,6 +61,7 @@ public class IntLinkedList {
 	 * Method gives the value of the last added element
 	 * @return integer value of the last added element
 	 */
+	@Override
 	public int top() {
 		if (isEmpty())
 			return DEFAULT_EMPTY_STACK_VALUE;
@@ -68,6 +72,7 @@ public class IntLinkedList {
 	 * Method gives the value of the last added element and remove it from list
 	 * @return integer value of the last added element or the constant value, if the list is empty
 	 */
+	@Override
 	public int pop() {
 		if (isEmpty())
 			return DEFAULT_EMPTY_STACK_VALUE;
@@ -77,6 +82,7 @@ public class IntLinkedList {
 		return ret;
 	}
 	
+	@Override
 	public int getSize() {
 		return size;
 	}
