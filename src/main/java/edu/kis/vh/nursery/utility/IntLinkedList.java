@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.utility;
 
 /**
  * Class represents stack as linked list of int values and methods to work with it
