@@ -24,6 +24,8 @@ public class DefaultCountingOutRyhmer {
 		intArray.push(in);
 	}
 //	Open Declaration opens the implementation of the method, from which we delegate
+//	ctrl + t shows hierarchy of class
+//	ctrl with the cursor shows the implementation or the declaration
 	public boolean callCheck() {
 		return intArray.isEmpty();
 	}
