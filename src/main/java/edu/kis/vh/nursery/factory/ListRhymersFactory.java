@@ -28,4 +28,5 @@ public class ListRhymersFactory implements Rhymersfactory {
         return new HanoiRhymer(new IntLinkedList());
     }
 
+    // Answer: Abstract Factory
 }
