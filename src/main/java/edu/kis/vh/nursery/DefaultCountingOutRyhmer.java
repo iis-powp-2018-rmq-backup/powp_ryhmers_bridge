@@ -11,7 +11,7 @@ public class DefaultCountingOutRyhmer {
         stack = new IntLinkedList();
     }
 
-    public DefaultCountingOutRyhmer(IntLinkedList stack) {
+    public DefaultCountingOutRyhmer(Stack stack) {
         this.stack = stack;
     }
 
