@@ -1,6 +1,5 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.list.IntLinkedList;
 import edu.kis.vh.nursery.list.StackImplementation;
 
 public class DefaultCountingOutRhymer {
@@ -8,7 +7,7 @@ public class DefaultCountingOutRhymer {
     private StackImplementation stack;
 
     public DefaultCountingOutRhymer() {
-        this.stack = new IntLinkedList();
+        this.stack = new IntArrayStack();
     }
 
     public DefaultCountingOutRhymer(StackImplementation stack) {
@@ -39,4 +38,11 @@ public class DefaultCountingOutRhymer {
         return stack.pop();
     }
 
+    /**
+     * W komentarzu w klasie DefaultCountingOutRyhmer napisz jakie są konsekwencje zmiany omówionej w poprzednim punkcie
+     * 
+     * Konsekwencją zmian jest czytelniejszy i bardziej zrozumiały kod
+     *
+     *
+     */
 }
