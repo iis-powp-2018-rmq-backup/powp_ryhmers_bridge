@@ -64,3 +64,5 @@ public class IntArrayStack implements IntDataStructure {
     }
 
 }
+//[Netbeans] ctrl+left click does the same as navigate -> go to devlaration (ctrl+b)
+//[Netbeans] no quick type hierarchy in netbeans
