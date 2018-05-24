@@ -2,13 +2,11 @@ package edu.kis.vh.nursery.stack;
 
 public class IntArrayStack implements StackInterface{
 
-	private static final int DEFAULT_ARRAY_EMPTY_VALUE = -1;
-
 	private static final int NUMBERS_CAPACITY = 12;
 
 	private int[] numbers = new int[NUMBERS_CAPACITY];
 
-	private int total = DEFAULT_ARRAY_EMPTY_VALUE;
+	private int total = StackInterface.DEFAULT_EMPTY_STACK_VALUE;
 
 	@Override
 	public int getSize() {
@@ -23,25 +21,25 @@ public class IntArrayStack implements StackInterface{
 
 	@Override
 	public boolean isEmpty() {
-		return total == DEFAULT_ARRAY_EMPTY_VALUE;
+		return total == StackInterface.DEFAULT_EMPTY_STACK_VALUE;
 	}
 
 	@Override
 	public boolean isFull() {
-		return total == NUMBERS_CAPACITY + DEFAULT_ARRAY_EMPTY_VALUE;
+		return total == NUMBERS_CAPACITY + StackInterface.DEFAULT_EMPTY_STACK_VALUE;
 	}
 
 	@Override
 	public int top() {
 		if (isEmpty())
-			return DEFAULT_ARRAY_EMPTY_VALUE;
+			return StackInterface.DEFAULT_EMPTY_STACK_VALUE;
 		return numbers[total];
 	}
 
 	@Override
 	public int pop() {
 		if (isEmpty())
-			return DEFAULT_ARRAY_EMPTY_VALUE;
+			return StackInterface.DEFAULT_EMPTY_STACK_VALUE;
 		return numbers[total--];
 	}
 }

@@ -8,13 +8,7 @@ package edu.kis.vh.nursery.stack;
  */
 public class IntLinkedList implements StackInterface {
 
-	/**
-	 * Constant Value, which represents empty list
-	 */
-	private static final int DEFAULT_EMPTY_STACK_VALUE = -1;
-	/**
-	 * Last element of list
-	 */
+
 	private Node last;
 	/**
 	 * Amount of elements in list
@@ -64,7 +58,7 @@ public class IntLinkedList implements StackInterface {
 	@Override
 	public int top() {
 		if (isEmpty())
-			return DEFAULT_EMPTY_STACK_VALUE;
+			return StackInterface.DEFAULT_EMPTY_STACK_VALUE;
 		return last.getValue();
 	}
 
@@ -75,13 +69,13 @@ public class IntLinkedList implements StackInterface {
 	@Override
 	public int pop() {
 		if (isEmpty())
-			return DEFAULT_EMPTY_STACK_VALUE;
+			return StackInterface.DEFAULT_EMPTY_STACK_VALUE;
 		final int ret = last.getValue();
 		last = last.getPrev();
 		size--;
 		return ret;
 	}
-	
+
 	@Override
 	public int getSize() {
 		return size;

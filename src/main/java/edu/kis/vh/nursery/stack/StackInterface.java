@@ -3,6 +3,11 @@ package edu.kis.vh.nursery.stack;
 public interface StackInterface {
 
 	/**
+	 * Constant Value, which represents empty list
+	 */
+	int DEFAULT_EMPTY_STACK_VALUE = -1;
+
+	/**
 	 * Method adds value to the list
 	 * @param i value which be added to list
 	 */
