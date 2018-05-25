@@ -9,7 +9,7 @@ public class IntArrayStack implements Stack {
     @Override
     public void push(final int in) {
         if (!isFull())
-            numbers[++total] = in;
+            numbers[total++] = in;
     }
 
     @Override
@@ -19,7 +19,7 @@ public class IntArrayStack implements Stack {
 
     @Override
     public boolean isFull() {
-        return total == NUMBERS_CAPACITY - 1;
+        return total == NUMBERS_CAPACITY + DEFAULT_EMPTY_STACK_VALUE;
     }
 
     @Override

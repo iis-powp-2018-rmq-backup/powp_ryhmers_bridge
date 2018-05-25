@@ -36,9 +36,7 @@ public class RyhmersJUnitTest {
 		//which doesn't have any fixed capacity, we should test IntArrayStack instead.
 		DefaultCountingOutRyhmer ryhmer = new DefaultCountingOutRyhmer(new IntArrayStack());
 		final int STACK_CAPACITY = 12;
-		//We need to fix this loop condition because we don't want to fill the stack completely
-		//before asserting if it's empty.
-		for (int i = 0; i < STACK_CAPACITY - 1; i++) {
+		for (int i = 0; i < STACK_CAPACITY; i++) {
 			boolean result = ryhmer.isFull();
 			Assert.assertEquals(false, result);
 			ryhmer.countIn(888);
