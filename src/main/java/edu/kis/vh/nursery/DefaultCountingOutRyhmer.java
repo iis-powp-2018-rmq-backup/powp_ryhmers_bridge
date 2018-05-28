@@ -1,7 +1,7 @@
 package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRyhmer {
-
+//(ctrl+b) goes to declaration of selected method.
 	final IntArray intArray = new IntArray();
 
 	public DefaultCountingOutRyhmer() {
