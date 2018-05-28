@@ -2,7 +2,7 @@ package edu.kis.vh.nursery.stack;
 
 public class IntArrayStack implements StackInterface{
 	private static final int _NUMBERS_SIZE = 12;
-	private static final int _1 = -1;
+
 	private final int[] NUMBERS = new int[_NUMBERS_SIZE];
 	private int total = _1;
 	
@@ -14,7 +14,7 @@ public class IntArrayStack implements StackInterface{
 	
 	@Override
  	public boolean isFull() {
- 		return total == _NUMBERS_SIZE + _1;
+ 		return total == _NUMBERS_SIZE - 1;
  	}
 	
 	@Override

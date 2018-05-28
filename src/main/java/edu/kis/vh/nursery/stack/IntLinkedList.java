@@ -52,7 +52,7 @@ public class IntLinkedList implements StackInterface {
 	@Override
 	public int top() {
 		if (isEmpty())
-			return -1;
+			return _1;
 		return last.getValue();
 	}
 	
@@ -63,7 +63,7 @@ public class IntLinkedList implements StackInterface {
 	@Override
 	public int pop() {
 		if (isEmpty())
-			return -1;
+			return _1;
 		final int ret = last.getValue();
 		last = last.getPrev();
 		size--;

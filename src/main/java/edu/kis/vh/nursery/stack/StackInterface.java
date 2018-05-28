@@ -1,6 +1,11 @@
 package edu.kis.vh.nursery.stack;
 
 public interface StackInterface {
+	
+	/**
+	 * Default value returned by methods when the list is empty
+	 */
+	int _1 = -1;
 
 	/**
 	 * ADD integer to end of list.
