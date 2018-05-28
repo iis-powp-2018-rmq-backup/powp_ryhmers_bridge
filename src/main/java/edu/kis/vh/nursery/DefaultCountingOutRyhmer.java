@@ -1,0 +1,59 @@
+package edu.kis.vh.nursery;
+
+import edu.kis.vh.nursery.stack.IntLinkedList;
+import edu.kis.vh.nursery.stack.StackInterface;
+
+/**
+ * @author student
+ *
+ */
+
+//Open Declaration opens the implementation of the method, from which we delegate
+
+// 3.1.7 thanks to this change, we can use more dynamically classes that implements StackInterface.
+
+// 3.1.13	 -  ctrl + t shows hierarchy of class
+//			 - 	ctrl with the cursor shows the implementation or the declaration
+
+
+
+public class DefaultCountingOutRyhmer{
+
+	private StackInterface intArray;
+
+	public DefaultCountingOutRyhmer() {
+		super();
+		this.intArray = new IntLinkedList();
+	}
+	
+	public DefaultCountingOutRyhmer(StackInterface  intArray) {
+		super();
+		this.intArray = intArray;
+	}
+	
+	public int getTotal() {
+		return intArray.getSize();
+	}
+
+	void countIn(int in) {
+		intArray.push(in);
+	}
+
+	 boolean callCheck() {
+		return intArray.isEmpty();
+	}
+
+	 boolean isFull() {
+		return intArray.isFull();
+	}
+
+	 int peekaboo() {
+		 return intArray.top();
+	}
+
+	 int countOut() {
+		 return intArray.pop();
+	}
+	
+
+}

@@ -1,17 +1,33 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.defaultCountingOutRyhmer;
+import edu.kis.vh.nursery.DefaultCountingOutRyhmer;
 import edu.kis.vh.nursery.HanoiRyhmer;
+import edu.kis.vh.nursery.factory.ArrayRyhmesFactory;
 import edu.kis.vh.nursery.factory.DefaultRyhmersFactory;
-import edu.kis.vh.nursery.factory.Ryhmersfactory;
+import edu.kis.vh.nursery.factory.ListRyhmersFactory;
+import edu.kis.vh.nursery.factory.RyhmersFactory;
 
 class RyhmersDemo {
 
 	public static void main(String[] args) {
-		Ryhmersfactory factory = new DefaultRyhmersFactory();
 		
-		defaultCountingOutRyhmer[] ryhmers = { factory.GetStandardRyhmer(), factory.GetFalseRyhmer(),
-				factory.GetFIFORyhmer(), factory.GetHanoiRyhmer()};
+		// 3.1.16 we use abstract factory pattern 
+		
+		// 3.1.18 	FIFORyhmers break the isolation rule. 
+		
+		RyhmersFactory factory = new DefaultRyhmersFactory();
+		ryhmersTest(factory);
+		RyhmersFactory listFactory = new ListRyhmersFactory(); 
+		ryhmersTest(listFactory);
+		RyhmersFactory arrayFactory = new ArrayRyhmesFactory();
+		ryhmersTest(arrayFactory);
+		
+		
+	}
+	
+	private static void ryhmersTest(RyhmersFactory factory){
+		DefaultCountingOutRyhmer[] ryhmers = { factory.getStandardRyhmer(), factory.getFalseRyhmer(),
+				factory.getFIFORyhmer(), factory.getHanoiRyhmer()};
 		
 		for (int i = 1; i < 15; i++)
 			for (int j = 0; j < 3; j++)

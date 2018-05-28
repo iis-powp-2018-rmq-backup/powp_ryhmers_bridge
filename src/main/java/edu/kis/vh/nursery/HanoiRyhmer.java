@@ -1,17 +1,36 @@
 package edu.kis.vh.nursery;
 
-public class HanoiRyhmer extends defaultCountingOutRyhmer {
+import edu.kis.vh.nursery.stack.StackInterface;
 
-int totalRejected = 0;
+public class HanoiRyhmer extends DefaultCountingOutRyhmer {
+
+	private int totalRejected = 0;
+	
+	
+
+	public HanoiRyhmer() {
+		super();
+	}
+
+	public HanoiRyhmer(StackInterface intArray) {
+		super(intArray);
+	}
 
 	public int reportRejected() {
 		return totalRejected;
 	}
-
+	
+	@Override
 	public void countIn(int in) {
-	if (!callCheck() && in > peekaboo())
+		if (!callCheck() && in > peekaboo())
 			totalRejected++;
-			else
-				super.countIn(in);
+		else
+			super.countIn(in);
+	}
+
+	int getTotalRejected() {
+		return totalRejected;
 	}
 }
+
+//alt + -> przeskakuje miedzy ostatnimi kursorami 
