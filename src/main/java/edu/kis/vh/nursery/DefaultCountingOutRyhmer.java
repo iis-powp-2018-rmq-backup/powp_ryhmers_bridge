@@ -4,6 +4,10 @@ package edu.kis.vh.nursery;
  * @author student
  *
  */
+
+//Open Declaration opens the implementation of the method, from which we delegate
+
+
 public class DefaultCountingOutRyhmer {
 
 	private IntArrayStack intArray;
