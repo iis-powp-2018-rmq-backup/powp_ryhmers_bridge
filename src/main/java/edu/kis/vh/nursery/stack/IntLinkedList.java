@@ -2,7 +2,7 @@ package edu.kis.vh.nursery.stack;
 
 public class IntLinkedList implements IntStackImplementation {
 
-    public static final int IS_EMPTY_INDICATOR = -1;
+
     private Node last; // dostep do zmiennej odbywa sie poprzez funkcje get i set
     private int i; // dostep do zmiennej odbywa sie poprzez funkcje get i set
     private int size = IS_EMPTY_INDICATOR;

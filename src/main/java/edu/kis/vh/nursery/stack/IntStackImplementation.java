@@ -6,6 +6,8 @@ public interface IntStackImplementation {
      * @return pusta lista
      */
 
+    int IS_EMPTY_INDICATOR = -1;
+
     int getSize();
 
     void push(int i);

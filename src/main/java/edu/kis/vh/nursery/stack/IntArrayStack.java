@@ -3,7 +3,6 @@ package edu.kis.vh.nursery.stack;
 public class IntArrayStack implements IntStackImplementation {
 
     private static final int CAPACITY = 12;
-    private static final int IS_EMPTY_INDICATOR = -1;
     private int[] numbers = new int[getCAPACITY()]; // dostep do zmiennej odbywa sie poprzez funkcje get i set
 
 
