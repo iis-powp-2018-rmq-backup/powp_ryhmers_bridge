@@ -1,8 +1,17 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.stack.IntStackImplementation;
+
 public class HanoiRyhmer extends DefaultCountingOutRyhmer {
 
     private int totalRejected = 0; // dostep do zmiennej odbywa sie poprzez funkcje get i set
+
+    public HanoiRyhmer() {
+    }
+
+    public HanoiRyhmer(IntStackImplementation intLinkedList) {
+        super(intLinkedList);
+    }
 
     int reportRejected() {
         return getTotalRejected();
