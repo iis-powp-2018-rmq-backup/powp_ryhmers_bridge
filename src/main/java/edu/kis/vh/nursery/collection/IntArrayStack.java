@@ -4,8 +4,6 @@ public class IntArrayStack implements StackInterface {
 
     private static final int NUMBERS_CAPACITY = 12;
 
-    private static final int EMPTY_STACK_VALUE = -1;
-
     private int[] numbers = new int[NUMBERS_CAPACITY];
 
     private int total = EMPTY_STACK_VALUE;
