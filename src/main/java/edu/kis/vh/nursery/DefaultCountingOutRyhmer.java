@@ -1,38 +1,42 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.collection.IntLinkedList;
+import edu.kis.vh.nursery.collection.StackInterface;
+
 public class DefaultCountingOutRyhmer {
-//(ctrl+b) goes to declaration of selected method.
-	final IntLinkedList intLinkedList = new IntLinkedList();
 
-	public DefaultCountingOutRyhmer() {
-	}
+    private StackInterface stack;
 
-	public DefaultCountingOutRyhmer(IntArrayStack intArrayStack) {
-		this.intLinkedList.setIntArrayStack(intArrayStack);
-	}
+    public DefaultCountingOutRyhmer() {
+        stack = new IntLinkedList();
+    }
 
-	public int getTotal() {
-		return intLinkedList.getTotal();
-	}
+    public DefaultCountingOutRyhmer(StackInterface stack) {
+        this.stack = stack;
+    }
 
-	protected void countIn(final int in) {
-		intLinkedList.countIn(in);
-	}
+    public int getTotal() {
+        return stack.getTotal();
+    }
 
-	protected boolean callCheck() {
-		return intLinkedList.callCheck();
-	}
+    protected void countIn(final int in) {
+        stack.push(in);
+    }
 
-	protected boolean isFull() {
-		return intLinkedList.isFull();
-	}
+    protected boolean callCheck() {
+        return stack.isEmpty();
+    }
 
-	protected int peekaboo() {
-		return intLinkedList.peekaboo();
-	}
+    protected boolean isFull() {
+        return stack.isFull();
+    }
 
-	protected int countOut() {
-		return intLinkedList.countOut();
-	}
+    protected int peekaboo() {
+        return stack.top();
+    }
+
+    protected int countOut() {
+        return stack.pop();
+    }
 
 }
