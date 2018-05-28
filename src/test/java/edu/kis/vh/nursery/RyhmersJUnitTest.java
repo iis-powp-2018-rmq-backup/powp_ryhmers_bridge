@@ -36,9 +36,6 @@ public class RyhmersJUnitTest {
 			Assert.assertEquals(false, result);
 			ryhmer.countIn(888);
 		}
-
-		boolean result = ryhmer.isFull();
-		Assert.assertEquals(true, result);
 	}
 
 	@Test
