@@ -4,7 +4,6 @@ public class IntLinkedList implements IntStackInterface {
 
 
     private Node last; // dostep do zmiennej odbywa sie poprzez funkcje get i set
-    private int i; // dostep do zmiennej odbywa sie poprzez funkcje get i set
     private int size = IS_EMPTY_INDICATOR;
 
 
@@ -91,9 +90,6 @@ public class IntLinkedList implements IntStackInterface {
      * zwraca liczbe
      * @return i
      */
-    public int getI() {
-        return i;
-    }
 
 }
 
@@ -107,19 +103,8 @@ class Node {
         setValue(i);
     }
 
-    public int getValue() {
-        return value;
-    }
-
     public void setValue(final int value) {
         this.value = value;
     }
 
-    public Node getPrev() {
-        return prev;
-    }
-
-    public Node getNext() {
-        return next;
-    }
 }
