@@ -5,6 +5,7 @@ import edu.kis.vh.nursery.stack.IntStackInterface;
 
 public class DefaultCountingOutRyhmer {
 // klasa wykorzystujac wspolny interjejs moze korzystac teraz z IntArrayStack lub IntLinkedList
+    //Wszystkie klasy Ryhmers lamia ta zasade, brak im wspolnego interfejsu.
     public int getTotal() {
         return intLinkedList.getSize();
     }
