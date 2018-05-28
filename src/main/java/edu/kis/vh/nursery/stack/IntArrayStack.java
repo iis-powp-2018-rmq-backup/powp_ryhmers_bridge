@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery.stack;
 
-public class IntArrayStack implements IntStackImplementation {
+public class IntArrayStack implements IntStackInterface {
 
     private static final int CAPACITY = 12;
     private int[] numbers = new int[getCAPACITY()]; // dostep do zmiennej odbywa sie poprzez funkcje get i set
