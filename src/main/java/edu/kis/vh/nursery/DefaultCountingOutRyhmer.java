@@ -5,6 +5,8 @@ import edu.kis.vh.nursery.list.IntLinkedListInterface;
 
 public class DefaultCountingOutRyhmer {
 
+    // klasa wykorzystujac wspolny interjejs moze korzystac teraz z IntArrayStack lub IntLinkedList
+
     public DefaultCountingOutRyhmer(IntLinkedListInterface IntLinkedList) {
         this.IntLinkedList = IntLinkedList;
     }
