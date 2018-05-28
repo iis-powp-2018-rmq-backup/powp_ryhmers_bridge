@@ -5,7 +5,8 @@ public interface StackInterface {
 	/**
 	 * Default value returned by methods when the list is empty
 	 */
-	int _1 = -1;
+	int _1 = 0;
+	// 3.1.11 - changes from 3.1.10 helped in this.
 
 	/**
 	 * ADD integer to end of list.
