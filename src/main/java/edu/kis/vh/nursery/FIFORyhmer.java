@@ -1,8 +1,19 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.stack.IntLinkedListInterface;
+
 public class FIFORyhmer extends DefaultCountingOutRyhmer {
 
 	private DefaultCountingOutRyhmer temp = new DefaultCountingOutRyhmer();
+
+	public FIFORyhmer(IntLinkedListInterface intLinkedListInterface) {
+		super(intLinkedListInterface);
+	}
+
+    public FIFORyhmer()
+    {
+
+    }
 
 	@Override
 	public int countOut() {
