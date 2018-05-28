@@ -5,6 +5,9 @@ import edu.kis.vh.nursery.collection.StackInterface;
 
 public class DefaultCountingOutRyhmer {
 
+    //przy zmianie w ostatnim punkcie wymagana byla zmiana nazw metod. Z drugiej strony mozliwa jest
+    //teraz wieksza rozszerzalnosc projektu (np. o nowe typy stosu)
+
     private StackInterface stack;
 
     public DefaultCountingOutRyhmer() {
