@@ -1,10 +1,11 @@
 package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.list.IntLinkedList;
+import edu.kis.vh.nursery.list.IntLinkedListInterface;
 
 public class DefaultCountingOutRyhmer {
 
-    public DefaultCountingOutRyhmer(IntLinkedList IntLinkedList) {
+    public DefaultCountingOutRyhmer(IntLinkedListInterface IntLinkedList) {
         this.IntLinkedList = IntLinkedList;
     }
 
@@ -33,6 +34,6 @@ public class DefaultCountingOutRyhmer {
         return IntLinkedList.pop();
     }
 
-    private IntLinkedList IntLinkedList;
+    private IntLinkedListInterface IntLinkedList;
 
 }

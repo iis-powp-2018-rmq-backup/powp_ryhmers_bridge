@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery.list;
 
-public class IntArrayStack {
+public class IntArrayStack implements IntLinkedListInterface {
 
     private static final int emptyStack = -1;
     private static final int sizeOfStack = 11;
@@ -9,33 +9,40 @@ public class IntArrayStack {
 
     private int total = -1;
 
-    public void countIn(int in) {
+
+    @Override
+    public void push(int i) {
         if (!isFull())
-            NUMBERS[++total] = in;
+            getNumbers()[++total] = i;
     }
 
-    private int getTotal() {
-        return total;
+    private int[] getNumbers() {
+        return NUMBERS;
     }
 
-    boolean callCheck() {
-        return getTotal() == emptyStack;
+    @Override
+    public boolean isEmpty() {
+        return true;
     }
 
-    boolean isFull() {
-        return getTotal() == sizeOfStack;
+    @Override
+    public boolean isFull() {
+        return false;
     }
 
-    int peekaboo() {
-        if (callCheck())
+    @Override
+    public int top() {
+        if (isEmpty())
             return emptyStack;
-        return NUMBERS[getTotal()];
+        return getNumbers()[total];
     }
 
-    public int countOut() {
-        if (callCheck())
+    @Override
+    public int pop() {
+        if (isEmpty())
             return emptyStack;
-        return NUMBERS[total--];
+        return getNumbers()[total--];
     }
+
 
 }
