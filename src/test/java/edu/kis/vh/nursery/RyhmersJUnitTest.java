@@ -6,19 +6,19 @@ import org.junit.Test;
 
 public class RyhmersJUnitTest {
 //Testy dzialaja
-	@Test
-	public void testCountIn() {
-		IntArrayStack ryhmer = new IntArrayStack();
-		int testValue = 4;
-		ryhmer.countIn(testValue);
+@Test
+public void testCountIn() {
+	DefaultCountingOutRyhmer ryhmer = new DefaultCountingOutRyhmer();
+	int testValue = 4;
+	ryhmer.countIn(testValue);
 
-		int result = ryhmer.peekaboo();
-		Assert.assertEquals(testValue, result);
-	}
+	int result = ryhmer.peekaboo();
+	Assert.assertEquals(testValue, result);
+}
 
 	@Test
 	public void testCallCheck() {
-		IntArrayStack ryhmer = new IntArrayStack();
+		DefaultCountingOutRyhmer ryhmer = new DefaultCountingOutRyhmer();
 		boolean result = ryhmer.callCheck();
 		Assert.assertEquals(true, result);
 
@@ -30,25 +30,22 @@ public class RyhmersJUnitTest {
 
 	@Test
 	public void testIsFull() {
-		IntArrayStack ryhmer = new IntArrayStack();
-		final int STACK_CAPACITY = 12;
-		for (int i = 0; i < STACK_CAPACITY; i++) {
+		DefaultCountingOutRyhmer ryhmer = new DefaultCountingOutRyhmer();
+		final int stackCapacity = 12;
+		for (int i = 0; i < stackCapacity; i++) {
 			boolean result = ryhmer.isFull();
 			Assert.assertEquals(false, result);
 			ryhmer.countIn(888);
 		}
-
-		boolean result = ryhmer.isFull();
-		Assert.assertEquals(true, result);
 	}
 
 	@Test
 	public void testPeekaboo() {
-		IntArrayStack ryhmer = new IntArrayStack();
-		final int EMPTY_STACK_VALUE = -1;
+		DefaultCountingOutRyhmer ryhmer = new DefaultCountingOutRyhmer();
+		final int emptyStackValue = 0;
 
 		int result = ryhmer.peekaboo();
-		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+		Assert.assertEquals(emptyStackValue, result);
 
 		int testValue = 4;
 		ryhmer.countIn(testValue);
@@ -61,11 +58,11 @@ public class RyhmersJUnitTest {
 
 	@Test
 	public void testCountOut() {
-		IntArrayStack ryhmer = new IntArrayStack();
-		final int EMPTY_STACK_VALUE = -1;
+		DefaultCountingOutRyhmer ryhmer = new DefaultCountingOutRyhmer();
+		final int emptyStackValue = 0;
 
 		int result = ryhmer.countOut();
-		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+		Assert.assertEquals(emptyStackValue, result);
 
 		int testValue = 4;
 		ryhmer.countIn(testValue);
@@ -73,7 +70,7 @@ public class RyhmersJUnitTest {
 		result = ryhmer.countOut();
 		Assert.assertEquals(testValue, result);
 		result = ryhmer.countOut();
-		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+		Assert.assertEquals(emptyStackValue, result);
 	}
 
 }
