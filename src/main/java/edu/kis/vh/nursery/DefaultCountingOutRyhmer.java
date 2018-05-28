@@ -7,6 +7,8 @@ public class DefaultCountingOutRyhmer {
 
     // klasa wykorzystujac wspolny interjejs moze korzystac teraz z IntArrayStack lub IntLinkedList
 
+    //Wszystkie klasy Ryhmers lamia ta zasade, brak im wspolnego interfejsu.
+
     public DefaultCountingOutRyhmer(IntLinkedListInterface IntLinkedList) {
         this.IntLinkedList = IntLinkedList;
     }
