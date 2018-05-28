@@ -1,20 +1,14 @@
 package edu.kis.vh.nursery.list;
 
-public class IntLinkedList {
+public class IntLinkedList implements IntStackImplementation {
 
-    private static final int IS_EMPTY_INDICATOR = -1;
+    public static final int IS_EMPTY_INDICATOR = -1;
     private Node last; // dostep do zmiennej odbywa sie poprzez funkcje get i set
     private int i; // dostep do zmiennej odbywa sie poprzez funkcje get i set
     private int size = IS_EMPTY_INDICATOR;
-    /**
-     * getter do zmiennej is_empty_indicator
-     * @return pusta lista
-     */
-    public static int getIsEmptyIndicator() {
-        return IS_EMPTY_INDICATOR;
-    }
 
 
+    @Override
     public int getSize() {
         return size;
     }
@@ -24,6 +18,7 @@ public class IntLinkedList {
      * dodawanie wartosci do listy
      * @param i wartosc dodawana na poczatek listy
      */
+    @Override
     public void push(final int i) {
         if (getLast() == null)
             setLast(new Node(i));
@@ -39,6 +34,7 @@ public class IntLinkedList {
      * sprawdzenie czy lista jest pusta
      * @return null
      */
+    @Override
     public boolean isEmpty() {
         return getLast() == null;
     }
@@ -47,6 +43,7 @@ public class IntLinkedList {
      * sprawdzenie czy lista jest pusta
      * @return false
      */
+    @Override
     public boolean isFull() {
         return false;
     }
@@ -54,18 +51,20 @@ public class IntLinkedList {
     /** zwraca ostatnia wartosc
      * @return ostatnia wartosc
      */
+    @Override
     public int top() {
         if (isEmpty())
-            return getIsEmptyIndicator();
+            return IS_EMPTY_INDICATOR;
         return getLast().value;
     }
 
     /** zwraca i usuwa ostatnia wartosc
      * @return
      */
+    @Override
     public int pop() {
         if (isEmpty())
-            return getIsEmptyIndicator();
+            return IS_EMPTY_INDICATOR;
         int ret = getLast().value;
         setLast(getLast().prev);
         --size;
