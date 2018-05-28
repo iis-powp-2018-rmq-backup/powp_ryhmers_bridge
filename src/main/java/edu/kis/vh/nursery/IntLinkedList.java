@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery;
 
-public class IntArray {
+public class IntLinkedList {
 
     static final int NUMBERS_CAPACITY = 12;
     static final int EMPTY_STACK_VALUE = -1;
@@ -17,7 +17,7 @@ public class IntArray {
     int[] numbers = new int[NUMBERS_CAPACITY];
     int total = EMPTY_STACK_VALUE;
 
-    public IntArray() {
+    public IntLinkedList() {
     }
 
     public int getTotal() {

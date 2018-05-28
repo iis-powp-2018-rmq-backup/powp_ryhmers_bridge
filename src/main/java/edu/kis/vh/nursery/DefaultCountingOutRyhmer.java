@@ -2,37 +2,37 @@ package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRyhmer {
 //(ctrl+b) goes to declaration of selected method.
-	final IntArray intArray = new IntArray();
+	final IntLinkedList intLinkedList = new IntLinkedList();
 
 	public DefaultCountingOutRyhmer() {
 	}
 
 	public DefaultCountingOutRyhmer(IntArrayStack intArrayStack) {
-		this.intArray.setIntArrayStack(intArrayStack);
+		this.intLinkedList.setIntArrayStack(intArrayStack);
 	}
 
 	public int getTotal() {
-		return intArray.getTotal();
+		return intLinkedList.getTotal();
 	}
 
 	protected void countIn(final int in) {
-		intArray.countIn(in);
+		intLinkedList.countIn(in);
 	}
 
 	protected boolean callCheck() {
-		return intArray.callCheck();
+		return intLinkedList.callCheck();
 	}
 
 	protected boolean isFull() {
-		return intArray.isFull();
+		return intLinkedList.isFull();
 	}
 
 	protected int peekaboo() {
-		return intArray.peekaboo();
+		return intLinkedList.peekaboo();
 	}
 
 	protected int countOut() {
-		return intArray.countOut();
+		return intLinkedList.countOut();
 	}
 
 }

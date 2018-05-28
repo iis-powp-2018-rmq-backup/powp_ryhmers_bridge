@@ -6,7 +6,7 @@ public class FIFORyhmer extends DefaultCountingOutRyhmer {
 	
 	@Override
 	protected int countOut() {
-		while (!intArray.callCheck())
+		while (!intLinkedList.callCheck())
 			
 		defaultCountingOutRyhmer.countIn(super.countOut());
 		
@@ -14,7 +14,7 @@ public class FIFORyhmer extends DefaultCountingOutRyhmer {
 		
 		while (!defaultCountingOutRyhmer.callCheck())
 
-            intArray.countIn(defaultCountingOutRyhmer.countOut());
+            intLinkedList.countIn(defaultCountingOutRyhmer.countOut());
 		
 		return ret;
 	}
