@@ -9,9 +9,9 @@ public class RyhmersJUnitTest {
 	public void testCountIn() {
 		IntArrayStack ryhmer = new IntArrayStack();
 		final int testValue = 4;
-		ryhmer.countIn(testValue);
+		ryhmer.push(testValue);
 
-		final int result = ryhmer.peekaboo();
+		final int result = ryhmer.pop();
 		Assert.assertEquals(testValue, result);
 	}
 
@@ -19,12 +19,12 @@ public class RyhmersJUnitTest {
 	public void testCallCheck() {
 		IntArrayStack ryhmer = new IntArrayStack();
 		final int testValue = 888;
-		boolean result = ryhmer.callCheck();
+		boolean result = ryhmer.isEmpty();
 		Assert.assertEquals(true, result);
 
-		ryhmer.countIn(testValue);
+		ryhmer.push(testValue);
 
-		result = ryhmer.callCheck();
+		result = ryhmer.isEmpty();
 		Assert.assertEquals(false, result);
 	}
 
@@ -65,14 +65,14 @@ public class RyhmersJUnitTest {
 		final int EMPTY_STACK_VALUE = -1;
 		final int testValue = 4;
 
-		int result = ryhmer.countOut();
+		int result = ryhmer.pop();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
 
-		ryhmer.countIn(testValue);
+		ryhmer.push(testValue);
 
-		result = ryhmer.countOut();
+		result = ryhmer.pop();
 		Assert.assertEquals(testValue, result);
-		result = ryhmer.countOut();
+		result = ryhmer.pop();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
 	}
 

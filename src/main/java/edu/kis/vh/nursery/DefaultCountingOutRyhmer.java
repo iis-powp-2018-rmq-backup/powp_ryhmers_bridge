@@ -1,6 +1,7 @@
 package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.list.IntLinkedList;
+import edu.kis.vh.nursery.list.StackInterface;
 
 /**
  * @author student
@@ -10,16 +11,16 @@ import edu.kis.vh.nursery.list.IntLinkedList;
 //Open Declaration opens the implementation of the method, from which we delegate
 
 
-public class DefaultCountingOutRyhmer {
+public class DefaultCountingOutRyhmer{
 
-	private IntLinkedList intArray;
+	private StackInterface intArray;
 
 	public DefaultCountingOutRyhmer() {
 		super();
 		this.intArray = new IntLinkedList();
 	}
 	
-	public DefaultCountingOutRyhmer(IntLinkedList intArray) {
+	public DefaultCountingOutRyhmer(StackInterface  intArray) {
 		super();
 		this.intArray = intArray;
 	}

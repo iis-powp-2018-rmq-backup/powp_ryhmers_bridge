@@ -4,7 +4,7 @@ package edu.kis.vh.nursery.list;
  * Basic implementation of linked list contained integers.
  */
 
-public class IntLinkedList {
+public class IntLinkedList implements StackInterface {
 	
 	private Node last;
 	
@@ -13,10 +13,10 @@ public class IntLinkedList {
 	*/
 	private int size = 0;
 	
-	/**
-	 * ADD integer to end of list.
-	 * @param i - integer to add.
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.nursery.list.StackInterface#push(int)
 	 */
+	@Override
 	public void push(int i) {
 		if (last == null) {
 			last = new Node(i);
@@ -30,26 +30,26 @@ public class IntLinkedList {
 		}
 	}
 
-	/**
-	 * Check if list is empty.
-	 * @return true if list empty otherwise false.
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.nursery.list.StackInterface#isEmpty()
 	 */
+	@Override
 	public boolean isEmpty() {
 		return last == null;
 	}
 
-	/**
-	 * Check if list is full.
-	 * @return should always be false.
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.nursery.list.StackInterface#isFull()
 	 */
+	@Override
 	public boolean isFull() {
 		return false; // TODO: In this case, this method is useless, should be removed. 
 	}
 
-	/**
-	 * Get value from top of the list.  
-	 * @return integer that is currently on the top of the list
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.nursery.list.StackInterface#top()
 	 */
+	@Override
 	public int top() {
 		if (isEmpty())
 			return -1;
@@ -57,10 +57,10 @@ public class IntLinkedList {
 	}
 	
 	
-	/**
-	 * Pop out value from top of the list. 
-	 * @return true if list empty otherwise false.
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.nursery.list.StackInterface#pop()
 	 */
+	@Override
 	public int pop() {
 		if (isEmpty())
 			return -1;
@@ -71,9 +71,10 @@ public class IntLinkedList {
 	}
 	
 	
-	/**
-	 * @return list size.
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.nursery.list.StackInterface#getSize()
 	 */
+	@Override
 	public int getSize() {
 		return size;
 	}
