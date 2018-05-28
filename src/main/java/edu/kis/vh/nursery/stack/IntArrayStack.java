@@ -4,7 +4,6 @@ public class IntArrayStack implements IntLinkedListInterface {
 
     //zrobione
 
-    private static final int emptyStack = -1;
     private static final int sizeOfStack = 11;
     private static final int stackCapacity = 12;
     private int[] NUMBERS = new int[stackCapacity];
