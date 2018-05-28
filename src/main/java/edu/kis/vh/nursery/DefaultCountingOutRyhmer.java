@@ -1,7 +1,7 @@
 package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.stack.IntLinkedList;
-import edu.kis.vh.nursery.stack.IntStackImplementation;
+import edu.kis.vh.nursery.stack.IntStackInterface;
 
 public class DefaultCountingOutRyhmer {
 // klasa wykorzystujac wspolny interjejs moze korzystac teraz z IntArrayStack lub IntLinkedList
@@ -29,12 +29,12 @@ public class DefaultCountingOutRyhmer {
         return intLinkedList.pop();
     }
 
-    IntStackImplementation intLinkedList;
+    IntStackInterface intLinkedList;
 
     public DefaultCountingOutRyhmer() {
         intLinkedList = new IntLinkedList();
     }
-    public DefaultCountingOutRyhmer(IntStackImplementation intLinkedList) {
+    public DefaultCountingOutRyhmer(IntStackInterface intLinkedList) {
         super();
         this.intLinkedList = intLinkedList;
     }

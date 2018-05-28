@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery.stack;
 
-public class IntLinkedList implements IntStackImplementation {
+public class IntLinkedList implements IntStackInterface {
 
 
     private Node last; // dostep do zmiennej odbywa sie poprzez funkcje get i set

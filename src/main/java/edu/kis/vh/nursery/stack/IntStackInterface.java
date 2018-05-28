@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery.stack;
 
-public interface IntStackImplementation {
+public interface IntStackInterface {
     /**
      * getter do zmiennej is_empty_indicator
      * @return pusta lista

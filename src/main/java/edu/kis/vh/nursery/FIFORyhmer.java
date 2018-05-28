@@ -1,12 +1,14 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.stack.IntStackImplementation;
+
+import edu.kis.vh.nursery.stack.IntArrayStack;
+import edu.kis.vh.nursery.stack.IntStackInterface;
 
 public class FIFORyhmer extends DefaultCountingOutRyhmer {
 
-    private final DefaultCountingOutRyhmer temp = new DefaultCountingOutRyhmer();
-
-    public FIFORyhmer(IntStackImplementation intLinkedList) {
+    private final IntArrayStack temp = new IntArrayStack();
+    //Tablica bedzie zajmowac mniej pamieci niz lista, nie potrzebuje zawierac wskaznikow na poprzedni i nastepny element
+    public FIFORyhmer(IntStackInterface intLinkedList) {
         super(intLinkedList);
     }
 
@@ -17,13 +19,13 @@ public class FIFORyhmer extends DefaultCountingOutRyhmer {
     public int countOut() {
         while (!callCheck())
 
-            temp.countIn(super.countOut());
+            temp.push(super.countOut());
 
-        final int ret = temp.countOut();
+        final int ret = temp.pop();
 
-        while (!temp.callCheck())
+        while (!temp.isEmpty())
 
-            countIn(temp.countOut());
+            countIn(temp.pop());
 
         return ret;
     }
