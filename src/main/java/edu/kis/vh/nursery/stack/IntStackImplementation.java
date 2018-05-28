@@ -21,4 +21,6 @@ public interface IntStackImplementation {
     int pop();
 
     //Tak, zmiana zostala ograniczona do jednego miejsca
+
+    //W Inteliji Navigate->GoTo i ctrl i klikniecie myszka dziala tak samo
 }
