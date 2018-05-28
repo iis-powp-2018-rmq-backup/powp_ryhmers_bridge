@@ -2,7 +2,8 @@ package edu.kis.vh.nursery.stack;
 
 public interface IntLinkedListInterface {
 
-    int emptyStack = -1;
+    //Pomoglo ,poniewaz zmiane wprowadzam w jednym miejscu
+    int emptyStack = 0;
 
     void push(int i);
 
