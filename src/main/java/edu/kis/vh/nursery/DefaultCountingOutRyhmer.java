@@ -12,6 +12,9 @@ import edu.kis.vh.nursery.stack.StackInterface;
 
 // 3.1.7 thanks to this change, we can use more dynamically classes that implements StackInterface.
 
+// 3.1.13	 -  ctrl + t shows hierarchy of class
+//			 - 	ctrl with the cursor shows the implementation or the declaration
+
 
 
 public class DefaultCountingOutRyhmer{

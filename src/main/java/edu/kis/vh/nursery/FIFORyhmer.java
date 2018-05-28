@@ -1,11 +1,13 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.stack.IntLinkedList;
 import edu.kis.vh.nursery.stack.StackInterface;
+
+// 3.1.14 	- we need stack without capacity, because we push many values and after that we pop out all of them.
 
 public class FIFORyhmer extends DefaultCountingOutRyhmer {
 
-	private final DefaultCountingOutRyhmer temp = new DefaultCountingOutRyhmer();
-	
+	private final StackInterface temp = new IntLinkedList();
 	
 	
 	public FIFORyhmer() {
@@ -13,24 +15,22 @@ public class FIFORyhmer extends DefaultCountingOutRyhmer {
 	}
 
 
-
 	public FIFORyhmer(StackInterface intArray) {
 		super(intArray);
 	}
-
 
 
 	@Override
 	public int countOut() {
 		while (!callCheck())
 			
-		temp.countIn(super.countOut());
+		temp.push(super.countOut());
 		
-		final int ret = temp.countOut();
+		final int ret = temp.pop();
 		
-		while (!temp.callCheck())
+		while (!temp.isEmpty())
 			
-			countIn(temp.countOut());
+			countIn(temp.pop());
 
 		return ret;
 	}
