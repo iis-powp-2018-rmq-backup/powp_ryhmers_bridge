@@ -10,6 +10,9 @@ import edu.kis.vh.nursery.list.StackInterface;
 
 //Open Declaration opens the implementation of the method, from which we delegate
 
+// 3.1.7 thanks to this change, we cen use more dynamically classes that implements StackInterface.
+
+
 
 public class DefaultCountingOutRyhmer{
 
