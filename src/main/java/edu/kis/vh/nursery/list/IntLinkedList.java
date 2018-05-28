@@ -7,19 +7,26 @@ package edu.kis.vh.nursery.list;
 public class IntLinkedList {
 	
 	private Node last;
-
-
+	
+	/**
+	* Amount of elements in list
+	*/
+	private int size = 0;
+	
 	/**
 	 * ADD integer to end of list.
 	 * @param i - integer to add.
 	 */
 	public void push(int i) {
-		if (last == null)
+		if (last == null) {
 			last = new Node(i);
+			size++;
+		}
 		else {
 			last.setNext(new Node(i));
 			last.getNext().setPrev(last);
 			last = last.getNext();
+			size++;
 		}
 	}
 
@@ -59,10 +66,20 @@ public class IntLinkedList {
 			return -1;
 		final int ret = last.getValue();
 		last = last.getPrev();
+		size--;
 		return ret;
 	}
-
 	
+	
+	/**
+	 * @return list size.
+	 */
+	public int getSize() {
+		return size;
+	}
+
+
+
 	private class Node {
 
 		private int value;
