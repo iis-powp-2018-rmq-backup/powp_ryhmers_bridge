@@ -10,6 +10,11 @@ import edu.kis.vh.nursery.factory.RyhmersFactory;
 class RyhmersDemo {
 
 	public static void main(String[] args) {
+		
+		// 3.1.16 we use abstract factory pattern 
+		
+		// 3.1.18 	FIFORyhmers break the isolation rule. 
+		
 		RyhmersFactory factory = new DefaultRyhmersFactory();
 		ryhmersTest(factory);
 		RyhmersFactory listFactory = new ListRyhmersFactory(); 
