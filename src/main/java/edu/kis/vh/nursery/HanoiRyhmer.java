@@ -1,17 +1,36 @@
 package edu.kis.vh.nursery;
 
-public class HanoiRyhmer extends defaultCountingOutRyhmer {
+import edu.kis.vh.nursery.stack.IntStackInterface;
 
-int totalRejected = 0;
+public class HanoiRyhmer extends DefaultCountingOutRyhmer {
 
-	public int reportRejected() {
-		return totalRejected;
-	}
+    private int totalRejected = 0; // dostep do zmiennej odbywa sie poprzez funkcje get i set
 
-	public void countIn(int in) {
-	if (!callCheck() && in > peekaboo())
-			totalRejected++;
-			else
-				super.countIn(in);
-	}
+    public HanoiRyhmer() {
+    }
+
+    public HanoiRyhmer(IntStackInterface intLinkedList) {
+        super(intLinkedList);
+    }
+
+    int reportRejected() {
+        return getTotalRejected();
+    }
+
+    @Override
+    public void countIn(final int in) {
+        if (!callCheck() && in > peekaboo())
+            setTotalRejected(getTotalRejected() + 1);
+        else
+            super.countIn(in);
+    }
+
+    public int getTotalRejected() {
+        return totalRejected;
+    }
+
+    public void setTotalRejected(final int totalRejected) {
+        this.totalRejected = totalRejected;
+    }
 }
+// Alt + --> lub Alt + <-- dziala w pozwala na pominiecie calego słowa
