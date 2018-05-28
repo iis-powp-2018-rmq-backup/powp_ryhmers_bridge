@@ -2,7 +2,7 @@ package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRyhmer {
 
-	private final IntArray intArray = new IntArray();
+	final IntArray intArray = new IntArray();
 
 	public DefaultCountingOutRyhmer() {
 	}
