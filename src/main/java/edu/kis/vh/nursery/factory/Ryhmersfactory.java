@@ -14,4 +14,4 @@ import edu.kis.vh.nursery.DefaultCountingOutRyhmer;
 		
 	}
 
-	//Fabryka abstrakcyjna 
+	//Fabryka abstrakcyjna
