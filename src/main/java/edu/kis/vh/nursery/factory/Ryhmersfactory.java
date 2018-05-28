@@ -13,3 +13,4 @@ public interface Ryhmersfactory {
     DefaultCountingOutRyhmer getHanoiRyhmer();
 
 }
+//Fabryka abstrakcyjna
