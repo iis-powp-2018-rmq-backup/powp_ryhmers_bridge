@@ -7,7 +7,7 @@ public class RyhmersJUnitTest {
 
 	@Test
 	public void testCountIn() {
-		final DefaultCountingOutRyhmer ryhmer = new DefaultCountingOutRyhmer();
+		IntArrayStack ryhmer = new IntArrayStack();
 		final int testValue = 4;
 		ryhmer.countIn(testValue);
 
@@ -17,7 +17,7 @@ public class RyhmersJUnitTest {
 
 	@Test
 	public void testCallCheck() {
-		final DefaultCountingOutRyhmer ryhmer = new DefaultCountingOutRyhmer();
+		IntArrayStack ryhmer = new IntArrayStack();
 		final int testValue = 888;
 		boolean result = ryhmer.callCheck();
 		Assert.assertEquals(true, result);
@@ -61,7 +61,7 @@ public class RyhmersJUnitTest {
 
 	@Test
 	public void testCountOut() {
-		DefaultCountingOutRyhmer ryhmer = new DefaultCountingOutRyhmer();
+		IntArrayStack ryhmer = new IntArrayStack();
 		final int EMPTY_STACK_VALUE = -1;
 		final int testValue = 4;
 

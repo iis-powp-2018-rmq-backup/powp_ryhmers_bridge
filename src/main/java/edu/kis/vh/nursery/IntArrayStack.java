@@ -1,10 +1,12 @@
 package edu.kis.vh.nursery;
 
-public class InArrayStack {
+public class IntArrayStack {
 	private static final int _NUMBERS_SIZE = 12;
 	private static final int _1 = -1;
 	private final int[] NUMBERS = new int[_NUMBERS_SIZE];
 	private int total = _1;
+	
+	
 
 	 public int getTotal() {
 		return total;

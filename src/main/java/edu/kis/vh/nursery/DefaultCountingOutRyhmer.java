@@ -6,42 +6,41 @@ package edu.kis.vh.nursery;
  */
 public class DefaultCountingOutRyhmer {
 
-	private static final int _NUMBERS_SIZE = 12;
-	private static final int _1 = -1;
-	private final int[] NUMBERS = new int[_NUMBERS_SIZE];
-	private int total = _1;
+	private IntArrayStack intArray;
 
-	 public int getTotal() {
-		return total;
+	public DefaultCountingOutRyhmer() {
+		super();
+		this.intArray = new IntArrayStack();
 	}
-
-	public void setTotal(int total) {
-		this.total = total;
+	
+	public DefaultCountingOutRyhmer(IntArrayStack intArray) {
+		super();
+		this.intArray = intArray;
+	}
+	
+	public int getTotal() {
+		return intArray.getTotal();
 	}
 
 	void countIn(int in) {
-		if (!isFull())
-			NUMBERS[++total] = in;
+		intArray.countIn(in);
 	}
 
 	 boolean callCheck() {
-		return total == -1;
+		return intArray.callCheck();
 	}
 
 	 boolean isFull() {
-		return total == 11;
+		return intArray.isFull();
 	}
 
 	 int peekaboo() {
-		if (callCheck())
-			return -1;
-		return NUMBERS[total];
+		 return intArray.peekaboo();
 	}
 
 	 int countOut() {
-		if (callCheck())
-			return -1;
-		return NUMBERS[total--];
+		 return intArray.countOut();];
 	}
+	
 
 }
