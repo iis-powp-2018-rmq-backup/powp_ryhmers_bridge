@@ -4,7 +4,7 @@ import edu.kis.vh.nursery.list.IntLinkedList;
 import edu.kis.vh.nursery.list.IntStackImplementation;
 
 public class DefaultCountingOutRyhmer {
-
+// klasa wykorzystujac wspolny interjejs moze korzystac teraz z IntArrayStack lub IntLinkedList
     public int getTotal() {
         return intLinkedList.getSize();
     }
