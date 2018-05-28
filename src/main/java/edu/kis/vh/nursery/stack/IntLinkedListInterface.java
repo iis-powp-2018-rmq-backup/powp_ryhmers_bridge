@@ -4,7 +4,7 @@ public interface IntLinkedListInterface {
 
     //Pomoglo ,poniewaz zmiane wprowadzam w jednym miejscu
     //W Inteliji Navigate->GoTo i ctrl i klikniecie myszka dziala tak samo
-    
+
     int emptyStack = 0;
 
     void push(int i);
