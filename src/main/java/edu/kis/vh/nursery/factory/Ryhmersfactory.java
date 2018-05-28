@@ -13,3 +13,5 @@ import edu.kis.vh.nursery.DefaultCountingOutRyhmer;
 		DefaultCountingOutRyhmer getHanoiRyhmer();
 		
 	}
+
+	//Fabryka abstrakcyjna 
