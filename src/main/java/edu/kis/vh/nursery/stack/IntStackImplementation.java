@@ -6,7 +6,7 @@ public interface IntStackImplementation {
      * @return pusta lista
      */
 
-    int IS_EMPTY_INDICATOR = -1;
+    int IS_EMPTY_INDICATOR = 0;
 
     int getSize();
 
@@ -19,4 +19,6 @@ public interface IntStackImplementation {
     int top();
 
     int pop();
+
+    //Tak, zmiana zostala ograniczona do jednego miejsca
 }
