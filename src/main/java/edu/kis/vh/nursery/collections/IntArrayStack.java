@@ -1,6 +1,6 @@
-package edu.kis.vh.nursery;
+package edu.kis.vh.nursery.collections;
 
-class IntArrayStack implements CountingContainer{
+class IntArrayStack implements CountingContainer {
     private static final int NUMBERS_EMPTY = -1;
     private static final int NUMBERS_CAPACITY = 12;
 
