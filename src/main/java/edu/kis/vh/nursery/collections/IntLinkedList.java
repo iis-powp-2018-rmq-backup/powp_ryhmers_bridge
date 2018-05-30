@@ -4,9 +4,8 @@ public class IntLinkedList implements CountingContainer {
 
 	private int total = LIST_EMPTY;
 	private Node last;
-	private int value;
 
-	public void push(int value) {
+	@Override public void push(int value) {
 		if (getLast() == null)
 			setLast(new Node(value));
 		else {
@@ -25,13 +24,13 @@ public class IntLinkedList implements CountingContainer {
 		return false;
 	}
 
-	public int top() {
+	@Override public int top() {
 		if (isEmpty())
 			return LIST_EMPTY;
 		return getLast().getValue();
 	}
 
-	public int pop() {
+	@Override public int pop() {
 		if (isEmpty())
 			return LIST_EMPTY;
 		int returnedValue = getLast().getValue();
@@ -41,7 +40,7 @@ public class IntLinkedList implements CountingContainer {
 
 	@Override
 	public int getTotal() {
-		return 0;
+		return total;
 	}
 
 	public Node getLast() {
@@ -50,14 +49,6 @@ public class IntLinkedList implements CountingContainer {
 
 	public void setLast(Node last) {
 		this.last = last;
-	}
-
-	public int getValue() {
-		return value;
-	}
-
-	public void setValue(int value) {
-		this.value = value;
 	}
 
 	/*
