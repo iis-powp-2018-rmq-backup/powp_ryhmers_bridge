@@ -1,8 +1,11 @@
 package edu.kis.vh.nursery.list;
 
-public class IntLinkedList {
+import edu.kis.vh.nursery.CountingContainer;
+
+public class IntLinkedList implements CountingContainer {
 
 	private static final int LIST_EMPTY = -1;
+	private int total = -1;
 	private Node last;
 	private int value;
 
@@ -14,6 +17,7 @@ public class IntLinkedList {
 			getLast().getNext().setPrev(getLast());
 			setLast(getLast().getNext());
 		}
+		total++;
 	}
 
 	public boolean isEmpty() {
@@ -36,6 +40,11 @@ public class IntLinkedList {
 		int returnedValue = getLast().getValue();
 		setLast(getLast().getPrev());
 		return returnedValue;
+	}
+
+	@Override
+	public int getTotal() {
+		return 0;
 	}
 
 	public Node getLast() {
