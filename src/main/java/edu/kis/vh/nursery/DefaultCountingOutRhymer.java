@@ -5,40 +5,40 @@ package edu.kis.vh.nursery;
  */
 public class DefaultCountingOutRhymer {
 
-	static final int EMPTY = -1;
-	static final int NUMBER_CAPACITY = 12;
-	static final int FULL = 11;
+	IntArrayStack intArrayStack;
+	
+	public DefaultCountingOutRhymer() {
+		super();
+		this.intArrayStack = new IntArrayStack();
+	}
+	
+	public DefaultCountingOutRhymer(IntArrayStack intArrayStack) {
+		super();
+		this.intArrayStack = intArrayStack;
+	}
 
-	private final int[] NUMBERS = new int[NUMBER_CAPACITY];
-	private int total = EMPTY;
 
 	public int getTotal() {
-		return total;
+		return intArrayStack.getTotal();
 	}
 
 	public void countIn(int in) {
-		if (!isFull())
-			NUMBERS[++total] = in;
-	}
-
-	protected boolean callCheck() {
-		return total == EMPTY;
+		intArrayStack.countIn(in);
 	}
 
 	public boolean isFull() {
-		return total == FULL;
+		return intArrayStack.isFull();
 	}
 
-	protected int peekaboo() {
-		if (callCheck())
-			return EMPTY;
-		return NUMBERS[total];
+	public boolean callCheck() {
+		return intArrayStack.callCheck();
 	}
 
-	protected int countOut() {
-		if (callCheck())
-			return EMPTY;
-		return NUMBERS[total--];
+	public int peekaboo() {
+		return intArrayStack.peekaboo();
 	}
 
+	public int countOut() {
+		return intArrayStack.countOut();
+	}
 }

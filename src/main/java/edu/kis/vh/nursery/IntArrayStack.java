@@ -8,7 +8,7 @@ public class IntArrayStack {
 
 	private final int[] NUMBERS = new int[NUMBER_CAPACITY];
 	private int total = EMPTY;
-
+	
 	public int getTotal() {
 		return total;
 	}
@@ -18,7 +18,7 @@ public class IntArrayStack {
 			NUMBERS[++total] = in;
 	}
 
-	protected boolean callCheck() {
+	public boolean callCheck() {
 		return total == EMPTY;
 	}
 
@@ -26,13 +26,13 @@ public class IntArrayStack {
 		return total == FULL;
 	}
 
-	protected int peekaboo() {
+	public int peekaboo() {
 		if (callCheck())
 			return EMPTY;
 		return NUMBERS[total];
 	}
 
-	protected int countOut() {
+	public int countOut() {
 		if (callCheck())
 			return EMPTY;
 		return NUMBERS[total--];
