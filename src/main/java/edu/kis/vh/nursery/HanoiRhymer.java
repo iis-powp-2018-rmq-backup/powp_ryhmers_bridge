@@ -1,5 +1,7 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.list.IntLinkedList;
+
 /**
  * @author Mrucznik
  * Klasa zawierająca implementacje wyliczanki typu Hanoi
@@ -7,6 +9,16 @@ package edu.kis.vh.nursery;
 public class HanoiRhymer extends DefaultCountingOutRhymer {
 
 	private int totalRejected = 0;
+
+	public HanoiRhymer() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public HanoiRhymer(IntLinkedList intLinkedList) {
+		super(intLinkedList);
+		// TODO Auto-generated constructor stub
+	}
 
 	/**
 	 * @return ilość odrzuconych liczb
