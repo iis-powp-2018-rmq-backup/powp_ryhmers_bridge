@@ -3,33 +3,38 @@ package edu.kis.vh.nursery;
 import edu.kis.vh.nursery.list.IntLinkedList;
 
 public class DefaultCountingOutRyhmer {
-	private IntLinkedList intLinkedList;
+	/**
+	 * Dzięki zastosowaniu wspólnego interfejsu w IntLinkedList oraz IntArrayStack
+	 * możemy bez problemu używać tych 2 klas wymiennie (w zależności od tego która implementacja jest nam potrzebna)
+	 */
+
+	private IntStack intStack;
 
 	public DefaultCountingOutRyhmer() {
 		this(new IntLinkedList());
 	}
 
-	public DefaultCountingOutRyhmer(IntLinkedList intLinkedList) {
-		this.intLinkedList = intLinkedList;
+	public DefaultCountingOutRyhmer(IntStack intStack) {
+		this.intStack = intStack;
 	}
 
 	public void countIn(int in) {
-		intLinkedList.push(in);
+		intStack.push(in);
 	}
 
 	public boolean callCheck() {
-		return intLinkedList.isEmpty();
+		return intStack.isEmpty();
 	}
 
 	public boolean isFull() {
-		return intLinkedList.isFull();
+		return intStack.isFull();
 	}
 
 	protected int peekaboo() {
-		return intLinkedList.top();
+		return intStack.top();
 	}
 
 	public int countOut() {
-		return intLinkedList.pop();
+		return intStack.pop();
 	}
 }

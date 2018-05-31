@@ -1,10 +1,12 @@
 package edu.kis.vh.nursery.list;
 
+import edu.kis.vh.nursery.IntStack;
+
 /**
  * Basic implementation of linked list that contains integers.
  */
 // TODO: Should implement Collection interface
-public class IntLinkedList {
+public class IntLinkedList implements IntStack {
 	/**
 	 * Value returned by empty list.
 	 */
@@ -16,6 +18,7 @@ public class IntLinkedList {
 	 * Add integer to end of list.
 	 * @param i - integer to add
 	 */
+	@Override
 	public void push(int i) {
 		if (last == null) {
 			last = new Node(i);
@@ -30,6 +33,7 @@ public class IntLinkedList {
 	 * Check if list is empty.
 	 * @return true if list is empty, false otherwise
 	 */
+	@Override
 	public boolean isEmpty() {
 		return last == null;
 	}
@@ -38,6 +42,7 @@ public class IntLinkedList {
 	 * Check if list is full.
 	 * @return should always return false
 	 */
+	@Override
 	public boolean isFull() {
 		return false; // TODO: Useless method in this case, should be removed
 	}
@@ -46,6 +51,7 @@ public class IntLinkedList {
 	 * Get value on top of list.
 	 * @return integer that is currently on top of the list
 	 */
+	@Override
 	public int top() {
 		if (isEmpty()) {
 			return LIST_EMPTY; // TODO: Should return Integer instead of int, and null value in this case. It would pass my tests then :)
@@ -57,6 +63,7 @@ public class IntLinkedList {
 	 * Pop out value from top of the list.
 	 * @return popped out value
 	 */
+	@Override
 	public int pop() {
 		if (isEmpty()) {
 			return LIST_EMPTY;
