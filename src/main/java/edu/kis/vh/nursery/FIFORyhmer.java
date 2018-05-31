@@ -16,6 +16,12 @@ public class FIFORyhmer extends DefaultCountingOutRyhmer {
 		super(intStack);
 	}
 
+	/**
+	 * Bez bicia przyznam się, że nie wiem co to zasada izolacji, ale obstawiłbym, że właśnie w tej metodzie
+	 * jest ona złamana. Używany jest tu jednocześnie zbiór elementów z nadklasy jak i tymczasowy zbiór temp
+	 * z któego zwracane są dane w przeciążonej metodzie countOut()
+	 */
+
 	@Override
 	public int countOut() {
 		while (!callCheck()) {
