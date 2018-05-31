@@ -12,12 +12,10 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
 
 	public HanoiRhymer() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
-	public HanoiRhymer(IntLinkedList intLinkedList) {
-		super(intLinkedList);
-		// TODO Auto-generated constructor stub
+	public HanoiRhymer(IIntStack intStack) {
+		super(intStack);
 	}
 
 	/**

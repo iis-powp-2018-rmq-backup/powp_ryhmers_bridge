@@ -7,40 +7,40 @@ import edu.kis.vh.nursery.list.IntLinkedList;
  */
 public class DefaultCountingOutRhymer {
 
-	IIntStack intLinkedList;
+	IIntStack intStack;
 	
 	public DefaultCountingOutRhymer() {
 		super();
-		this.intLinkedList = new IntLinkedList();
+		this.intStack = new IntLinkedList();
 	}
 	
-	public DefaultCountingOutRhymer(IntLinkedList intLinkedList) {
+	public DefaultCountingOutRhymer(IIntStack intStack) {
 		super();
-		this.intLinkedList = intLinkedList;
+		this.intStack = intStack;
 	}
 
 
 	public int getTotal() {
-		return intLinkedList.getTotal();
+		return intStack.getTotal();
 	}
 
 	public void countIn(int in) {
-		intLinkedList.push(in);
+		intStack.push(in);
 	}
 
 	public boolean isFull() {
-		return intLinkedList.isFull();
+		return intStack.isFull();
 	}
 
 	public boolean callCheck() {
-		return intLinkedList.isEmpty();
+		return intStack.isEmpty();
 	}
 
 	public int peekaboo() {
-		return intLinkedList.top();
+		return intStack.top();
 	}
 
 	public int countOut() {
-		return intLinkedList.pop();
+		return intStack.pop();
 	}
 }

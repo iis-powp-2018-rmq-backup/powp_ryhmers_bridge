@@ -3,34 +3,25 @@ package edu.kis.vh.nursery;
 import edu.kis.vh.nursery.list.IntLinkedList;
 
 public class FIFORhymer extends DefaultCountingOutRhymer {
-
-	private DefaultCountingOutRhymer defaultCountingOutRyhmer = new DefaultCountingOutRhymer();
-
 	
-	
+	IIntStack temp = new IntLinkedList();
 	public FIFORhymer() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
-
-
-	public FIFORhymer(IntLinkedList intLinkedList) {
-		super(intLinkedList);
-		// TODO Auto-generated constructor stub
+	public FIFORhymer(IIntStack intStack) {
+		super(intStack);
 	}
-
-
 
 	@Override
 	public int countOut() {
 		while (!callCheck())
-			defaultCountingOutRyhmer.countIn(super.countOut());
+			temp.push(super.countOut());
 
-		int ret = defaultCountingOutRyhmer.countOut();
+		int ret = temp.pop();
 
-		while (!defaultCountingOutRyhmer.callCheck())
-			countIn(defaultCountingOutRyhmer.countOut());
+		while (!temp.isEmpty())
+			countIn(temp.pop());
 
 		return ret;
 	}
@@ -41,4 +32,5 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
  * Quick type hierarchy wyświetla nam hierarchię typu
  * CTRL z myszką wyświetla opcje nawigacji 
  * 
+ * Najlepszy będzie IntLinkedList ponieważ mamy nieogarniczone miejsce i nie trzeba przsuwać tablicy
  * */
