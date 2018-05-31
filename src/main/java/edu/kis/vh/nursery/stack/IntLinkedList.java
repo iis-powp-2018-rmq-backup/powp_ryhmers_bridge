@@ -5,10 +5,6 @@ package edu.kis.vh.nursery.stack;
  */
 // TODO: Should implement Collection interface
 public class IntLinkedList implements IntStack {
-	/**
-	 * Value returned by empty stack.
-	 */
-	public static final int LIST_EMPTY = -1;
 
 	private Node last;
 
@@ -52,7 +48,7 @@ public class IntLinkedList implements IntStack {
 	@Override
 	public int top() {
 		if (isEmpty()) {
-			return LIST_EMPTY; // TODO: Should return Integer instead of int, and null value in this case. It would pass my tests then :)
+			return STACK_EMPTY; // TODO: Should return Integer instead of int, and null value in this case. It would pass my tests then :)
 		}
 		return last.getValue();
 	}
@@ -64,7 +60,7 @@ public class IntLinkedList implements IntStack {
 	@Override
 	public int pop() {
 		if (isEmpty()) {
-			return LIST_EMPTY;
+			return STACK_EMPTY;
 		}
 		final int ret = last.getValue();
 		last = last.getPrev();

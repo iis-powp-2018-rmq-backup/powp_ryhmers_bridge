@@ -31,14 +31,14 @@ public class IntLinkedListJUnitTest {
 		final IntLinkedList testLinkedList = new IntLinkedList();
 		final int testValue = -1;
 
-		assertEquals(IntLinkedList.LIST_EMPTY, testLinkedList.top());
+		assertEquals(IntLinkedList.STACK_EMPTY, testLinkedList.top());
 
 		testLinkedList.push(testValue);
-		assertNotEquals(IntLinkedList.LIST_EMPTY, testLinkedList.top());
+		assertNotEquals(IntLinkedList.STACK_EMPTY, testLinkedList.top());
 		assertEquals(testValue, testLinkedList.top());
 
 		testLinkedList.pop();
-		assertEquals(IntLinkedList.LIST_EMPTY, testLinkedList.top());
+		assertEquals(IntLinkedList.STACK_EMPTY, testLinkedList.top());
 	}
 
 	@Test
@@ -46,14 +46,14 @@ public class IntLinkedListJUnitTest {
 		final IntLinkedList testLinkedList = new IntLinkedList();
 		final int testValue = -1;
 
-		assertEquals(IntLinkedList.LIST_EMPTY, testLinkedList.pop());
+		assertEquals(IntLinkedList.STACK_EMPTY, testLinkedList.pop());
 
 		testLinkedList.push(testValue);
 		int result = testLinkedList.pop();
 
-		assertNotEquals(IntLinkedList.LIST_EMPTY, result);
+		assertNotEquals(IntLinkedList.STACK_EMPTY, result);
 		assertEquals(testValue, result);
 
-		assertEquals(IntLinkedList.LIST_EMPTY, testLinkedList.top());
+		assertEquals(IntLinkedList.STACK_EMPTY, testLinkedList.top());
 	}
 }

@@ -2,11 +2,10 @@ package edu.kis.vh.nursery.stack;
 
 public class IntArrayStack implements IntStack {
 	public final static int MAX_NUMBERS_COUNT = 12;
-	public final static int NO_NUMBERS = -1;
 
 	private final int[] numbers = new int[MAX_NUMBERS_COUNT];
 
-	private int total = NO_NUMBERS;
+	private int total = STACK_EMPTY;
 
 	public int getTotal() {
 		return total;
@@ -21,7 +20,7 @@ public class IntArrayStack implements IntStack {
 
 	@Override
 	public boolean isEmpty() {
-		return total == NO_NUMBERS;
+		return total == STACK_EMPTY;
 	}
 
 	@Override
@@ -32,7 +31,7 @@ public class IntArrayStack implements IntStack {
 	@Override
 	public int top() {
 		if (isEmpty()) {
-			return NO_NUMBERS;
+			return STACK_EMPTY;
 		}
 		return numbers[total];
 	}
@@ -40,7 +39,7 @@ public class IntArrayStack implements IntStack {
 	@Override
 	public int pop() {
 		if (isEmpty()) {
-			return NO_NUMBERS;
+			return STACK_EMPTY;
 		}
 		return numbers[total--];
 	}
