@@ -35,3 +35,10 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
 		return ret;
 	}
 }
+
+/*
+ * Open declaration przechodzi do wybranej deklaracji
+ * Quick type hierarchy wyświetla nam hierarchię typu
+ * CTRL z myszką wyświetla opcje nawigacji 
+ * 
+ * */
