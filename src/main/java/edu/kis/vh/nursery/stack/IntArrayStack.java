@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.stack;
 
 public class IntArrayStack implements IntStack {
 	public final static int MAX_NUMBERS_COUNT = 12;
