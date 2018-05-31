@@ -2,13 +2,11 @@ package edu.kis.vh.nursery.stacks;
 
 public class IntArrayStack implements IntStack {
 
-	private static final int STARTINGTOTAL = -1;
-
 	private static final int ARRAYSIZE = 12;
 
 	private int[] numbers = new int[ARRAYSIZE];
 
-	private int total = STARTINGTOTAL;
+	private int total = EMPTY_STACK;
 
 	/**
 	 * @param in Liczba do wliczenia w wyliczankę.
@@ -24,7 +22,7 @@ public class IntArrayStack implements IntStack {
 	 */
 	@Override
 	public boolean isEmpty() {
-		return total == STARTINGTOTAL;
+		return total == EMPTY_STACK;
 	}
 
 	/**
@@ -41,7 +39,7 @@ public class IntArrayStack implements IntStack {
 	@Override
 	public int top() {
 		if (isEmpty())
-			return STARTINGTOTAL;
+			return EMPTY_STACK;
 		return numbers[total];
 	}
 
@@ -50,7 +48,7 @@ public class IntArrayStack implements IntStack {
 	 */
 	public int pop() {
 		if (isEmpty())
-			return STARTINGTOTAL;
+			return EMPTY_STACK;
 		return numbers[total--];
 	}
 
