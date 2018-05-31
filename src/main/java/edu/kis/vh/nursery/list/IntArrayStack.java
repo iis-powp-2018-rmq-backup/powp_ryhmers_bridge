@@ -4,7 +4,6 @@ import edu.kis.vh.nursery.IIntStack;
 
 public class IntArrayStack implements IIntStack {
 
-	static final int EMPTY = -1;
 	static final int NUMBER_CAPACITY = 12;
 	static final int FULL = 11;
 

@@ -3,8 +3,6 @@ package edu.kis.vh.nursery.list;
 import edu.kis.vh.nursery.IIntStack;
 
 public class IntLinkedList implements IIntStack {
-
-	static final int EMPTY = -1;
 	
 	class Node {
 
@@ -51,8 +49,8 @@ public class IntLinkedList implements IIntStack {
 			last.setNext(new Node(index));
 			last.getNext().setPrev(last);
 			last = last.getNext();
-			total++;
 		}
+		total++;
 	}
 
 	public boolean isEmpty() {
