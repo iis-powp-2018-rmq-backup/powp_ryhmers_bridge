@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery;
+package edu.kis.vh.nursery.list;
 
 public interface IntStack {
 	void push(int i);

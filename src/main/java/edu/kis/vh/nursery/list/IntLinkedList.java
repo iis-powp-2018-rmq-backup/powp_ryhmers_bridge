@@ -1,7 +1,5 @@
 package edu.kis.vh.nursery.list;
 
-import edu.kis.vh.nursery.IntStack;
-
 /**
  * Basic implementation of linked list that contains integers.
  */
