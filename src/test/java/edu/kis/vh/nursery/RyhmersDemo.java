@@ -1,35 +1,49 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.defaultCountingOutRyhmer;
-import edu.kis.vh.nursery.HanoiRyhmer;
+import edu.kis.vh.nursery.factory.ArrayRyhmersFactory;
 import edu.kis.vh.nursery.factory.DefaultRyhmersFactory;
-import edu.kis.vh.nursery.factory.Ryhmersfactory;
+import edu.kis.vh.nursery.factory.LinkedListRyhmersFactory;
+import edu.kis.vh.nursery.factory.RyhmersFactory;
+
+import java.util.LinkedList;
+import java.util.List;
 
 class RyhmersDemo {
 
 	public static void main(String[] args) {
-		Ryhmersfactory factory = new DefaultRyhmersFactory();
-		
-		defaultCountingOutRyhmer[] ryhmers = { factory.GetStandardRyhmer(), factory.GetFalseRyhmer(),
-				factory.GetFIFORyhmer(), factory.GetHanoiRyhmer()};
-		
-		for (int i = 1; i < 15; i++)
-			for (int j = 0; j < 3; j++)
+		List<RyhmersFactory> testFactories = new LinkedList<>();
+
+		testFactories.add(new DefaultRyhmersFactory());
+		testFactories.add(new ArrayRyhmersFactory());
+		testFactories.add(new LinkedListRyhmersFactory());
+
+		testFactories.forEach(RyhmersDemo::rhymersTest);
+
+	}
+
+	private static void rhymersTest(RyhmersFactory factory) {
+		DefaultCountingOutRyhmer[] ryhmers = {factory.getStandardRyhmer(), factory.getFalseRyhmer(),
+				factory.getFIFORyhmer(), factory.getHanoiRyhmer()};
+
+		for (int i = 1; i < 15; i++) {
+			for (int j = 0; j < 3; j++) {
 				ryhmers[j].countIn(i);
-		
+			}
+		}
+
 		java.util.Random rn = new java.util.Random();
-		for (int i = 1; i < 15; i++)
+		for (int i = 1; i < 15; i++) {
 			ryhmers[3].countIn(rn.nextInt(20));
-		
+		}
+
 		for (int i = 0; i < ryhmers.length; i++) {
-			while (!ryhmers[i].callCheck())
+			while (!ryhmers[i].callCheck()) {
 				System.out.print(ryhmers[i].countOut() + "  ");
+			}
 			System.out.println();
 		}
-		
-		System.out.println("total rejected is "
-				+ ((HanoiRyhmer) ryhmers[3]).reportRejected());
-		
+
+		System.out.println("total rejected is " + ((HanoiRyhmer) ryhmers[3]).reportRejected());
 	}
-	
+
 }
