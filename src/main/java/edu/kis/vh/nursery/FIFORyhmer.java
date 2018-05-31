@@ -1,10 +1,12 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.stack.IntLinkedList;
 import edu.kis.vh.nursery.stack.IntStack;
 
 public class FIFORyhmer extends DefaultCountingOutRyhmer {
 
-	private final DefaultCountingOutRyhmer temp = new DefaultCountingOutRyhmer();
+	// Z uwagi na to, że typ tej wyliczanki to FIFO wybrałem listę wiązaną
+	private final IntStack temp = new IntLinkedList();
 
 	public FIFORyhmer() {
 		super();
@@ -17,13 +19,13 @@ public class FIFORyhmer extends DefaultCountingOutRyhmer {
 	@Override
 	public int countOut() {
 		while (!callCheck()) {
-			temp.countIn(super.countOut());
+			temp.push(super.countOut());
 		}
 
-		final int ret = temp.countOut();
+		final int ret = temp.pop();
 
-		while (!temp.callCheck()) {
-			countIn(temp.countOut());
+		while (!temp.isEmpty()) {
+			countIn(temp.pop());
 		}
 
 		return ret;
