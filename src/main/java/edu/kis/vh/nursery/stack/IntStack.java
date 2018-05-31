@@ -1,7 +1,12 @@
 package edu.kis.vh.nursery.stack;
 
 public interface IntStack {
-	int STACK_EMPTY = -1;
+	/**
+	 * Tak, dzięki realizacji zadania 10 mogłem zmienić tylko stałą w interfejsie,
+	 * aby została ona zmieniona we wszystkich implementacjach.
+	 * Niestety operacja ta spowodowała, że testy jednostkowe dla tych metod nie przechodzą.
+	 */
+	int STACK_EMPTY = 0;
 
 	void push(int i);
 	boolean isEmpty();
