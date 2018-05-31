@@ -8,6 +8,7 @@ public class DefaultCountingOutRhymer {
 	
 	public DefaultCountingOutRhymer() {
 		super();
+		IntArray = new IntArrayStack();
 	}
 	
 	public DefaultCountingOutRhymer(IntArrayStack intArray) {
