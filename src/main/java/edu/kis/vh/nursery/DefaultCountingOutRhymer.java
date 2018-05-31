@@ -3,37 +3,36 @@ import edu.kis.vh.nursery.list.*;
 
 
 public class DefaultCountingOutRhymer {
-	private IntLinkedList IntList;
+	private IntStack intStack;
 
-	
 	public DefaultCountingOutRhymer() {
 		super();
-		IntList = new IntLinkedList();
+		this.intStack = new IntLinkedList();
 	}
 	
-	public DefaultCountingOutRhymer(IntLinkedList intList) {
+	public DefaultCountingOutRhymer(IntStack intStack) {
 		super();
-		IntList = intList;
+		this.intStack = intStack;
 	}
 
 	public void countIn(int in) {
-		IntList.push(in);
+		intStack.push(in);
 	}
 
 	public int lastValue() {
-		return IntList.top();
+		return intStack.top();
 	}
 
 	public boolean callCheck() {
-		return IntList.isEmpty();
+		return intStack.isEmpty();
 	}
 
 	public boolean isFull() {
-		return IntList.isFull();
+		return intStack.isFull();
 	}
 
 	public int countOut() {
-		return IntList.pop();
+		return intStack.pop();
 	}
 	
 }
