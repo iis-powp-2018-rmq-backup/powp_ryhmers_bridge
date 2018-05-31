@@ -40,6 +40,7 @@ public class IntLinkedList {
 	}
 
 	private Node last;
+	private int total = 0;
 
 	public void push(int index) {
 		if (last == null)
@@ -48,6 +49,7 @@ public class IntLinkedList {
 			last.setNext(new Node(index));
 			last.getNext().setPrev(last);
 			last = last.getNext();
+			total++;
 		}
 	}
 
@@ -70,6 +72,11 @@ public class IntLinkedList {
 			return EMPTY;
 		int ret = last.getValue();
 		last = last.getPrev();
+		total --;
 		return ret;
+	}
+
+	public int getTotal() {
+		return total;
 	}
 }
