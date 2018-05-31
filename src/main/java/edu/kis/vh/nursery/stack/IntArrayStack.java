@@ -14,7 +14,7 @@ public class IntArrayStack implements IntStack {
 	@Override
 	public void push(int in) {
 		if (!isFull()) {
-			numbers[++total] = in;
+			numbers[total++] = in;
 		}
 	}
 
@@ -25,7 +25,7 @@ public class IntArrayStack implements IntStack {
 
 	@Override
 	public boolean isFull() {
-		return total == MAX_NUMBERS_COUNT - 1;
+		return total == MAX_NUMBERS_COUNT;
 	}
 
 	@Override
