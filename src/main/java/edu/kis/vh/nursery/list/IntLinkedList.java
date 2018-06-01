@@ -6,7 +6,7 @@ public class IntLinkedList {
 	private static final int DEFAULT_EMPTY_STACK_VALUE = -1;
 	private Node last;
 	private int i;
-
+	private int total = DEFAULT_EMPTY_STACK_VALUE;
 	public void push(final int i) {
 		if (last == null)
 			last = new Node(i);
@@ -54,7 +54,9 @@ public class IntLinkedList {
 	public void setI(int i) {
 		this.i = i;
 	}
-
+	public int getTotal() {
+		return total;
+	}
 }
 
 class Node {
