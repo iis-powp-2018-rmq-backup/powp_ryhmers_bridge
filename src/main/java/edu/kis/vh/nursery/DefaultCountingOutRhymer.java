@@ -40,3 +40,5 @@ public class DefaultCountingOutRhymer {
         return stack.getTotal();
     }
 }
+
+// answer 3.1.18 - all three classes break the rule, because they have no common interface.
