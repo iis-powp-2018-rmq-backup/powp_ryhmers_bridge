@@ -1,5 +1,6 @@
 package edu.kis.vh.nursery.list;
 
+
 public class IntLinkedList {
 
 	private static final int DEFAULT_EMPTY_STACK_VALUE = -1;
