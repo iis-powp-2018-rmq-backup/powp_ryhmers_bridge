@@ -14,27 +14,27 @@ public class DefaultCountingOutRhymer {
         this.intLinkedList = intLinkedList;
     }
 
-    public void countIn(int in) {
+    protected void countIn(int in) {
         intLinkedList.push(in);
     }
 
-    public boolean callCheck() {
+    protected boolean callCheck() {
         return intLinkedList.isEmpty();
     }
 
-    public boolean isFull() {
+    protected boolean isFull() {
         return intLinkedList.isFull();
     }
 
-    public int peekaboo() {
+    protected int peekaboo() {
         return intLinkedList.top();
     }
 
-    public int countOut() {
+    protected int countOut() {
         return intLinkedList.pop();
     }
 
-    public int getTotal() {
+    protected int getTotal() {
         return intLinkedList.getTotal();
     }
 }
