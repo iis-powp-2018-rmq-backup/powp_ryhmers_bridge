@@ -1,9 +1,10 @@
 package edu.kis.vh.nursery;
 import edu.kis.vh.nursery.collection.Stack;
+import edu.kis.vh.nursery.collection.IntLinkedList;
 
 public class FIFORhymer extends DefaultCountingOutRhymer {
 
-	private final DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
+	private Stack temp = new IntLinkedList();
 	
 	public FIFORhymer(){
 	
@@ -16,14 +17,16 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
 	public int countOut() {
 		while (!callCheck())
 
-			temp.countIn(super.countOut());
+			temp.push(super.countOut());
 
-		final int ret = temp.countOut();
+		final int ret = temp.pop();
 
-		while (!temp.callCheck())
+		while (!temp.isEmpty())
 
-			countIn(temp.countOut());
+			countIn(temp.pop());
 
 		return ret;
 	}
 }
+
+//IntLinkedList should be better, because of unlimited space
