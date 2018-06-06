@@ -3,8 +3,10 @@ package edu.kis.vh.nursery;
 // kombinacja klawiszy alt + ← oraz → nawiguje pomiedzy otwartymi klasami
 public class CountingOutRyhmer {
 
+    public static final int capacity = 12;
+    public static final int empty = -1;
     public int total = -1;
-    private int[] NUMBERS = new int[12];
+    private int[] NUMBERS = new int[capacity];
 
     public void countIn(int in) {
         if (!isFull())
@@ -12,7 +14,7 @@ public class CountingOutRyhmer {
     }
 
     public boolean callCheck() {
-        return total == -1;
+        return total == empty;
     }
 
     public boolean isFull() {
@@ -21,13 +23,13 @@ public class CountingOutRyhmer {
 
     protected int peekaboo() {
         if (callCheck())
-            return -1;
+            return empty;
         return NUMBERS[total];
     }
 
     public int countOut() {
         if (callCheck())
-            return -1;
+            return empty;
         return NUMBERS[total--];
     }
 
