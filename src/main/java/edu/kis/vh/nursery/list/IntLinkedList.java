@@ -20,7 +20,8 @@ public class IntLinkedList {
 	}
 
 	public boolean isFull() {
-		return false;
+
+	    return false;
 	}
 
 	public int top() {
