@@ -1,21 +1,22 @@
 package edu.kis.vh.nursery;
 
+// kombinacja klawiszy alt + ← oraz → nawiguje pomiedzy otwartymi klasami
 public class defaultCountingOutRyhmer {
 
     public int total = -1;
     private int[] NUMBERS = new int[12];
 
-	public void countIn(int in) {
-		if (!isFull())
-			NUMBERS[++total] = in;
-	}
+    public void countIn(int in) {
+        if (!isFull())
+            NUMBERS[++total] = in;
+    }
 
     public boolean callCheck() {
-	    return total == -1;
+        return total == -1;
     }
 
     public boolean isFull() {
-	    return total == 11;
+        return total == 11;
     }
 
     protected int peekaboo() {
