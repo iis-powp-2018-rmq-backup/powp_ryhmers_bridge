@@ -3,9 +3,9 @@ package edu.kis.vh.nursery;
 // kombinacja klawiszy alt + ← oraz → nawiguje pomiedzy otwartymi klasami
 public class CountingOutRyhmer {
 
-    public static final int capacity = 12;
-    public static final int empty = -1;
-    public int total = -1;
+    private static final int capacity = 12;
+    private static final int empty = -1;
+    private int total = -1;
     private int[] NUMBERS = new int[capacity];
 
     public void countIn(int in) {
