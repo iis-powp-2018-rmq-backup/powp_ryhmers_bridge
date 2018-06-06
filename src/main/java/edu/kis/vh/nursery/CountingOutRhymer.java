@@ -1,7 +1,7 @@
 package edu.kis.vh.nursery;
 
 // kombinacja klawiszy alt + ← oraz → nawiguje pomiedzy otwartymi klasami
-public class CountingOutRyhmer {
+public class CountingOutRhymer {
 
     private static final int capacity = 12;
     private static final int empty = -1;
