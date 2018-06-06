@@ -3,8 +3,8 @@ package edu.kis.vh.nursery;
 import org.junit.Assert;
 import org.junit.Test;
 
+//TODO: add tests for more classes
 public class RhymersJUnitTest {
-
     @Test
     public void testCountIn() {
         CountingOutRhymer ryhmer = new CountingOutRhymer();

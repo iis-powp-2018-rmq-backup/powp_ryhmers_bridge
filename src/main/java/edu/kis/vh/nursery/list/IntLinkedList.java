@@ -2,6 +2,7 @@ package edu.kis.vh.nursery.list;
 
 public class IntLinkedList {
 
+    // TODO: needs refactoring to the bridge pattern :)
     private static final int empty = -1;
     private Node last;
     // sa one uzywane poprzez gettery bezposrednio w publicznych metodach klasy
