@@ -5,6 +5,8 @@ import edu.kis.vh.nursery.stack.IntLinkedListInterface;
 
 // Klasa DefaultCountingOutRhymer może teraz używac obydwu implementacji
 
+// Wszystkie lamia te zasade, brak im wspolnego interfejsu
+
 public class DefaultCountingOutRhymer {
     IntLinkedListInterface intStack = new IntLinkedList();
 
