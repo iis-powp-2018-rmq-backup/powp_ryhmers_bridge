@@ -4,11 +4,11 @@ import edu.kis.vh.nursery.stack.IntLinkedListInterface;
 
 public class IntArrayStack implements IntLinkedListInterface {
 
-    private static final int IS_EMPTY_TOTAl = -1;
+
     private static final int CAPACITY = 11;
     private final int[] NUMBERS = new int[12];
 
-    private int total = IS_EMPTY_TOTAl;
+    private int total = IntLinkedList.IS_EMPTY;
 
 
     @Override
@@ -19,7 +19,7 @@ public class IntArrayStack implements IntLinkedListInterface {
 
     @Override
     public boolean isEmpty() {
-        if (total == IS_EMPTY_TOTAl)
+        if (total == IntLinkedList.IS_EMPTY)
             return true;
         return false;
     }
@@ -34,14 +34,14 @@ public class IntArrayStack implements IntLinkedListInterface {
     @Override
     public int top() {
         if(isEmpty())
-            return IS_EMPTY_TOTAl;
+            return IntLinkedList.IS_EMPTY;
         return NUMBERS[total];
     }
 
     @Override
     public int pop() {
         if(isEmpty())
-            return IS_EMPTY_TOTAl;
+            return IntLinkedList.IS_EMPTY;
         return NUMBERS[total--];
     }
 }
