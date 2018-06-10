@@ -4,34 +4,34 @@ import edu.kis.vh.nursery.list.IntLinkedList;
 import edu.kis.vh.nursery.list.IntLinkedListInterface;
 
 public class DefaultCountingOutRhymer {
-    IntLinkedListInterface intintStack = new IntLinkedList();
+    IntLinkedListInterface intStack = new IntLinkedList();
 
     public DefaultCountingOutRhymer() {
         super();
     }
 
-    public DefaultCountingOutRhymer(IntLinkedList intLinkedList) {
-        this.intintStack = intLinkedList;
+    public DefaultCountingOutRhymer(IntLinkedList intStacks) {
+        this.intStack = intStacks;
     }
 
     public void countIn(int in) {
-        intintStack.push(in);
+        intStack.push(in);
     }
 
     public boolean callCheck() {
-        return intintStack.isEmpty();
+        return intStack.isEmpty();
     }
 
     public boolean isFull() {
-        return intintStack.isFull();
+        return intStack.isFull();
     }
 
     public int peekaboo() {
-        return intintStack.top();
+        return intStack.top();
     }
 
     public int countOut() {
-        return intintStack.pop();
+        return intStack.pop();
     }
 
 }
