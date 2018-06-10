@@ -1,16 +1,16 @@
 package edu.kis.vh.nursery.list;
 
-class IntLinkedList {
+public class IntLinkedList {
 
     private static final int IS_EMPTY_TOP = -1;
     private Node last;
     private int i;
 
-    private static int getIsEmptyTop() {
+    public static int getIsEmptyTop() {
         return IS_EMPTY_TOP;
     }
 
-    private void push(int i) {
+    public void push(int i) {
         if (getLast() == null)
             setLast(new Node(i));
         else {
@@ -20,21 +20,21 @@ class IntLinkedList {
         }
     }
 
-    private boolean isEmpty() {
+    public boolean isEmpty() {
         return getLast() == null;
     }
 
-    private boolean isFull() {
+    public boolean isFull() {
         return false;
     }
 
-    private int top() {
+    public int top() {
         if (isEmpty())
             return getIsEmptyTop();
         return getLast().getValue();
     }
 
-    private int pop() {
+    public int pop() {
         if (isEmpty())
             return getIsEmptyTop();
         int ret = getLast().getValue();
@@ -42,11 +42,11 @@ class IntLinkedList {
         return ret;
     }
 
-    private Node getLast() {
+    public Node getLast() {
         return last;
     }
 
-    private void setLast(Node last) {
+    public void setLast(Node last) {
         this.last = last;
     }
 
