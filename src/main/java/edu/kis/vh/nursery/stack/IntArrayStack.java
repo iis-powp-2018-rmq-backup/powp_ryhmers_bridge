@@ -1,6 +1,6 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.stack;
 
-import edu.kis.vh.nursery.list.IntLinkedListInterface;
+import edu.kis.vh.nursery.stack.IntLinkedListInterface;
 
 public class IntArrayStack implements IntLinkedListInterface {
 
