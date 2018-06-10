@@ -6,6 +6,8 @@ public interface IntLinkedListInterface {
 
     //Wczesniej wykonany punk 3.1.10 umozliwil zmiane tylko w jednym miejscu zamiast w dwoch
 
+    //IntelliJ Navigate > Go To oraz ctrl + lewy przycisk myszki daja ten sam efekt
+
     void push(int i);
 
     boolean isEmpty();
