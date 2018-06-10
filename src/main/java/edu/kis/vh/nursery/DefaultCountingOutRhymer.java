@@ -3,6 +3,8 @@ package edu.kis.vh.nursery;
 import edu.kis.vh.nursery.list.IntLinkedList;
 import edu.kis.vh.nursery.list.IntLinkedListInterface;
 
+// Klasa DefaultCountingOutRhymer może teraz używac obydwu implementacji
+
 public class DefaultCountingOutRhymer {
     IntLinkedListInterface intStack = new IntLinkedList();
 
