@@ -1,8 +1,8 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.list.IntStackInterface;
+import edu.kis.vh.nursery.list.IntLinkedListInterface;
 
-public class IntArrayStack implements IntStackInterface {
+public class IntArrayStack implements IntLinkedListInterface {
 
     private static final int IS_EMPTY_TOTAl = -1;
     private static final int CAPACITY = 11;

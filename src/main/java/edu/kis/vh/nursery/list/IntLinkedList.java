@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery.list;
 
-public class IntStack implements IntStackInterface {
+public class IntLinkedList implements IntLinkedListInterface {
 
     private static final int IS_EMPTY_TOP = -1;
     private Node last;

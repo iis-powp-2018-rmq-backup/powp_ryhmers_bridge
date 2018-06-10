@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery.list;
 
-public interface IntStackInterface {
+public interface IntLinkedListInterface {
 
     void push(int i);
 
