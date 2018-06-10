@@ -12,7 +12,7 @@ public class DefaultCountingOutRhymer {
         super();
     }
 
-    public DefaultCountingOutRhymer(IntLinkedList intStacks) {
+    public DefaultCountingOutRhymer(IntLinkedListInterface intStacks) {
         this.intStack = intStacks;
     }
 

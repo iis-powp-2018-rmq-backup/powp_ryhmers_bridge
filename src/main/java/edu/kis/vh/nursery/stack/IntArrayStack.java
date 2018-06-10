@@ -10,6 +10,11 @@ public class IntArrayStack implements IntLinkedListInterface {
 
     private int total = IntLinkedList.IS_EMPTY;
 
+    public IntArrayStack() {}
+
+    public IntArrayStack(int total) {
+        this.total = total;
+    }
 
     @Override
     public void push(int i) {
