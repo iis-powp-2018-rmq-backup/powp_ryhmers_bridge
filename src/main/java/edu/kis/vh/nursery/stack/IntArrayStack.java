@@ -6,7 +6,7 @@ public class IntArrayStack implements IntStack {
 
 	private int[] numbers = new int[ARRAYSIZE];
 
-	public int total = INITIALTOTAL;
+	public int total = EMPTYSTACK;
 
 	@Override
 	public void push(int in) {
@@ -16,7 +16,7 @@ public class IntArrayStack implements IntStack {
 
 	@Override
 	public boolean isEmpty() {
-		return total == INITIALTOTAL;
+		return total == EMPTYSTACK;
 	}
 
 	public boolean isFull() {
@@ -26,14 +26,14 @@ public class IntArrayStack implements IntStack {
 	@Override
 	public int top() {
 		if (isEmpty())
-			return INITIALTOTAL;
+			return EMPTYSTACK;
 		return numbers[total];
 	}
 
 	@Override
 	public int pop() {
 		if (isEmpty())
-			return INITIALTOTAL;
+			return EMPTYSTACK;
 		return numbers[total--];
 	}
 }

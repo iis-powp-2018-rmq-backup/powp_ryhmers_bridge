@@ -10,9 +10,9 @@ public class DefaultCountingOutRhymer {
 		this.intStack = new IntLinkedList();
 	}
 
-	public DefaultCountingOutRhymer(IntStack intList) {
+	public DefaultCountingOutRhymer(IntStack intStack) {
 		super();
-		this.intStack = intList;
+		this.intStack = intStack;
 	}
 
 	public int prevValue() {

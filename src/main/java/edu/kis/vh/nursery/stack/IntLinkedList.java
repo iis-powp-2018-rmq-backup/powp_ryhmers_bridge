@@ -52,7 +52,7 @@ public class IntLinkedList implements IntStack {
 	@Override
 	public int top() {
 		if (isEmpty())
-			return INITIALTOTAL;
+			return EMPTYSTACK;
 		return last.getValue();
 	}
 
@@ -62,7 +62,7 @@ public class IntLinkedList implements IntStack {
 	@Override
 	public int pop() {
 		if (isEmpty())
-			return INITIALTOTAL;
+			return EMPTYSTACK;
 		int ret = last.getValue();
 		last = last.getPrev();
 		return ret;

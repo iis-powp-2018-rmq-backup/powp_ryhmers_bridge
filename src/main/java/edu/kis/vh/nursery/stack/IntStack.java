@@ -2,7 +2,7 @@ package edu.kis.vh.nursery.stack;
 
 public interface IntStack {
 
-	int INITIALTOTAL = -1;
+	int EMPTYSTACK = 0;
 
 	void push(int i);
 
