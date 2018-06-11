@@ -1,7 +1,6 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.stack;
 
 public class IntArrayStack implements IntStack {
-	private static final int INITIALTOTAL = -1;
 
 	private static final int ARRAYSIZE = 12;
 
