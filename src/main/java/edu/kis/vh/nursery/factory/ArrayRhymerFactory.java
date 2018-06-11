@@ -1,31 +1,31 @@
 package edu.kis.vh.nursery.factory;
 
 import edu.kis.vh.nursery.DefaultCountingOutRhymer;
+import edu.kis.vh.nursery.FIFORhymer;
+import edu.kis.vh.nursery.HanoiRhymer;
+import edu.kis.vh.nursery.stacks.IntArrayStack;
+import edu.kis.vh.nursery.stacks.IntLinkedList;
 
 public class ArrayRhymerFactory implements Rhymersfactory {
 
 	@Override
 	public DefaultCountingOutRhymer GetStandardRhymer() {
-		// TODO Auto-generated method stub
-		return null;
+		return new DefaultCountingOutRhymer(new IntArrayStack());
 	}
 
 	@Override
 	public DefaultCountingOutRhymer GetFalseRhymer() {
-		// TODO Auto-generated method stub
-		return null;
+		return new DefaultCountingOutRhymer(new IntLinkedList());
 	}
 
 	@Override
 	public DefaultCountingOutRhymer GetFIFORhymer() {
-		// TODO Auto-generated method stub
-		return null;
+		return new FIFORhymer(new IntArrayStack());
 	}
 
 	@Override
 	public DefaultCountingOutRhymer GetHanoiRhymer() {
-		// TODO Auto-generated method stub
-		return null;
+		return new HanoiRhymer(new IntArrayStack());
 	}
 
 }
