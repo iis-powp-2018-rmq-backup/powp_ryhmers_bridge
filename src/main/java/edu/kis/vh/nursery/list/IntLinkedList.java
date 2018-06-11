@@ -4,7 +4,7 @@ package edu.kis.vh.nursery.list;
  * @author Dawid Sowala
  *
  */
-public class IntLinkedList {
+public class IntLinkedList implements IntStack {
 
 	private static final int initialtotal = -1;
 
@@ -19,6 +19,7 @@ public class IntLinkedList {
 	 * Dodanie elementu do listy
 	 * @param i wartość elementu
 	 */
+	@Override
 	public void push(int i) {
 		if (last == null)
 			last = new Node(i);
@@ -33,6 +34,7 @@ public class IntLinkedList {
 	 * Sprawdzanie czy lista jest pusta
 	 * @return zwraca true dla pustej listy
 	 */
+	@Override
 	public boolean isEmpty() {
 		return last == null;
 	}
@@ -41,6 +43,7 @@ public class IntLinkedList {
 	 * Spradzenie czy lista jest pełna
 	 * @return zwraca zawsze false
 	 */
+	@Override
 	public boolean isFull() {
 		return false;
 	}
@@ -48,6 +51,7 @@ public class IntLinkedList {
 	/**
 	 * @return Zwraca ostatni element listy lub -1 gdy ta jest pusta
 	 */
+	@Override
 	public int top() {
 		if (isEmpty())
 			return initialtotal;
@@ -57,6 +61,7 @@ public class IntLinkedList {
 	/**
 	 * @return Zwraca i usuwa ostatni element listy lub -1 gdy ta jest pusta
 	 */
+	@Override
 	public int pop() {
 		if (isEmpty())
 			return initialtotal;

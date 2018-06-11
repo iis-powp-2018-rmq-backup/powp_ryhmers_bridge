@@ -3,14 +3,14 @@ package edu.kis.vh.nursery;
 import edu.kis.vh.nursery.list.*;
 
 public class DefaultCountingOutRhymer {
-	private IntLinkedList IntList;
+	private IntStack IntList;
 
 	public DefaultCountingOutRhymer() {
 		super();
 		IntList = new IntLinkedList();
 	}
 
-	public DefaultCountingOutRhymer(IntLinkedList intList) {
+	public DefaultCountingOutRhymer(IntStack intList) {
 		super();
 		IntList = intList;
 	}

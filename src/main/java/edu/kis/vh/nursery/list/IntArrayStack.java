@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery.list;
 
-public class IntArrayStack {
+public class IntArrayStack implements IntStack {
 	private static final int INITIALTOTAL = -1;
 
 	private static final int ARRAYSIZE = 12;
@@ -9,16 +9,14 @@ public class IntArrayStack {
 
 	public int total = INITIALTOTAL;
 
-	public int getTotal() {
-		return total;
-	}
-
-	public void countIn(int in) {
+	@Override
+	public void push(int in) {
 		if (!isFull())
 			numbers[++total] = in;
 	}
 
-	public boolean callCheck() {
+	@Override
+	public boolean isEmpty() {
 		return total == INITIALTOTAL;
 	}
 
@@ -26,14 +24,16 @@ public class IntArrayStack {
 		return total == 11;
 	}
 
-	public int prevValue() {
-		if (callCheck())
+	@Override
+	public int top() {
+		if (isEmpty())
 			return INITIALTOTAL;
 		return numbers[total];
 	}
 
-	public int countOut() {
-		if (callCheck())
+	@Override
+	public int pop() {
+		if (isEmpty())
 			return INITIALTOTAL;
 		return numbers[total--];
 	}
