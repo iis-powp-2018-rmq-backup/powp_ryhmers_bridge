@@ -1,7 +1,17 @@
 
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.stack.IntStack;
+
 public class FIFORhymer extends DefaultCountingOutRhymer {
+
+	public FIFORhymer() {
+		super();
+	}
+
+	public FIFORhymer(IntStack intStack) {
+		super(intStack);
+	}
 
 	private final DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
 
@@ -20,4 +30,4 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
 		return ret;
 	}
 }
-//Ostatnia edycja pliku i miejsce z pomocą alt+->
+// Ostatnia edycja pliku i miejsce z pomocą alt+->
