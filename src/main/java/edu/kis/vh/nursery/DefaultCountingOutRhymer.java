@@ -7,6 +7,7 @@ public class DefaultCountingOutRhymer {
 
 	public DefaultCountingOutRhymer() {
 		super();
+		IntList = new IntLinkedList();
 	}
 
 	public DefaultCountingOutRhymer(IntLinkedList intList) {
