@@ -1,13 +1,18 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.stack.IStackImplementation;
 import edu.kis.vh.nursery.stack.IntArrayStack;
 
 public class DefaultCountingOutRyhmer {
 
-	IntArrayStack list;
-
+	IStackImplementation list;
+	// Dzięki zmianie, będziemy mogli przekazać dowolną implementację naszej struktury.
 	public DefaultCountingOutRyhmer() {
 		list = new IntArrayStack();
+	}
+
+	public DefaultCountingOutRyhmer(IStackImplementation stackImplementation) {
+		list = stackImplementation;
 	}
 
 	public boolean callCheck() {
