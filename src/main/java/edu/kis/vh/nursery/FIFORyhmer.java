@@ -1,14 +1,16 @@
 package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.stack.IStackImplementation;
+import edu.kis.vh.nursery.stack.IntArrayStack;
 
 public class FIFORyhmer extends DefaultCountingOutRyhmer {
 
-	private DefaultCountingOutRyhmer defaultCountingOutRyhmer;
 
 	public FIFORyhmer () {
-		super();
-		defaultCountingOutRyhmer = new DefaultCountingOutRyhmer();
+		list = new IntArrayStack();
+		// IntArrayStack - szybszy (sekwencyjny) dostęp do danych
+		// Dużo większa szansa na przeniesienie do pamięci Cache CPU (w przeciwieństwie do IntLinkedList)
+		// Oszczędność pamięci.
 	}
 
 	public FIFORyhmer (IStackImplementation stackImplementation)
@@ -20,14 +22,15 @@ public class FIFORyhmer extends DefaultCountingOutRyhmer {
 	public int countOut() {
 		int returnCountOut;
 		while (!callCheck()) {
-			defaultCountingOutRyhmer.countIn(super.countOut());
+			list.push(super.countOut());
 		}
 
-		returnCountOut = defaultCountingOutRyhmer.countOut();
+		returnCountOut = list.pop();
 
-		while (!defaultCountingOutRyhmer.callCheck()) {
-			countIn(defaultCountingOutRyhmer.countOut());
+		while (!list.isEmpty()) {
+			countIn(list.pop());
 		}
+
 		return returnCountOut;
 	}
 }
