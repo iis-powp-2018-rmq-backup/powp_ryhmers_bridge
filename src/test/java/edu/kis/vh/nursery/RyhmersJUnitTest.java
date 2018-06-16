@@ -7,8 +7,8 @@ import org.junit.Test;
 public class RyhmersJUnitTest {
 
     private static int testValue = 4;
-    private int EMPTY_STACK_VALUE = -1;
-    private final int STACK_CAPACITY = 12;
+    private int EMPTY_STACK_VALUE = 0;
+    private final int STACK_CAPACITY = 11;
 	private DefaultCountingOutRyhmer ryhmer;
 
 	@Before

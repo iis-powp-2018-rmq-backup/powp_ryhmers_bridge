@@ -7,8 +7,9 @@ abstract class IntStackBaseClass implements IStackImplementation {
     protected int total;
 
     protected int totalMax;
-    protected final static int EMPTY_STRUCT_CODE = -1;
-
+    protected final static int EMPTY_STRUCT_CODE = 0;
+    // Przeniesienie danych do klasy abstrakcyjnej okazało się przydatne.
+    // Wartość zmiennej wystarczyło zmienić tylko w jednym miejscu.
     IntStackBaseClass () {
         total = EMPTY_STRUCT_CODE;
         totalMax = 11;
