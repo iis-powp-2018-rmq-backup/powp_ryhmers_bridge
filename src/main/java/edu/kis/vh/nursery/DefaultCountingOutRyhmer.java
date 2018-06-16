@@ -5,7 +5,7 @@ public class DefaultCountingOutRyhmer {
 	final private int[] NUMBERS;
 	private int total;
 	private final int totalMax;
-	private final static int emptyStructCode = -1;
+	private final static int EMPTY_STRUCT_CODE = -1;
 
 	public DefaultCountingOutRyhmer() {
 		NUMBERS = new int[12];
@@ -14,7 +14,7 @@ public class DefaultCountingOutRyhmer {
 	}
 
 	public boolean callCheck() {
-		return total == emptyStructCode;
+		return total == EMPTY_STRUCT_CODE;
 	}
 		
 	public boolean isFull() {
@@ -23,14 +23,14 @@ public class DefaultCountingOutRyhmer {
 		
 	protected int peekaboo() {
 		if (callCheck()) {
-			return emptyStructCode;
+			return EMPTY_STRUCT_CODE;
 		}
 		return NUMBERS[total];
 	}
 
 	public int countOut() {
 		if (callCheck()) {
-			return emptyStructCode;
+			return EMPTY_STRUCT_CODE;
 		}
 		return NUMBERS[total--];
 	}
