@@ -8,13 +8,13 @@ public class HanoiRyhmer extends DefaultCountingOutRyhmer {
 	private int totalRejected;
 
 	public HanoiRyhmer() {
-	    totalRejected = 0;
-    }
+		totalRejected = 0;
+	}
 
-    @Override
+	@Override
 	public void countIn(final int in) {
 		if (!callCheck() && in > peekaboo()) {
-            totalRejected = totalRejected + 1;
+			totalRejected = totalRejected + 1;
 		} else {
 			super.countIn(in);
 		}
