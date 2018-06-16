@@ -7,6 +7,7 @@ public class FIFORyhmer extends DefaultCountingOutRyhmer {
 	private DefaultCountingOutRyhmer defaultCountingOutRyhmer;
 
 	public FIFORyhmer () {
+		super();
 		defaultCountingOutRyhmer = new DefaultCountingOutRyhmer();
 	}
 

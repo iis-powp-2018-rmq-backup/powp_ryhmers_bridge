@@ -13,7 +13,8 @@ public class HanoiRyhmer extends DefaultCountingOutRyhmer {
 	private int totalRejected;
 
 	public HanoiRyhmer() {
-		totalRejected = 0;
+		super();
+	    totalRejected = 0;
 	}
 
     public HanoiRyhmer (IStackImplementation stackImplementation)
