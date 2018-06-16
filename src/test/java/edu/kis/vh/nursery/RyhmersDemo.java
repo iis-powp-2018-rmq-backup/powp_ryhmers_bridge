@@ -28,7 +28,7 @@ class RyhmersDemo {
 		}
 		
 		System.out.println("total rejected is "
-				+ ((HanoiRyhmer) ryhmers[3]).reportRejected());
+				+ ((HanoiRyhmer) ryhmers[3]).getTotalRejected());
 		
 	}
 	

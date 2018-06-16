@@ -1,17 +1,17 @@
 package edu.kis.vh.nursery;
 
+import lombok.Getter;
+
 public class HanoiRyhmer extends defaultCountingOutRyhmer {
 
-int totalRejected = 0;
+	@Getter
+	private int totalRejected = 0;
 
-	public int reportRejected() {
-		return totalRejected;
-	}
-
-	public void countIn(int in) {
-	if (!callCheck() && in > peekaboo())
-			totalRejected++;
-			else
-				super.countIn(in);
+	public void countIn(final int in) {
+		if (!callCheck() && in > peekaboo()) {
+            totalRejected = totalRejected + 1;
+		} else {
+			super.countIn(in);
+		}
 	}
 }
