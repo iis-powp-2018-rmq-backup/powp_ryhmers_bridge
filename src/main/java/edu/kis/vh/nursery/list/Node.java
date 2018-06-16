@@ -1,12 +1,19 @@
 package edu.kis.vh.nursery.list;
 
-public class Node {
+import lombok.Getter;
+import lombok.Setter;
 
-    public int value;
-    public Node prev, next;
+class Node {
 
-    public Node(int i) {
-        value = i;
+    @Getter
+    private int value;
+
+    @Getter
+    @Setter
+    private Node prev, next;
+
+    public Node(final int input) {
+        value = input;
     }
 
 }
