@@ -37,3 +37,6 @@ class RyhmersDemo {
 	}
 	
 }
+
+
+// W przypadku fabryk zaimplementowany został wzorzec AbstractFactory.
