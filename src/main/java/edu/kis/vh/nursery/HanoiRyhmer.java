@@ -1,17 +1,37 @@
 package edu.kis.vh.nursery;
 
-public class HanoiRyhmer extends defaultCountingOutRyhmer {
+import edu.kis.vh.nursery.stack.IStackImplementation;
+import lombok.Getter;
 
-int totalRejected = 0;
+/**
+ *
+ * Hanoi - wyliczanka.
+ */
+public class HanoiRyhmer extends DefaultCountingOutRyhmer {
 
-	public int reportRejected() {
-		return totalRejected;
+	@Getter
+	private int totalRejected;
+
+	public HanoiRyhmer() {
+		super();
+	    totalRejected = 0;
 	}
 
-	public void countIn(int in) {
-	if (!callCheck() && in > peekaboo())
-			totalRejected++;
-			else
-				super.countIn(in);
+    public HanoiRyhmer (IStackImplementation stackImplementation)
+    {
+        super(stackImplementation);
+    }
+
+    /**
+	 * Umieszcza podaną wartość do systemu (wyliczanki).
+	 * @param input - wartość, którą zamierzamy umieścić w naszym systemie.
+	 */
+	@Override
+	public void countIn(final int input) {
+		if (!callCheck() && input > peekaboo()) {
+			totalRejected = totalRejected + 1;
+		} else {
+			super.countIn(input);
+		}
 	}
 }
