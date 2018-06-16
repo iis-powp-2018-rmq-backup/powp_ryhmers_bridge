@@ -2,6 +2,8 @@ package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.factory.DefaultRyhmersFactory;
 import edu.kis.vh.nursery.factory.IRyhmersFactory;
+import edu.kis.vh.nursery.factory.IntArrayStackDefaultRyhmersFactory;
+import edu.kis.vh.nursery.factory.IntLinkedListRyhmersFactory;
 
 class RyhmersDemo {
 
@@ -19,7 +21,6 @@ class RyhmersDemo {
 		for (int i = 1; i < 15; i++) {
 			ryhmers[3].countIn(rn.nextInt(20));
 		}
-
 		for (int i = 0; i < ryhmers.length; i++) {
 			while (!ryhmers[i].callCheck()) {
 				System.out.print(ryhmers[i].countOut() + "  ");
@@ -32,11 +33,11 @@ class RyhmersDemo {
 	}
 
 	public static void main(String[] args) {
-		IRyhmersFactory factory = new DefaultRyhmersFactory();
-		testRyhmers(factory);
+		testRyhmers(new DefaultRyhmersFactory());
+		testRyhmers(new IntLinkedListRyhmersFactory());
+		testRyhmers(new IntArrayStackDefaultRyhmersFactory());
 	}
 	
 }
-
 
 // W przypadku fabryk zaimplementowany został wzorzec AbstractFactory.
