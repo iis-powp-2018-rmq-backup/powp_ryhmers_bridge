@@ -1,21 +1,11 @@
 package edu.kis.vh.nursery.stack;
 
-import lombok.Getter;
-
-public class IntLinkedList implements IStackImplementation {
+public class IntLinkedList extends IntStackBaseClass {
 
     private Node last;
 
-    @Getter
-    private int total;
-
-    private int totalMax;
-
-    private final static int EMPTY_STRUCT_CODE = -1;
-
     public IntLinkedList() {
-        total = EMPTY_STRUCT_CODE;
-        totalMax = 11;
+        super();
     }
 
     @Override
@@ -34,11 +24,6 @@ public class IntLinkedList implements IStackImplementation {
     @Override
     public boolean isEmpty() {
         return last == null;
-    }
-
-    @Override
-    public boolean isFull() {
-        return total == totalMax;
     }
 
     @Override
