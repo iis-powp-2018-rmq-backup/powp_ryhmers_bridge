@@ -1,5 +1,7 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.stack.IStackImplementation;
+
 public class FIFORyhmer extends DefaultCountingOutRyhmer {
 
 	private DefaultCountingOutRyhmer defaultCountingOutRyhmer;
@@ -7,6 +9,11 @@ public class FIFORyhmer extends DefaultCountingOutRyhmer {
 	public FIFORyhmer () {
 		defaultCountingOutRyhmer = new DefaultCountingOutRyhmer();
 	}
+
+	public FIFORyhmer (IStackImplementation stackImplementation)
+    {
+    	super(stackImplementation);
+    }
 
 	@Override
 	public int countOut() {

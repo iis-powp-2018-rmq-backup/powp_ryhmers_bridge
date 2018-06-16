@@ -1,5 +1,6 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.stack.IStackImplementation;
 import lombok.Getter;
 
 /**
@@ -15,7 +16,12 @@ public class HanoiRyhmer extends DefaultCountingOutRyhmer {
 		totalRejected = 0;
 	}
 
-	/**
+    public HanoiRyhmer (IStackImplementation stackImplementation)
+    {
+        super(stackImplementation);
+    }
+
+    /**
 	 * Umieszcza podaną wartość do systemu (wyliczanki).
 	 * @param input - wartość, którą zamierzamy umieścić w naszym systemie.
 	 */
