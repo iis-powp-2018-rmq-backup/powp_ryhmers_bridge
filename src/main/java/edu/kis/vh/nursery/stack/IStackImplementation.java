@@ -8,3 +8,7 @@ public interface IStackImplementation {
     int pop();
     int getTotal();
 }
+
+// F3 - definicje.
+// ctrl,+,t  - Pokazuje miejsca gdzie zaimplementowano metodę
+// ctrl,+,myszka - Pozwala na wybór jednej z tych dwóch opcji.

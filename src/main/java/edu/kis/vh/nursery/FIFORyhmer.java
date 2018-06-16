@@ -36,3 +36,4 @@ public class FIFORyhmer extends DefaultCountingOutRyhmer {
 }
 /* Sprawdzenie działanie skrótu alt+/ */
 /* Skrót klawiszowy alt + wybrana strzałka odpowiada za przejście między edytowanymi elementami.*/
+
