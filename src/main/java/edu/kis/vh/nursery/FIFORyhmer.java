@@ -18,21 +18,6 @@ public class FIFORyhmer extends DefaultCountingOutRyhmer {
     	super(stackImplementation);
     }
 
-	@Override
-	public int countOut() {
-		int returnCountOut;
-		while (!callCheck()) {
-			list.push(super.countOut());
-		}
-
-		returnCountOut = list.pop();
-
-		while (!list.isEmpty()) {
-			countIn(list.pop());
-		}
-
-		return returnCountOut;
-	}
 }
 /* Sprawdzenie działanie skrótu alt+/ */
 /* Skrót klawiszowy alt + wybrana strzałka odpowiada za przejście między edytowanymi elementami.*/

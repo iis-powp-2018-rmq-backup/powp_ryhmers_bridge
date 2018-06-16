@@ -27,7 +27,7 @@ public class IntArrayStack extends IntStackBaseClass {
         if (isEmpty()) {
             return EMPTY_STRUCT_CODE;
         }
-        return NUMBERS[total--];
+        return NUMBERS[--total];
     }
 
     @Override
