@@ -2,7 +2,7 @@ package edu.kis.vh.nursery;
 
 import lombok.Getter;
 
-public class HanoiRyhmer extends defaultCountingOutRyhmer {
+public class HanoiRyhmer extends DefaultCountingOutRyhmer {
 
 	@Getter
 	private int totalRejected = 0;
