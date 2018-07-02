@@ -1,44 +1,44 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.list.IntLinkedList;
+
 //TODO: extract interface Ryhmer | refactoring to bridge pattern
 
 public class DefaultCountingOutRyhmer {
 
-	private static final int FIXED_INT = -1;
+	private IntLinkedList list;
+	
+	public DefaultCountingOutRyhmer() {
+		list = new IntLinkedList();
+	}
 
-	private static final int SIZE = 12;
-
-	private final int[] numbers = new int[SIZE];
-
-	public int total = FIXED_INT;
-
+	public DefaultCountingOutRyhmer(IntLinkedList stack) {
+		super();
+		this.list = stack;
+	}
+	
 	public int getTotal() {
-		return total;
+		return list.getTotal();
 	}
 
 	public void countIn(int in) {
-		if (!isFull())
-			numbers[++total] = in;
+		list.push(in);
 	}
 
 	protected boolean callCheck() {
-		return total == FIXED_INT;
+		return list.isEmpty()();
 	}
 
 	protected boolean isFull() {
-		return total == 11;
+		return list.isFull();
 	}
 
 	protected int peekaboo() {
-		if (callCheck())
-			return FIXED_INT;
-		return numbers[total];
+		return list.top();
 	}
 
 	protected int countOut() {
-		if (callCheck())
-			return FIXED_INT;
-		return numbers[total--];
+		return list.pop();
 	}
 
 }
