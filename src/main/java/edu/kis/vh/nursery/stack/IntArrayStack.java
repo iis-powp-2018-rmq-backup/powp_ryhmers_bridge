@@ -6,7 +6,7 @@ public class IntArrayStack implements Stack{
 
 	private final int[] numbers = new int[SIZE];
 
-	public int total = Stack.FIXED_INT;
+	public int total = Stack.isEmptyIndicator;
 
 	public int getTotal() {
 		return total;
@@ -18,7 +18,7 @@ public class IntArrayStack implements Stack{
 	}
 
 	public boolean isEmpty() {
-		return total == Stack.FIXED_INT;
+		return total == Stack.isEmptyIndicator;
 	}
 
 	public boolean isFull() {
@@ -27,13 +27,13 @@ public class IntArrayStack implements Stack{
 
 	public int top() {
 		if (isEmpty())
-			return Stack.FIXED_INT;
+			return Stack.isEmptyIndicator;
 		return numbers[total];
 	}
 
 	public int pop() {
 		if (isEmpty())
-			return Stack.FIXED_INT;
+			return Stack.isEmptyIndicator;
 		return numbers[total--];
 	}
 
