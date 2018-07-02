@@ -10,6 +10,10 @@ public class DefaultCountingOutRyhmer {
 
 	public int total = FIXED_INT;
 
+	public int getTotal() {
+		return total;
+	}
+
 	public void countIn(int in) {
 		if (!isFull())
 			numbers[++total] = in;
