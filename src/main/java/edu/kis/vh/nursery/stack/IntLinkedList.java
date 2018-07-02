@@ -2,9 +2,8 @@ package edu.kis.vh.nursery.stack;
 
 public class IntLinkedList implements Stack{
 
-	private static final int isEmptyInt = -1;
 	private Node last;
-	private int total = isEmptyInt;
+	private int total = Stack.FIXED_INT;
 
 	public void push(int i) {
 		if (last == null)
@@ -30,14 +29,14 @@ public class IntLinkedList implements Stack{
 	@Override
 	public int top() {
 		if (isEmpty())
-			return isEmptyInt;
+			return Stack.FIXED_INT;
 		return last.getValue();
 	}
 
 	@Override
 	public int pop() {
 		if (isEmpty())
-			return isEmptyInt;
+			return Stack.FIXED_INT;
 		int ret = last.getValue();
 		last = last.getPrev();
 		--total;
