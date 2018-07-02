@@ -45,3 +45,6 @@ public class DefaultCountingOutRyhmer {
 	}
 
 }
+
+// All classes break isolation, we always need to call a specific implementation
+// There should be a common interface
