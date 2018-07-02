@@ -17,3 +17,7 @@ public interface Stack {
 	int getTotal();
 
 }
+
+// F3 - shows the definition
+// Ctrl + T - shows the location of the implemented method
+// Ctrl + mouse cursor - lets you choose between the two mentioned options
