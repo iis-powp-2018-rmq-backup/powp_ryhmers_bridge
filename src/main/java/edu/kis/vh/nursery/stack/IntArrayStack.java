@@ -2,9 +2,9 @@ package edu.kis.vh.nursery.stack;
 
 public class IntArrayStack implements Stack{
 
-	private static final int SIZE = 12;
+	private static final int CAPACITY = 12;
 
-	private final int[] numbers = new int[SIZE];
+	private final int[] numbers = new int[CAPACITY];
 
 	public int total = Stack.isEmptyIndicator;
 
@@ -14,7 +14,7 @@ public class IntArrayStack implements Stack{
 
 	public void push(int in) {
 		if (!isFull())
-			numbers[++total] = in;
+			numbers[total++] = in;
 	}
 
 	public boolean isEmpty() {
@@ -22,7 +22,7 @@ public class IntArrayStack implements Stack{
 	}
 
 	public boolean isFull() {
-		return total == 11;
+		return total == CAPACITY;
 	}
 
 	public int top() {
@@ -34,7 +34,7 @@ public class IntArrayStack implements Stack{
 	public int pop() {
 		if (isEmpty())
 			return Stack.isEmptyIndicator;
-		return numbers[total--];
+		return numbers[--total];
 	}
 
 }
