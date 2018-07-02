@@ -10,8 +10,8 @@ class RyhmersDemo {
 	public static void main(String[] args) {
 		Ryhmersfactory factory = new DefaultRyhmersFactory();
 		
-		DefaultCountingOutRyhmer[] ryhmers = { factory.GetStandardRyhmer(), factory.GetFalseRyhmer(),
-				factory.GetFIFORyhmer(), factory.GetHanoiRyhmer()};
+		DefaultCountingOutRyhmer[] ryhmers = { factory.getStandardRyhmer(), factory.getFalseRyhmer(),
+				factory.getFIFORyhmer(), factory.getHanoiRyhmer()};
 		
 		for (int i = 1; i < 15; i++)
 			for (int j = 0; j < 3; j++)

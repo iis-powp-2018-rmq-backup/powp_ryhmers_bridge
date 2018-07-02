@@ -3,11 +3,11 @@ package edu.kis.vh.nursery.factory;
 import edu.kis.vh.nursery.DefaultCountingOutRyhmer;
 
 public interface Ryhmersfactory {
-	public DefaultCountingOutRyhmer GetStandardRyhmer();
+	public DefaultCountingOutRyhmer getStandardRyhmer();
 
-	public DefaultCountingOutRyhmer GetFalseRyhmer();
+	public DefaultCountingOutRyhmer getFalseRyhmer();
 
-	public DefaultCountingOutRyhmer GetFIFORyhmer();
+	public DefaultCountingOutRyhmer getFIFORyhmer();
 
-	public DefaultCountingOutRyhmer GetHanoiRyhmer();
+	public DefaultCountingOutRyhmer getHanoiRyhmer();
 }
