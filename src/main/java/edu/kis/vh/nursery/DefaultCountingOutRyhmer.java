@@ -19,11 +19,11 @@ public class DefaultCountingOutRyhmer {
 			numbers[++total] = in;
 	}
 
-	public boolean callCheck() {
+	protected boolean callCheck() {
 		return total == FIXED_INT;
 	}
 
-	public boolean isFull() {
+	protected boolean isFull() {
 		return total == 11;
 	}
 
@@ -33,7 +33,7 @@ public class DefaultCountingOutRyhmer {
 		return numbers[total];
 	}
 
-	public int countOut() {
+	protected int countOut() {
 		if (callCheck())
 			return FIXED_INT;
 		return numbers[total--];
