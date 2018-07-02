@@ -1,5 +1,7 @@
 package edu.kis.vh.nursery;
 
+import javax.xml.bind.annotation.XmlEnumValue;
+
 public class HanoiRyhmer extends DefaultCountingOutRyhmer {
 
 	private int totalRejected = 0;
@@ -8,6 +10,7 @@ public class HanoiRyhmer extends DefaultCountingOutRyhmer {
 		return totalRejected;
 	}
 
+	@Override
 	public void countIn(int in) {
 		if (!callCheck() && in > peekaboo())
 			totalRejected++;
