@@ -1,19 +1,21 @@
 package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.list.IntLinkedList;
-import edu.kis.vh.nursery.list.StackImplementation;
+import edu.kis.vh.nursery.list.Stack;
 
 //TODO: extract interface Ryhmer | refactoring to bridge pattern
 
+// Ryhmer now implements common interface, so it can now be used as stack or list
+
 public class DefaultCountingOutRyhmer {
 
-	private StackImplementation list;
+	private Stack list;
 	
 	public DefaultCountingOutRyhmer() {
 		list = new IntLinkedList();
 	}
 
-	public DefaultCountingOutRyhmer(StackImplementation stack) {
+	public DefaultCountingOutRyhmer(Stack stack) {
 		super();
 		this.list = stack;
 	}
@@ -27,7 +29,7 @@ public class DefaultCountingOutRyhmer {
 	}
 
 	protected boolean callCheck() {
-		return list.isEmpty()();
+		return list.isEmpty();
 	}
 
 	protected boolean isFull() {
