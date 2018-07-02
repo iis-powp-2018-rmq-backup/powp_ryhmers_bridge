@@ -49,8 +49,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="6" language="java" name="edu.kis.vh.nursery.list.IntLinkedList" project="powp-rhymers" 
-    file="/powp-rhymers/src/main/java/edu/kis/vh/nursery/list/IntLinkedList.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="6" language="java" name="edu.kis.vh.nursery.stack.IntLinkedList" project="powp-rhymers" 
+    file="/powp-rhymers/src/main/java/edu/kis/vh/nursery/stack/IntLinkedList.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="864" y="105"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -58,8 +58,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="7" language="java" name="edu.kis.vh.nursery.list.IntLinkedList.Node" project="powp-rhymers" 
-    file="/powp-rhymers/src/main/java/edu/kis/vh/nursery/list/IntLinkedList.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="7" language="java" name="edu.kis.vh.nursery.stack.IntLinkedList.Node" project="powp-rhymers" 
+    file="/powp-rhymers/src/main/java/edu/kis/vh/nursery/stack/IntLinkedList.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="949" y="491"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
