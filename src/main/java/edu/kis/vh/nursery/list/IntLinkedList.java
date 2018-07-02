@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery.list;
 
-public class IntLinkedList {
+public class IntLinkedList implements StackImplementation{
 
 	private static final int isEmptyInt = -1;
 	private Node last;
@@ -17,20 +17,24 @@ public class IntLinkedList {
 		++total;
 	}
 
+	@Override
 	public boolean isEmpty() {
 		return last == null;
 	}
 
+	@Override
 	public boolean isFull() {
 		return false;
 	}
 
+	@Override
 	public int top() {
 		if (isEmpty())
 			return isEmptyInt;
 		return last.getValue();
 	}
 
+	@Override
 	public int pop() {
 		if (isEmpty())
 			return isEmptyInt;
@@ -40,6 +44,7 @@ public class IntLinkedList {
 		return ret;
 	}
 
+	@Override
 	public int getTotal() {
 		return total;
 	}
