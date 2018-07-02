@@ -1,5 +1,6 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.stack.IntArrayStack;
 import edu.kis.vh.nursery.stack.Stack;
 
 public class FIFORyhmer extends DefaultCountingOutRyhmer {
@@ -12,20 +13,22 @@ public class FIFORyhmer extends DefaultCountingOutRyhmer {
 		super(stack);
 	}
 
-	private final DefaultCountingOutRyhmer temp = new DefaultCountingOutRyhmer();
+	private final IntArrayStack temp = new IntArrayStack();
 
 	@Override
 	public int countOut() {
 		while (!callCheck())
 
-			temp.countIn(super.countOut());
+			temp.push(super.countOut());
 
-		int ret = temp.countOut();
+		int ret = temp.pop();
 
-		while (!temp.callCheck())
+		while (!temp.isEmpty())
 
-			countIn(temp.countOut());
+			countIn(temp.pop());
 
 		return ret;
 	}
 }
+
+// IntArrayStack will be better, because it will take less space
