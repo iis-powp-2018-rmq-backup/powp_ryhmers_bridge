@@ -1,39 +1,61 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.list.IntLinkedList;
+
 // kombinacja klawiszy alt + ← oraz → nawiguje pomiedzy otwartymi klasami
 public class CountingOutRhymer {
 
-    private IntArray intArray;
+  private IntLinkedList intLinkedList;
 
-    public CountingOutRhymer(IntArray intArray) {
-        this.intArray = intArray;
+    public CountingOutRhymer(IntLinkedList intLinkedList) {
+        this.intLinkedList = intLinkedList;
     }
 
     public CountingOutRhymer() {
     }
 
-
-    public void countIn(int in) {
-        intArray.countIn(in);
+    public static int getEmpty() {
+        return IntLinkedList.getEmpty();
     }
 
-    public boolean callCheck() {
-        return intArray.callCheck();
+    public void push(int i) {
+        intLinkedList.push(i);
+    }
+
+    public boolean isEmpty() {
+        return intLinkedList.isEmpty();
     }
 
     public boolean isFull() {
-        return intArray.isFull();
+        return intLinkedList.isFull();
     }
 
-    public int peekaboo() {
-        return intArray.peekaboo();
+    public int top() {
+        return intLinkedList.top();
     }
+
+    public int pop() {
+        return intLinkedList.pop();
+    }
+
+
+    public void countIn(int in) {
+        if (!isFull())
+             push(in);
+    }
+
+
+    public boolean callCheck() {
+        return isEmpty();
+    }
+
 
     public int countOut() {
-        return intArray.countOut();
+        if (callCheck())
+            return getEmpty();
+        return pop();
     }
 
-    public int getTotal() {
-        return intArray.getTotal();
-    }
+
+
 }
