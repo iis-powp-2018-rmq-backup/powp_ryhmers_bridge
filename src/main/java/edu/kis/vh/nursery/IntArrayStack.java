@@ -2,37 +2,38 @@ package edu.kis.vh.nursery;
 
 public class IntArrayStack {
 
-    private final IntArray intArray = new IntArray();
+    private static final int capacity = 12;
+    private static final int empty = -1;
+    private int total = -1;
+    private int[] NUMBERS = new int[capacity];
 
-    public IntArrayStack() {
-    }
-
-    public IntArrayStack(int total, int[] NUMBERS) {
-        this.intArray.total = total;
-        this.intArray.NUMBERS = NUMBERS;
-    }
-
-    public void countIdelen(int in) {
-        intArray.countIdelen(in);
+    public void countIn(int in) {
+        if (!isFull())
+            NUMBERS[++total] = in;
     }
 
     public boolean callCheck() {
-        return intArray.callCheck();
+        return total == empty;
     }
 
     public boolean isFull() {
-        return intArray.isFull();
+        return total == 11;
     }
 
     protected int peekaboo() {
-        return intArray.peekaboo();
+        if (callCheck())
+            return empty;
+        return NUMBERS[total];
     }
 
     public int countOut() {
-        return intArray.countOut();
+        if (callCheck())
+            return empty;
+        return NUMBERS[total--];
     }
 
     public int getTotal() {
-        return intArray.getTotal();
+        return total;
     }
+
 }

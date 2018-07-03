@@ -3,37 +3,37 @@ package edu.kis.vh.nursery;
 // kombinacja klawiszy alt + ← oraz → nawiguje pomiedzy otwartymi klasami
 public class CountingOutRhymer {
 
-    private static final int capacity = 12;
-    private static final int empty = -1;
-    private int total = -1;
-    private int[] NUMBERS = new int[capacity];
+    private IntArray intArray;
+
+    public CountingOutRhymer(IntArray intArray) {
+        this.intArray = intArray;
+    }
+
+    public CountingOutRhymer() {
+    }
+
 
     public void countIn(int in) {
-        if (!isFull())
-            NUMBERS[++total] = in;
+        intArray.countIn(in);
     }
 
     public boolean callCheck() {
-        return total == empty;
+        return intArray.callCheck();
     }
 
     public boolean isFull() {
-        return total == 11;
+        return intArray.isFull();
     }
 
-    protected int peekaboo() {
-        if (callCheck())
-            return empty;
-        return NUMBERS[total];
+    public int peekaboo() {
+        return intArray.peekaboo();
     }
 
     public int countOut() {
-        if (callCheck())
-            return empty;
-        return NUMBERS[total--];
+        return intArray.countOut();
     }
 
     public int getTotal() {
-        return total;
+        return intArray.getTotal();
     }
 }

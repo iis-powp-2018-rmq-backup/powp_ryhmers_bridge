@@ -13,25 +13,27 @@ class RhymersDemo {
     }
 
     private static void testRhymers(RhymersFactory factory) {
-        CountingOutRhymer[] ryhmers = {factory.getStandardRyhmer(), factory.getFalseRyhmer(),
-                factory.getFIFORyhmer(), factory.getHanoiRyhmer()};
+        CountingOutRhymer[] rhymers = {factory.getStandardRhymer(), factory.getFalseRhymer(),
+                factory.getFIFORhymer(), factory.getHanoiRhymer()};
+
+
 
         for (int i = 1; i < 15; i++)
             for (int j = 0; j < 3; j++)
-                ryhmers[j].countIn(i);
+                rhymers[j].countIn(i);
 
         java.util.Random rn = new java.util.Random();
         for (int i = 1; i < 15; i++)
-            ryhmers[3].countIn(rn.nextInt(20));
+            rhymers[3].countIn(rn.nextInt(20));
 
-        for (int i = 0; i < ryhmers.length; i++) {
-            while (!ryhmers[i].callCheck())
-                System.out.print(ryhmers[i].countOut() + "  ");
+        for (int i = 0; i < rhymers.length; i++) {
+            while (!rhymers[i].callCheck())
+                System.out.print(rhymers[i].countOut() + "  ");
             System.out.println();
         }
 
         System.out.println("total rejected is "
-                + ((HanoiRhymer) ryhmers[3]).reportRejected());
+                + ((HanoiRhymer) rhymers[3]).reportRejected());
     }
 
 }

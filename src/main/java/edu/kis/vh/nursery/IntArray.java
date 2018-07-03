@@ -9,7 +9,7 @@ public class IntArray {
     public IntArray() {
     }
 
-    public void countIdelen(int in) {
+    public void countIn(int in) {
         if (!isFull())
             NUMBERS[++total] = in;
     }
