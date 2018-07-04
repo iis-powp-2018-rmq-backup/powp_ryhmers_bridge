@@ -1,15 +1,18 @@
 package edu.kis.vh.nursery.list;
 
-public class IntLinkedList {
+import edu.kis.vh.nursery.IntContainer;
+
+public class IntLinkedList implements IntContainer {
 
     // TODO: needs refactoring to the bridge pattern :)
     private static final int empty = -1;
     private Node last;
-    // sa one uzywane poprzez gettery bezposrednio w publicznych metodach klasy
 
     public static int getEmpty() {
         return empty;
     }
+    // sa one uzywane poprzez gettery bezposrednio w publicznych metodach klasy
+
 
     public void push(int i) {
         if (getLast() == null)
@@ -20,6 +23,7 @@ public class IntLinkedList {
             setLast(getLast().getNext());
         }
     }
+
 
     public boolean isEmpty() {
         return getLast() == null;
@@ -44,14 +48,38 @@ public class IntLinkedList {
         return ret;
     }
 
+    @Override
+    public void countIn(int in) {
+
+    }
+
+    @Override
+    public int countOut() {
+        return 0;
+    }
+
+    @Override
+    public int peekaboo() {
+        if (isEmpty())
+            return empty;
+        return top();
+    }
+
+    @Override
+    public boolean callCheck() {
+        return isEmpty();
+    }
+
     public Node getLast() {
         return last;
     }
 
+
     public void setLast(Node last) {
         this.last = last;
-    }
 
+
+    }
 
 
 
