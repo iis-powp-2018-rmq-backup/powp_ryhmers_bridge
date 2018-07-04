@@ -4,7 +4,6 @@ import edu.kis.vh.nursery.IntContainer;
 
 public class IntArrayStack implements IntContainer {
     static final int capacity = 12;
-    static final int empty = -1;
     int total = -1;
     int[] NUMBERS = new int[capacity];
 

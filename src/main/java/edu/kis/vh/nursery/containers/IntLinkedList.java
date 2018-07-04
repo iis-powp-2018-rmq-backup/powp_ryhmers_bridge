@@ -5,7 +5,6 @@ import edu.kis.vh.nursery.IntContainer;
 public class IntLinkedList implements IntContainer {
 
     // TODO: needs refactoring to the bridge pattern :)
-    private static final int empty = -1;
     private Node last;
 
     public static int getEmpty() {
