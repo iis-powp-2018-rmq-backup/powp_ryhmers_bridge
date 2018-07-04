@@ -1,4 +1,6 @@
-package edu.kis.vh.nursery;
+package edu.kis.vh.nursery.list;
+
+import edu.kis.vh.nursery.IntContainer;
 
 public class IntArrayStack implements IntContainer {
     static final int capacity = 12;
