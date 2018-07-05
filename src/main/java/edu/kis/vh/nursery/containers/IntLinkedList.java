@@ -81,12 +81,11 @@ public class IntLinkedList implements IntContainer {
     }
 
 
-
     private class Node {
 
         private int value;
         private Node prev;
-        private  Node next;
+        private Node next;
 
         Node(int i) {
             setValue(i);

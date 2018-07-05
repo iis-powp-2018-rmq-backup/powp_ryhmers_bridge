@@ -6,6 +6,16 @@ package edu.kis.vh.nursery;
 public class FIFORhymer extends CountingOutRhymer {
 
     private CountingOutRhymer temp = new CountingOutRhymer();
+
+    public FIFORhymer(IntContainer intContainer, CountingOutRhymer temp) {
+        super(intContainer);
+        this.temp = temp;
+    }
+
+    public FIFORhymer(CountingOutRhymer temp) {
+        this.temp = temp;
+    }
+
     /**
      * @return values from FIFORhymer
      */
