@@ -2,6 +2,9 @@ package edu.kis.vh.nursery.containers;
 
 import edu.kis.vh.nursery.IntContainer;
 
+// użycie klawisza ctrl oraz kursora myszki pozwala przejść zarówno do deklaracji
+// jak i implementacji
+
 public class IntArrayStack implements IntContainer {
     static final int capacity = 12;
     int total = -1;
