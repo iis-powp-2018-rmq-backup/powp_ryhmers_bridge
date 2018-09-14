@@ -1,6 +1,7 @@
 package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.containers.IntContainer;
+import edu.kis.vh.nursery.containers.IntLinkedList;
 
 // kombinacja klawiszy alt + ← oraz → nawiguje pomiedzy otwartymi klasami
 // zmiana wymaga podania implementacji IntContainer
@@ -9,10 +10,13 @@ public class CountingOutRhymer {
   private IntContainer intContainer;
 
     public CountingOutRhymer(IntContainer intContainer) {
+        super();
         this.intContainer = intContainer;
     }
 
     public CountingOutRhymer() {
+        super();
+        this.intContainer = new IntLinkedList();
     }
 
     public boolean callCheck() {

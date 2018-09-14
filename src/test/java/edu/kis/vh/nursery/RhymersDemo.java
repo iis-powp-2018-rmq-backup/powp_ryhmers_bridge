@@ -1,14 +1,22 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.containers.IntLinkedList;
+import edu.kis.vh.nursery.factory.ArrayStackRhymersFactory;
 import edu.kis.vh.nursery.factory.DefaultRhymersFactory;
+import edu.kis.vh.nursery.factory.LinkedListRhymersFactory;
 import edu.kis.vh.nursery.factory.RhymersFactory;
+
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.stream.Stream;
 
 class RhymersDemo {
 
     public static void main(String[] args) {
         RhymersFactory factory = new DefaultRhymersFactory();
-
         testRhymers(factory);
+        testFactories();
 
     }
 
@@ -34,6 +42,19 @@ class RhymersDemo {
 
         System.out.println("total rejected is "
                 + ((HanoiRhymer) rhymers[3]).reportRejected());
+    }
+
+    public static void testFactories(){
+        List<RhymersFactory> testFactories = new LinkedList<>();
+
+        testFactories.add( new DefaultRhymersFactory());
+        testFactories.add( new ArrayStackRhymersFactory());
+        testFactories.add( new LinkedListRhymersFactory());
+
+        testFactories.stream().forEach(RhymersDemo::testRhymers);
+
+
+
     }
 
 }
