@@ -1,4 +1,7 @@
 package edu.kis.vh.nursery;
+
+import edu.kis.vh.nursery.containers.IntContainer;
+
 /**
  *  @author Łukasz Okrąglewski
  *  @see edu.kis.vh.nursery.CountingOutRhymer
@@ -15,6 +18,8 @@ public class FIFORhymer extends CountingOutRhymer {
     public FIFORhymer(CountingOutRhymer temp) {
         this.temp = temp;
     }
+
+    public  FIFORhymer(){}
 
     /**
      * @return values from FIFORhymer

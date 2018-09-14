@@ -1,17 +1,12 @@
 package edu.kis.vh.nursery.containers;
 
-import edu.kis.vh.nursery.IntContainer;
-
 public class IntLinkedList implements IntContainer {
-
-    // TODO: needs refactoring to the bridge pattern :)
     private Node last;
 
     public static int getEmpty() {
         return empty;
     }
     // sa one uzywane poprzez gettery bezposrednio w publicznych metodach klasy
-
 
     public void push(int i) {
         if (getLast() == null)
