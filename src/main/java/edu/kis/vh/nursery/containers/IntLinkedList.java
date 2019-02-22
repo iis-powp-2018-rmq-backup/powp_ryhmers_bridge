@@ -78,20 +78,16 @@ public class IntLinkedList implements IntContainer {
 
     private class Node {
 
-        private int value;
+        private final int value;
         private Node prev;
         private Node next;
 
-        Node(int i) {
-            setValue(i);
+        Node(int value) {
+            this.value = value;
         }
 
         int getValue() {
             return value;
-        }
-
-        void setValue(int value) {
-            this.value = value;
         }
 
         Node getPrev() {
