@@ -6,7 +6,7 @@ package edu.kis.vh.nursery.containers;
 public class IntArrayStack implements IntContainer {
     static final int CAPACITY = 12;
     int TOTAL = -1;
-    int[] numbers = new int[CAPACITY];
+    Integer[] numbers = new Integer[CAPACITY];
 
     public IntArrayStack() {
     }
@@ -17,7 +17,8 @@ public class IntArrayStack implements IntContainer {
     }
 
     public boolean callCheck() {
-        return TOTAL == EMPTY;
+        return numbers[TOTAL] == null ;
+
     }
 
     public boolean isFull() {
