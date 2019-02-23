@@ -4,7 +4,7 @@ public class IntLinkedList implements IntContainer {
     private Node last;
 
     public static int getEmpty() {
-        return empty;
+        return EMPTY;
     }
     // sa one uzywane poprzez gettery bezposrednio w publicznych metodach klasy
 
@@ -55,7 +55,7 @@ public class IntLinkedList implements IntContainer {
     @Override
     public int peekaboo() {
         if (isEmpty())
-            return empty;
+            return EMPTY;
         return top();
     }
 

@@ -2,7 +2,7 @@ package edu.kis.vh.nursery.containers;
 
 public interface IntContainer {
 
-    static final int empty = 0;
+    static final int EMPTY = 0;
 
     // zmiana wymagana tylko w jednym miejscu
 

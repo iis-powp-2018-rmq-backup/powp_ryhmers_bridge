@@ -4,39 +4,39 @@ package edu.kis.vh.nursery.containers;
 // jak i implementacji
 
 public class IntArrayStack implements IntContainer {
-    static final int capacity = 12;
-    int total = -1;
-    int[] NUMBERS = new int[capacity];
+    static final int CAPACITY = 12;
+    int TOTAL = -1;
+    int[] numbers = new int[CAPACITY];
 
     public IntArrayStack() {
     }
 
     public void countIn(int in) {
         if (!isFull())
-            NUMBERS[++total] = in;
+            numbers[++TOTAL] = in;
     }
 
     public boolean callCheck() {
-        return total == empty;
+        return TOTAL == EMPTY;
     }
 
     public boolean isFull() {
-        return total == 11;
+        return TOTAL == 11;
     }
 
     public int peekaboo() {
         if (callCheck())
-            return empty;
-        return NUMBERS[total];
+            return EMPTY;
+        return numbers[TOTAL];
     }
 
     public int countOut() {
         if (callCheck())
-            return empty;
-        return NUMBERS[total--];
+            return EMPTY;
+        return numbers[TOTAL--];
     }
 
     public int getTotal() {
-        return total;
+        return TOTAL;
     }
 }
