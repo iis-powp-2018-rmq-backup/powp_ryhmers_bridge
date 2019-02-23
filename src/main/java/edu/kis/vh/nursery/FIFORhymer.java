@@ -8,18 +8,16 @@ import edu.kis.vh.nursery.containers.IntContainer;
  */
 public class FIFORhymer extends CountingOutRhymer {
 
-    private CountingOutRhymer temp = new CountingOutRhymer();
+    private CountingOutRhymer temp;
 
     public FIFORhymer(IntContainer intContainer, CountingOutRhymer temp) {
         super(intContainer);
         this.temp = temp;
     }
 
-    public FIFORhymer(CountingOutRhymer temp) {
-        this.temp = temp;
+    public FIFORhymer(IntContainer intContainer) {
+        super(intContainer);
     }
-
-    public  FIFORhymer(){}
 
     /**
      * @return values from FIFORhymer

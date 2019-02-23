@@ -14,11 +14,6 @@ public class CountingOutRhymer {
         this.intContainer = intContainer;
     }
 
-    public CountingOutRhymer() {
-        super();
-        this.intContainer = new IntLinkedList();
-    }
-
     public boolean callCheck() {
         return intContainer.callCheck();
     }

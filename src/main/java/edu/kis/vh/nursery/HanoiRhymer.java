@@ -11,11 +11,9 @@ public class HanoiRhymer extends CountingOutRhymer {
         this.totalRejected = totalRejected;
     }
 
-    public HanoiRhymer(int totalRejected) {
-        this.totalRejected = totalRejected;
+    public HanoiRhymer(IntContainer intContainer) {
+        super(intContainer);
     }
-
-    public HanoiRhymer(){}
 
     public int reportRejected() {
         return getTotalRejected();
